@@ -1,0 +1,8 @@
+numpy
+matplotlib
+pandas
+pytest
+
+# Ejecución del notebook
+jupyter
+ipykernel
