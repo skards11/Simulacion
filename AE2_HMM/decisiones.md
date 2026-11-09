@@ -3,8 +3,8 @@
 - **Proyecto:** AE2_HMM
 - **Fecha de registro:** 2026-11-05
 - **Última actualización:** 2026-11-09
-- **Estado:** D1–D6 registradas; etiqueta Git `anteproyecto`; sin experimentos ejecutados bajo el protocolo ni resultados del protocolo
-- **Hito 2026-11-09:** fase de diseño procedimental D1–D6 concluida; código legado aislado en `legacy/`; raíz refactorizada para D4
+- **Estado:** D1–D6 registradas; etiqueta Git `anteproyecto`; protocolo D4 ejecutado; resultados simulados disponibles
+- **Hito 2026-11-09:** fase de diseño procedimental D1–D6 concluida; código legado aislado en `legacy/`; raíz refactorizada para D4; ejecución D4 completada
 - **Fuentes leídas:** `.agents/skills/articulo-hmm/SKILL.md`, `materiales/caso_riesgo_de_incendio_forestal.md`
 
 ## Regla de registro
@@ -45,7 +45,7 @@ Solo se registra una decisión cuando el equipo la expresa. El silencio, la ause
 - **Tamaño del experimento:** T = 500 pasos, N = 2000 secuencias, una semilla distinta por réplica, semillas registradas. Justificación: con duración media de 2–3.3 pasos, T = 500 produce ~150–250 segmentos de estado por secuencia; el error Monte Carlo del promedio es ≈ sd/√N ≈ sd/44.7 (≈ 0.001 si sd ≈ 0.05). Se hará piloto N = 200 para estimar sd y se reportará IC por bootstrap de secuencias.
 - **Cota teórica útil:** en t = 1, con π, el mejor clasificador que solo mira una observación acierta como máximo ≈ 0.67; los errores se concentran entre estados adyacentes.
 - **Independencia:** la unidad independiente es la secuencia, no el paso de tiempo. Las métricas se calculan por secuencia y luego se agregan (promedio ± desviación / IC).
-- **Estado de ejecución:** no se ha ejecutado el protocolo D4 ni generado resultados del protocolo. La secuencia de 5 observaciones del material es solo demostrativa. La versión de 120 días se trasladó a `legacy/`; la raíz implementa D4, pero todavía no produce resultados.
+- **Estado de ejecución:** el protocolo D4 se ejecutó el 2026-11-09 con T = 500, N = 2000 y semilla maestra 20261109. Los resultados son simulados y están en `outputs/`. La secuencia de 5 observaciones del material sigue siendo solo demostrativa. La versión de 120 días está en `legacy/`.
 
 ## Decisiones registradas y pendientes
 
@@ -78,16 +78,43 @@ Documentación adoptada:
 
 > La carpeta `legacy/` contiene una simulación exploratoria previa con variables continuas y reglas de negocio de incendios. El protocolo formal del artículo científico se implementa en la raíz bajo las especificaciones D1–D6.
 
-La raíz quedó refactorizada para D4: HMM con Forward, Forward–Backward y Viterbi; simulación de secuencias sintéticas con T = 500 y N = 2000; comparación M0/M1/M2; macro-F1 por secuencia con agregación e IC por bootstrap. **No se ejecutaron experimentos del protocolo.**
+La raíz quedó refactorizada para D4: HMM con Forward, Forward–Backward y Viterbi; simulación de secuencias sintéticas con T = 500 y N = 2000; comparación M0/M1/M2; macro-F1 por secuencia con agregación e IC por bootstrap. La ejecución del protocolo se registra en la sección siguiente.
 
 ### Notas de implementación (no son decisiones nuevas)
 
 - **M1:** se implementó como HMM con A, B y la distribución estacionaria ξ de A, que es la forma no degenerada de usar la ley observable exacta; `observable_markov_law` calcula y prueba Q y la distribución observable. Si el equipo quería otra definición de M1, debe pronunciarse antes de reportar resultados.
 - **B alterada:** el escenario secundario usa una mezcla provisional del 50 % con la distribución uniforme (`PROVISIONAL_ALTERED_MIXING = 0.5`). Ese valor no está aprobado y debe fijarse antes de reportar ese escenario.
 
+### Resultados de la ejecución D4 (2026-11-09)
+
+Ejecución: `python main.py --save outputs/protocolo_d4_resumen.json`, con T = 500, N = 2000, semilla maestra 20261109 y dos escenarios. Artefactos: `outputs/protocolo_d4_resumen.json`, `.csv`, `.md`, `outputs/protocolo_d4_metricas.png` y `outputs/protocolo_d4_ejecucion.log`.
+
+**Escenario base**
+
+| Modelo | Macro-F1 (media [IC 95 %]) | Recall s3 | Exactitud |
+|---|---:|---:|---:|
+| M0 | 0.6608 [0.6599, 0.6618] | 0.6996 [0.6976, 0.7015] | 0.6650 [0.6641, 0.6660] |
+| M1 | 0.6749 [0.6738, 0.6760] | 0.6691 [0.6667, 0.6714] | 0.6828 [0.6817, 0.6838] |
+| M2 | 0.6749 [0.6738, 0.6759] | 0.6691 [0.6666, 0.6715] | 0.6828 [0.6818, 0.6839] |
+
+**Escenario con B alterada**
+
+| Modelo | Macro-F1 (media [IC 95 %]) | Recall s3 | Exactitud |
+|---|---:|---:|---:|
+| M0 | 0.4912 [0.4902, 0.4922] | 0.5163 [0.5142, 0.5184] | 0.4991 [0.4982, 0.5001] |
+| M1 | 0.4966 [0.4953, 0.4979] | 0.3999 [0.3970, 0.4029] | 0.5236 [0.5223, 0.5248] |
+| M2 | 0.4965 [0.4952, 0.4977] | 0.3996 [0.3968, 0.4025] | 0.5236 [0.5224, 0.5248] |
+
+Observaciones descriptivas, sin convertirlas en superioridad general:
+
+- En el escenario base, M1 y M2 superan a M0 en macro-F1 y exactitud, pero el recall de `s3` es mayor en M0.
+- M1 y M2 coinciden hasta la cuarta cifra decimal; es consistente con que solo difieren en el prior inicial (ξ frente a π) y T es largo.
+- Con B alterada, las tres variantes bajan de forma marcada. M1 y M2 mejoran apenas la macro-F1 de M0, pero pierden recall de `s3` respecto de M0.
+- Las cifras son simuladas y dependen de la B alterada provisional. No se afirma validez ecológica ni superioridad del HMM.
+
 ## Próximo paso
 
-D1–D6 están cerradas. La implementación de la raíz está lista para ejecutar D4, pero todavía no se ha ejecutado. Siguiente: verificar las pruebas, ejecutar el protocolo con las semillas registradas, generar tablas y figuras trazables, y redactar el manuscrito como **anteproyecto**, marcando como pendiente todo resultado experimental no ejecutado.
+D1–D6 están cerradas y el protocolo D4 ya se ejecutó con resultados simulados trazables en `outputs/`. Siguiente: redactar el manuscrito como **anteproyecto** usando esas tablas y figuras, declarar que M1 y la B alterada quedaron en la forma implementada, y mantener como pendientes la revisión de referencias, la declaración de uso de IA y cualquier escenario adicional.
 
 ## Bitácora
 
@@ -102,6 +129,7 @@ D1–D6 están cerradas. La implementación de la raíz está lista para ejecuta
 | 2026-11-09 | Aprobación y alcance | Aprobador/revisor y alcance sugerido | El alcance no excede la evidencia disponible | **D6.1 y D6.2 registradas** | Mensaje del equipo |
 | 2026-11-09 | Cierre de D6 | Etiqueta `anteproyecto`; registro en bitácora + tag Git; legado a `legacy/` | D1–D6 completas; legado aislado | **D6.3–D6.5 registradas; D6 cerrada** | Mensaje del equipo |
 | 2026-11-09 | Aislamiento legacy y refactor D4 | Mover versión de 120 días a `legacy/`; raíz con T=500/N=2000 y macro-F1 | Pruebas del protocolo; código legado congelado | **Reubicación y refactor ejecutados** | Cambios en el repositorio; `legacy/README.md` |
+| 2026-11-09 | Ejecución D4 | Correr T=500/N=2000, semilla 20261109, escenario base y B alterada | Pruebas de la raíz y del legado; resultados guardados y regenerables | **Ejecución completada; sin nueva decisión científica** | `outputs/protocolo_d4_resumen.json`; `.csv`; `.md`; `.png`; `.log` |
 
 ## Cómo retomar
 

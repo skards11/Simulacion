@@ -4,9 +4,8 @@ Comparación didáctica de decodificación con un Modelo Oculto de Markov (HMM)
 de tres estados latentes y tres observaciones ordinales de humedad.
 
 **Estado:** anteproyecto. Las decisiones D1–D6 están registradas en
-`decisiones.md`; todavía no se han ejecutado los experimentos del protocolo
-ni existen resultados del protocolo. Todas las cifras que produzca el código
-son simuladas.
+`decisiones.md` y el protocolo D4 ya se ejecutó. Los resultados están en
+`outputs/protocolo_d4_resumen.*`; todas las cifras son simuladas.
 
 ## Aviso sobre el código legado
 
@@ -27,7 +26,7 @@ proyecto en `legacy/`.
 │   └── __init__.py
 ├── tests/
 │   └── test_protocol.py    # Pruebas del protocolo
-├── outputs/                # Resultados que genere el protocolo (vacío por ahora)
+├── outputs/                # Resultados simulados del protocolo D4
 ├── legacy/                 # Simulación exploratoria anterior (120 días)
 ├── materiales/             # Caso didáctico
 └── decisiones.md           # Bitácora de decisiones D1–D6
@@ -73,6 +72,12 @@ El protocolo completo puede tardar varios minutos. El escenario secundario
 usa una B alterada por mezcla con la distribución uniforme; el valor de
 mezcla es **provisional** (`PROVISIONAL_ALTERED_MIXING = 0.5`) y debe
 registrarse antes de reportar ese escenario.
+
+Para generar tablas CSV/Markdown y la figura de métricas a partir del JSON:
+
+```powershell
+python scripts/report_d4.py --input outputs/protocolo_d4_resumen.json
+```
 
 ## Diseño del experimento
 
