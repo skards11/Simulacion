@@ -1,48 +1,44 @@
-# AE2_HMM
+# AE2_HMM — protocolo D4
 
-Sistema de evaluación de riesgo de incendio forestal con un Modelo Oculto de Markov (HMM).
+Comparación didáctica de decodificación con un Modelo Oculto de Markov (HMM)
+de tres estados latentes y tres observaciones ordinales de humedad.
 
-## Ejecución principal: Jupyter Notebook
+**Estado:** anteproyecto. Las decisiones D1–D6 están registradas en
+`decisiones.md`; todavía no se han ejecutado los experimentos del protocolo
+ni existen resultados del protocolo. Todas las cifras que produzca el código
+son simuladas.
 
-El proyecto se ejecuta en el notebook **`AE2_HMM.ipynb`**, que contiene la simulación, la decodificación de Viterbi, las métricas, las tablas y los gráficos.
+## Aviso sobre el código legado
 
-### 1. Crear un entorno virtual limpio
+> La carpeta `legacy/` contiene una simulación exploratoria previa con variables continuas y reglas de negocio de incendios. El protocolo formal del artículo científico se implementa en la raíz bajo las especificaciones D1–D6.
+
+El código de la raíz no usa porcentajes de humedad, focos de incendio ni
+alertas de quema. Esos artefactos se conservan únicamente como historia del
+proyecto en `legacy/`.
+
+## Estructura
+
+```text
+/
+├── main.py                 # Ejecutor del protocolo D4
+├── src/
+│   ├── hmm_model.py        # HMM, Forward, Forward–Backward y Viterbi
+│   ├── simulation.py       # M0/M1/M2, métricas y experimento D4
+│   └── __init__.py
+├── tests/
+│   └── test_protocol.py    # Pruebas del protocolo
+├── outputs/                # Resultados que genere el protocolo (vacío por ahora)
+├── legacy/                 # Simulación exploratoria anterior (120 días)
+├── materiales/             # Caso didáctico
+└── decisiones.md           # Bitácora de decisiones D1–D6
+```
+
+## Instalación
 
 ```powershell
 python -m venv .venv
-```
-
-### 2. Activarlo (Windows PowerShell)
-
-```powershell
 .\.venv\Scripts\Activate.ps1
-```
-
-### 3. Instalar las dependencias
-
-```powershell
 pip install -r requirements.txt
-```
-
-### 4. Registrar el kernel del entorno (opcional, recomendado)
-
-```powershell
-python -m ipykernel install --user --name ae2-hmm --display-name "Python (AE2 HMM)"
-```
-
-### 5. Abrir Jupyter y ejecutar el notebook
-
-```powershell
-jupyter notebook AE2_HMM.ipynb
-```
-
-También puede abrirse con JupyterLab o VS Code seleccionando el kernel del `.venv`.
-Ejecute las celdas en orden con **Run All**. Los resultados se guardan en `outputs/`.
-
-## Ejecución alternativa por consola
-
-```powershell
-python main.py
 ```
 
 ## Pruebas
@@ -51,17 +47,51 @@ python main.py
 python -m pytest -q
 ```
 
-## Estructura
+## Ejecución del protocolo
 
-```text
-/
-├── AE2_HMM.ipynb          # Notebook principal
-├── src/
-│   ├── hmm_model.py       # Matrices A, B, pi, Viterbi y forward-backward
-│   ├── simulation.py      # Simulación Monte Carlo y métricas
-│   └── utils.py           # Gráficos, tablas y reporte
-├── tests/test_hmm.py      # Pruebas con pytest
-├── main.py                # Punto de entrada alternativo
-├── requirements.txt
-└── outputs/               # Figuras y CSV generados
+Prueba de humo (rápida, no es un resultado del protocolo):
+
+```powershell
+python main.py --quick
 ```
+
+Protocolo completo D4 (`T = 500`, `N = 2000`):
+
+```powershell
+python main.py
+```
+
+Opciones útiles:
+
+```powershell
+python main.py --T 500 --N 2000 --seed 20261109 --bootstrap 1000
+python main.py --decoder viterbi
+python main.py --save outputs/protocolo_d4_resumen.json
+```
+
+El protocolo completo puede tardar varios minutos. El escenario secundario
+usa una B alterada por mezcla con la distribución uniforme; el valor de
+mezcla es **provisional** (`PROVISIONAL_ALTERED_MIXING = 0.5`) y debe
+registrarse antes de reportar ese escenario.
+
+## Diseño del experimento
+
+- **Unidad independiente:** la secuencia, no el paso de tiempo.
+- **Diseño pareado:** M0, M1 y M2 reciben las mismas observaciones y se
+  comparan contra los mismos estados latentes.
+- **M0:** umbral determinista sobre la humedad actual.
+- **M1:** baseline con la ley observable exacta y prior estacionario de A.
+- **M2:** HMM completo con A, B y π.
+- **Métrica principal:** macro-F1 por secuencia, agregada con media,
+  desviación estándar e IC por bootstrap de secuencias.
+- **Métricas secundarias:** recall de `s3` y exactitud.
+- **Semillas:** una semilla distinta por secuencia, derivada de una semilla
+  maestra y registrada en el resultado.
+
+## Limitaciones
+
+- Los estados `s1`, `s2`, `s3` son etiquetas puras, no variables físicas.
+- La humedad es ordinal; no se usan porcentajes ni umbrales inventados.
+- No se afirma validez ecológica ni superioridad general del HMM.
+- Los resultados del escenario con B alterada dependen del valor de mezcla
+  que se apruebe.

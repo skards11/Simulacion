@@ -1,414 +1,466 @@
-"""Simulación, métricas de prevención y análisis de riesgo de incendios.
+"""Experimento D4: comparación de decodificación M0, M1 y M2.
 
-Este módulo combina el HMM con variables físicas observables (humedad
-relativa) para producir un informe operativo útil para brigadas forestales.
+Este módulo implementa el protocolo registrado en ``decisiones.md``:
+
+* T = 500 pasos por secuencia y N = 2000 secuencias sintéticas.
+* Diseño pareado: las tres variantes reciben exactamente las mismas
+  observaciones y se comparan contra los mismos estados latentes.
+* Métrica principal: macro-F1 por secuencia, agregada con media, desviación
+  estándar e intervalo de confianza por bootstrap de secuencias.
+* Métricas secundarias: recall de ``s3`` (alias "Riesgo Extremo") y exactitud.
+* Escenario secundario con la matriz de emisión B alterada.
+
+Las cifras que produzca este módulo son simuladas. No son evidencia de validez
+ecológica ni de superioridad general del HMM.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
-from typing import Iterable
+from dataclasses import dataclass
+from typing import Mapping
 
 import numpy as np
 
-from .hmm_model import HMM
-
-# Rangos de humedad relativa (%) asociados a cada observación.
-HUMIDITY_RANGES: tuple[tuple[float, float], ...] = (
-    (60.0, 100.0),  # Humedad Alta
-    (30.0, 60.0),  # Humedad Media
-    (0.0, 30.0),  # Humedad Baja
+from .hmm_model import (
+    DEFAULT_EMISSION_MATRIX,
+    DEFAULT_INITIAL_PROBABILITIES,
+    DEFAULT_TRANSITION_MATRIX,
+    HMM,
+    OBSERVATIONS,
+    STATES,
+    stationary_distribution,
 )
 
-# Colores para gráficos y tablas: verde, ámbar y rojo.
-STATE_COLORS: tuple[str, ...] = ("#2e7d32", "#f9a825", "#c62828")
+DEFAULT_T: int = 500
+DEFAULT_N: int = 2000
+DEFAULT_MASTER_SEED: int = 20261109
+DEFAULT_BOOTSTRAP_SAMPLES: int = 1000
 
-# Factor de peligro asociado a cada estado para la probabilidad de ignición.
-FIRE_STATE_FACTORS: np.ndarray = np.array([0.50, 1.20, 2.00], dtype=float)
+MODEL_NAMES: tuple[str, ...] = ("M0", "M1", "M2")
+METRIC_NAMES: tuple[str, ...] = ("macro_f1", "recall_s3", "accuracy")
+
+# Mezcla provisional con la distribución uniforme para el escenario de B
+# alterada. No es una decisión científica registrada: el valor debe fijarse
+# antes de reportar resultados del escenario secundario.
+PROVISIONAL_ALTERED_MIXING: float = 0.5
 
 
 @dataclass
-class SeasonSimulation:
-    """Resultado completo de una temporada simulada."""
+class ExperimentResult:
+    """Resultado completo de una corrida del protocolo D4."""
 
-    model: HMM
-    days: np.ndarray
-    true_states: np.ndarray
-    observations: np.ndarray
-    humidity: np.ndarray
-    inferred_states: np.ndarray
-    posterior: np.ndarray
-    danger_index: np.ndarray
-    fire_events: np.ndarray
-    alerts: list[dict[str, object]] = field(default_factory=list)
-    seed: int | None = None
+    T: int
+    N: int
+    master_seed: int
+    seeds: np.ndarray
+    emission_matrix: np.ndarray
+    per_sequence: dict[str, dict[str, np.ndarray]]
+    summary: dict[str, dict[str, dict[str, float | None]]]
 
-    @property
-    def n_days(self) -> int:
-        return len(self.days)
-
-    @property
-    def true_state_names(self) -> np.ndarray:
-        return np.array([self.model.states[i] for i in self.true_states])
-
-    @property
-    def inferred_state_names(self) -> np.ndarray:
-        return np.array([self.model.states[i] for i in self.inferred_states])
-
-    @property
-    def observation_names(self) -> np.ndarray:
-        return np.array([self.model.observations[i] for i in self.observations])
-
-
-def sample_humidity(
-    observation_indices: np.ndarray,
-    rng: np.random.Generator,
-) -> np.ndarray:
-    """Convierte categorías de humedad en valores reales de humedad (%).
-
-    Alta: 60-100 %, Media: 30-60 %, Baja: 0-30 %.
-    """
-    indices = np.asarray(observation_indices, dtype=int)
-    if np.any(indices < 0) or np.any(indices >= len(HUMIDITY_RANGES)):
-        raise ValueError("Hay índices de observación de humedad fuera de rango.")
-
-    lows = np.array([limit[0] for limit in HUMIDITY_RANGES])[indices]
-    highs = np.array([limit[1] for limit in HUMIDITY_RANGES])[indices]
-    return rng.uniform(lows, highs)
-
-
-def simulate_fire_events(
-    states: np.ndarray,
-    humidity: np.ndarray,
-    rng: np.random.Generator,
-    base_probability: float = 0.004,
-    dryness_weight: float = 0.16,
-) -> np.ndarray:
-    """Simula posibles focos de incendio con probabilidad dependiente del riesgo.
-
-    La probabilidad aumenta cuando la humedad es baja y cuando el estado
-    oculto es más peligroso. No representa incendios confirmados, sino
-    posibles focos compatibles con las condiciones simuladas.
-    """
-    states = np.asarray(states, dtype=int)
-    humidity = np.asarray(humidity, dtype=float)
-
-    dryness = np.clip(1.0 - humidity / 100.0, 0.0, 1.0)
-    factors = FIRE_STATE_FACTORS[states]
-    probabilities = base_probability + dryness_weight * (dryness**2) * factors
-    probabilities = np.clip(probabilities, 0.0, 0.40)
-
-    return rng.random(len(states)) < probabilities
-
-
-def generate_burn_ban_alerts(
-    days: np.ndarray,
-    states: np.ndarray,
-    danger_index: np.ndarray,
-    danger_threshold: float = 75.0,
-) -> list[dict[str, object]]:
-    """Genera alertas de prohibición o restricción de quemas.
-
-    El estado inferido de riesgo extremo activa prohibición total. Un índice
-    de peligro alto sin estado extremo activa una restricción preventiva.
-    """
-    alerts: list[dict[str, object]] = []
-
-    for day, state, index in zip(days, states, danger_index):
-        if int(state) == 2:
-            alerts.append(
-                {
-                    "day": int(day),
-                    "level": "PROHIBICIÓN TOTAL",
-                    "danger_index": float(index),
-                    "message": (
-                        f"Día {int(day)}: PROHIBIDA cualquier quema. "
-                        f"Riesgo extremo inferido (índice {index:.1f}/100)."
-                    ),
-                }
-            )
-        elif index >= danger_threshold:
-            alerts.append(
-                {
-                    "day": int(day),
-                    "level": "RESTRICCIÓN PREVENTIVA",
-                    "danger_index": float(index),
-                    "message": (
-                        f"Día {int(day)}: restricción preventiva de quemas. "
-                        f"Índice de peligro {index:.1f}/100."
-                    ),
-                }
-            )
-
-    return alerts
-
-
-def run_simulation(
-    model: HMM | None = None,
-    n_days: int = 120,
-    seed: int | None = 42,
-    alert_threshold: float = 75.0,
-) -> SeasonSimulation:
-    """Ejecuta una temporada completa de simulación y decodificación."""
-    if n_days <= 0:
-        raise ValueError("n_days debe ser mayor que cero.")
-
-    if model is None:
-        model = HMM(seed=seed)
-
-    rng = np.random.default_rng(seed)
-    generated = model.simulate(n_days, rng=rng)
-
-    true_states = generated["states"]
-    observations = generated["observations"]
-    humidity = sample_humidity(observations, rng)
-    fire_events = simulate_fire_events(true_states, humidity, rng)
-
-    inferred_states = model.viterbi(observations)
-    posterior = model.forward_backward(observations)
-    danger_index = model.danger_index(posterior)
-
-    days = np.arange(1, n_days + 1)
-    alerts = generate_burn_ban_alerts(
-        days, inferred_states, danger_index, danger_threshold=alert_threshold
-    )
-
-    return SeasonSimulation(
-        model=model,
-        days=days,
-        true_states=true_states,
-        observations=observations,
-        humidity=humidity,
-        inferred_states=inferred_states,
-        posterior=posterior,
-        danger_index=danger_index,
-        fire_events=fire_events,
-        alerts=alerts,
-        seed=seed,
-    )
-
-
-def risk_counts(states: np.ndarray, model: HMM) -> dict[str, int]:
-    """Cuenta los días de cada nivel de riesgo."""
-    counts = np.bincount(np.asarray(states, dtype=int), minlength=model.n_states)
-    return {name: int(counts[i]) for i, name in enumerate(model.states)}
-
-
-def find_runs(values: np.ndarray, target: int) -> list[tuple[int, int]]:
-    """Devuelve intervalos (inicio, fin) inclusivos, en índices 0-based."""
-    values = np.asarray(values, dtype=int)
-    runs: list[tuple[int, int]] = []
-    start: int | None = None
-
-    for index, value in enumerate(values):
-        if value == target and start is None:
-            start = index
-        elif value != target and start is not None:
-            runs.append((start, index - 1))
-            start = None
-
-    if start is not None:
-        runs.append((start, len(values) - 1))
-
-    return runs
-
-
-def extreme_windows(
-    states: np.ndarray,
-    min_length: int = 2,
-) -> list[dict[str, int]]:
-    """Identifica ventanas continuas de riesgo extremo.
-
-    Parameters
-    ----------
-    states:
-        Secuencia de índices de estado.
-    min_length:
-        Longitud mínima para considerar que el peligro es "continuado".
-    """
-    windows: list[dict[str, int]] = []
-    for start, end in find_runs(states, target=2):
-        length = end - start + 1
-        if length >= min_length:
-            windows.append(
-                {
-                    "start_day": start + 1,
-                    "end_day": end + 1,
-                    "length": length,
-                }
-            )
-    return windows
-
-
-def empirical_transition_to_extreme(states: np.ndarray) -> dict[str, object]:
-    """Estima empíricamente P(S_t = Extremo | S_{t-1} ≠ Extremo)."""
-    states = np.asarray(states, dtype=int)
-    by_source: dict[str, dict[str, float | int]] = {}
-
-    for source in range(2):
-        mask = states[:-1] == source
-        opportunities = int(mask.sum())
-        entries = int(np.sum(mask & (states[1:] == 2)))
-        by_source[str(source)] = {
-            "opportunities": opportunities,
-            "entries_to_extreme": entries,
-            "probability": entries / opportunities if opportunities else float("nan"),
+    def to_dict(self) -> dict[str, object]:
+        """Versión serializable (sin objetos numpy) para guardar o imprimir."""
+        return {
+            "T": self.T,
+            "N": self.N,
+            "master_seed": self.master_seed,
+            "seeds": [int(seed) for seed in self.seeds],
+            "emission_matrix": self.emission_matrix.tolist(),
+            "summary": self.summary,
         }
 
-    non_extreme_previous = states[:-1] != 2
-    opportunities = int(non_extreme_previous.sum())
-    entries = int(np.sum(non_extreme_previous & (states[1:] == 2)))
 
-    return {
-        "overall_probability": entries / opportunities if opportunities else float("nan"),
-        "entries_to_extreme": entries,
-        "opportunities": opportunities,
-        "by_source": by_source,
-    }
-
-
-def compare_states(
-    true_states: np.ndarray,
-    inferred_states: np.ndarray,
-    model: HMM,
-) -> dict[str, object]:
-    """Compara estados reales e inferidos con exactitud y matriz de confusión."""
-    true_states = np.asarray(true_states, dtype=int)
-    inferred_states = np.asarray(inferred_states, dtype=int)
-
-    if len(true_states) != len(inferred_states):
-        raise ValueError("Las secuencias deben tener la misma longitud.")
-
-    confusion = np.zeros((model.n_states, model.n_states), dtype=int)
-    np.add.at(confusion, (true_states, inferred_states), 1)
-
-    accuracy = float(np.mean(true_states == inferred_states))
-
-    return {
-        "accuracy": accuracy,
-        "confusion_matrix": confusion,
-        "correct_days": int(np.sum(true_states == inferred_states)),
-        "total_days": int(len(true_states)),
-    }
-
-
-def _point_biserial_correlation(
-    values: np.ndarray,
-    events: np.ndarray,
+# ----------------------------------------------------------------------
+# Métricas por secuencia
+# ----------------------------------------------------------------------
+def macro_f1_score(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    n_classes: int = 3,
 ) -> float:
-    """Correlación de Pearson entre una variable continua y un evento binario."""
-    values = np.asarray(values, dtype=float)
-    events = np.asarray(events, dtype=float)
+    """Macro-F1 con las clases 0..n_classes-1 fijas.
 
-    if len(values) < 2:
-        return float("nan")
-    if np.std(values) == 0 or np.std(events) == 0:
-        return float("nan")
+    Si una clase no aparece ni en la verdad ni en la predicción, su F1 es 0.
+    Así la métrica no cambia de denominador entre secuencias.
+    """
+    y_true = np.asarray(y_true, dtype=int)
+    y_pred = np.asarray(y_pred, dtype=int)
 
-    return float(np.corrcoef(values, events)[0, 1])
+    if y_true.shape != y_pred.shape:
+        raise ValueError("y_true e y_pred deben tener la misma forma.")
+
+    f1_scores: list[float] = []
+    for label in range(n_classes):
+        true_positive = int(np.sum((y_true == label) & (y_pred == label)))
+        false_positive = int(np.sum((y_true != label) & (y_pred == label)))
+        false_negative = int(np.sum((y_true == label) & (y_pred != label)))
+
+        precision = (
+            true_positive / (true_positive + false_positive)
+            if (true_positive + false_positive) > 0
+            else 0.0
+        )
+        recall = (
+            true_positive / (true_positive + false_negative)
+            if (true_positive + false_negative) > 0
+            else 0.0
+        )
+        f1 = (
+            2.0 * precision * recall / (precision + recall)
+            if (precision + recall) > 0
+            else 0.0
+        )
+        f1_scores.append(float(f1))
+
+    return float(np.mean(f1_scores))
 
 
-def humidity_fire_analysis(sim: SeasonSimulation) -> dict[str, object]:
-    """Analiza la relación entre humedad, riesgo e incendios simulados."""
-    events = sim.fire_events.astype(float)
+def recall_score(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+    label: int = 2,
+) -> float:
+    """Recall de una clase concreta."""
+    y_true = np.asarray(y_true, dtype=int)
+    y_pred = np.asarray(y_pred, dtype=int)
 
-    correlation = _point_biserial_correlation(sim.humidity, events)
-    danger_correlation = _point_biserial_correlation(sim.danger_index, events)
+    support = int(np.sum(y_true == label))
+    if support == 0:
+        return 0.0
+    return float(np.sum((y_true == label) & (y_pred == label)) / support)
 
-    bands: dict[str, dict[str, float | int]] = {}
-    for index, name in enumerate(sim.model.observations):
-        mask = sim.observations == index
-        days = int(mask.sum())
-        fires = int(sim.fire_events[mask].sum())
-        bands[name] = {
-            "days": days,
-            "fire_events": fires,
-            "event_rate": fires / days if days else 0.0,
-            "mean_humidity": (
-                float(sim.humidity[mask].mean()) if days else float("nan")
-            ),
+
+def accuracy_score(y_true: np.ndarray, y_pred: np.ndarray) -> float:
+    """Exactitud global."""
+    y_true = np.asarray(y_true, dtype=int)
+    y_pred = np.asarray(y_pred, dtype=int)
+    if y_true.shape != y_pred.shape:
+        raise ValueError("y_true e y_pred deben tener la misma forma.")
+    return float(np.mean(y_true == y_pred))
+
+
+def compute_sequence_metrics(
+    y_true: np.ndarray,
+    y_pred: np.ndarray,
+) -> dict[str, float]:
+    """Calcula las tres métricas de una secuencia."""
+    return {
+        "macro_f1": macro_f1_score(y_true, y_pred),
+        "recall_s3": recall_score(y_true, y_pred, label=2),
+        "accuracy": accuracy_score(y_true, y_pred),
+    }
+
+
+# ----------------------------------------------------------------------
+# Ley observable exacta (diagnóstico y baseline M1)
+# ----------------------------------------------------------------------
+def observable_markov_law(
+    transition_matrix: np.ndarray,
+    emission_matrix: np.ndarray,
+    stationary: np.ndarray | None = None,
+) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
+    """Deriva la ley exacta del proceso observable bajo estacionariedad.
+
+    Returns
+    -------
+    p_observations:
+        P(O = o) = Σ_i ξ_i B[i, o].
+    q_observations:
+        Q[o, o'] = P(O_{t+1}=o' | O_t=o).
+    state_given_observation:
+        P(S = i | O = o) bajo ξ.
+    """
+    A = np.asarray(transition_matrix, dtype=float)
+    B = np.asarray(emission_matrix, dtype=float)
+    xi = (
+        stationary_distribution(A)
+        if stationary is None
+        else np.asarray(stationary, dtype=float)
+    )
+
+    p_observations = xi @ B
+    if np.any(p_observations <= 0):
+        raise ValueError("La ley observable contiene probabilidades nulas.")
+    state_given_observation = (xi[:, None] * B) / p_observations[None, :]
+
+    # P(O_{t+1}=o' | O_t=o) = Σ_i P(S_t=i|O_t=o) Σ_j A_ij B_j,o'
+    q_observations = state_given_observation.T @ (A @ B)
+
+    return p_observations, q_observations, state_given_observation
+
+
+# ----------------------------------------------------------------------
+# Decodificadores
+# ----------------------------------------------------------------------
+def decode_m0(observations: np.ndarray, emission_matrix: np.ndarray) -> np.ndarray:
+    """M0: umbral determinista que solo mira la humedad actual.
+
+    Asigna a cada observación el estado con mayor probabilidad en B:
+    Alta → s1, Media → s2, Baja → s3 (con las matrices del caso).
+    """
+    obs = np.asarray(observations, dtype=int)
+    mapping = np.argmax(np.asarray(emission_matrix, dtype=float), axis=0)
+    return mapping[obs]
+
+
+def decode_m1(
+    observations: np.ndarray,
+    transition_matrix: np.ndarray,
+    emission_matrix: np.ndarray,
+    stationary: np.ndarray | None = None,
+) -> np.ndarray:
+    """M1: baseline con la ley observable y prior estacionario.
+
+    Para evitar la versión degenerada de una cadena sobre observaciones ya
+    conocidas, M1 es el HMM con A, B y la distribución estacionaria ξ de A
+    en lugar de π. Al ser el mapeo M0 biyectivo en este caso, esta es la
+    forma no degenerada de explotar la ley observable sin usar las etiquetas
+    latentes.
+    """
+    A = np.asarray(transition_matrix, dtype=float)
+    B = np.asarray(emission_matrix, dtype=float)
+    xi = (
+        stationary_distribution(A)
+        if stationary is None
+        else np.asarray(stationary, dtype=float)
+    )
+
+    model = HMM(transition_matrix=A, emission_matrix=B, initial_probabilities=xi)
+    posterior = model.forward_backward(observations)
+    return np.argmax(posterior, axis=1)
+
+
+def decode_m2(
+    observations: np.ndarray,
+    model: HMM,
+    decoder: str = "posterior",
+) -> np.ndarray:
+    """M2: HMM completo con A, B y π.
+
+    ``decoder="posterior"`` usa el argmax de la posterior marginal
+    (Forward–Backward). ``decoder="viterbi"`` usa la ruta MAP de Viterbi.
+    """
+    if decoder == "posterior":
+        posterior = model.forward_backward(observations)
+        return np.argmax(posterior, axis=1)
+    if decoder == "viterbi":
+        return model.viterbi(observations)
+    raise ValueError("decoder debe ser 'posterior' o 'viterbi'.")
+
+
+# ----------------------------------------------------------------------
+# Escenario con B alterada
+# ----------------------------------------------------------------------
+def make_altered_emission_matrix(
+    emission_matrix: np.ndarray,
+    mixing: float = PROVISIONAL_ALTERED_MIXING,
+) -> np.ndarray:
+    """Mezcla B con la distribución uniforme para reducir su separabilidad.
+
+    ``mixing=0`` devuelve B original; ``mixing=1`` devuelve emisiones
+    uniformes. El valor por defecto es provisional y debe registrarse antes
+    de reportar el escenario secundario.
+    """
+    if not 0.0 <= mixing <= 1.0:
+        raise ValueError("mixing debe estar en [0, 1].")
+
+    B = np.asarray(emission_matrix, dtype=float)
+    uniform = np.full_like(B, 1.0 / B.shape[1])
+    return (1.0 - mixing) * B + mixing * uniform
+
+
+# ----------------------------------------------------------------------
+# Agregación
+# ----------------------------------------------------------------------
+def _bootstrap_ci(
+    values: np.ndarray,
+    rng: np.random.Generator,
+    n_bootstrap: int,
+    alpha: float = 0.05,
+) -> tuple[float, float]:
+    """IC percentil por bootstrap de secuencias (unidad independiente)."""
+    if n_bootstrap <= 0 or len(values) == 0:
+        return (float("nan"), float("nan"))
+
+    indices = rng.integers(
+        0,
+        len(values),
+        size=(n_bootstrap, len(values)),
+    )
+    means = values[indices].mean(axis=1)
+    low, high = np.quantile(means, [alpha / 2.0, 1.0 - alpha / 2.0])
+    return (float(low), float(high))
+
+
+def _summarize(
+    values: np.ndarray,
+    rng: np.random.Generator,
+    n_bootstrap: int,
+) -> dict[str, float | None]:
+    low, high = _bootstrap_ci(values, rng, n_bootstrap)
+    return {
+        "mean": float(np.mean(values)),
+        "sd": float(np.std(values, ddof=1)) if len(values) > 1 else 0.0,
+        "ci_low": low if np.isfinite(low) else None,
+        "ci_high": high if np.isfinite(high) else None,
+    }
+
+
+# ----------------------------------------------------------------------
+# Experimento
+# ----------------------------------------------------------------------
+def run_experiment(
+    T: int = DEFAULT_T,
+    N: int = DEFAULT_N,
+    seed: int = DEFAULT_MASTER_SEED,
+    emission_matrix: np.ndarray | None = None,
+    initial_probabilities: np.ndarray | None = None,
+    transition_matrix: np.ndarray | None = None,
+    bootstrap_samples: int = DEFAULT_BOOTSTRAP_SAMPLES,
+    decoder: str = "posterior",
+) -> ExperimentResult:
+    """Ejecuta una corrida del protocolo D4 para una matriz B.
+
+    Una semilla distinta por secuencia, generada a partir de ``seed`` y
+    registrada en ``ExperimentResult.seeds``. Las tres variantes usan las
+    mismas secuencias (diseño pareado).
+    """
+    if T <= 0 or N <= 0:
+        raise ValueError("T y N deben ser mayores que cero.")
+
+    B = (
+        DEFAULT_EMISSION_MATRIX
+        if emission_matrix is None
+        else np.asarray(emission_matrix, dtype=float)
+    )
+    A = (
+        DEFAULT_TRANSITION_MATRIX
+        if transition_matrix is None
+        else np.asarray(transition_matrix, dtype=float)
+    )
+    pi = (
+        DEFAULT_INITIAL_PROBABILITIES
+        if initial_probabilities is None
+        else np.asarray(initial_probabilities, dtype=float)
+    )
+
+    model = HMM(
+        transition_matrix=A,
+        emission_matrix=B,
+        initial_probabilities=pi,
+    )
+    stationary = stationary_distribution(model.A)
+
+    seeds = np.random.default_rng(seed).integers(
+        0,
+        np.iinfo(np.int64).max,
+        size=N,
+        dtype=np.int64,
+    )
+
+    per_sequence: dict[str, dict[str, np.ndarray]] = {
+        model_name: {
+            metric: np.empty(N, dtype=float) for metric in METRIC_NAMES
+        }
+        for model_name in MODEL_NAMES
+    }
+
+    for index in range(N):
+        rng = np.random.default_rng(int(seeds[index]))
+        generated = model.simulate(T, rng=rng)
+        true_states = generated["states"]
+        observations = generated["observations"]
+
+        predictions = {
+            "M0": decode_m0(observations, model.B),
+            "M1": decode_m1(observations, model.A, model.B, stationary),
+            "M2": decode_m2(observations, model, decoder=decoder),
         }
 
-    low_mask = sim.observations == 2
-    low_rate = (
-        float(sim.fire_events[low_mask].mean()) if low_mask.any() else float("nan")
+        for model_name, predicted in predictions.items():
+            sequence_metrics = compute_sequence_metrics(true_states, predicted)
+            for metric_name, value in sequence_metrics.items():
+                per_sequence[model_name][metric_name][index] = value
+
+    bootstrap_rng = np.random.default_rng(seed + 1)
+    summary: dict[str, dict[str, dict[str, float | None]]] = {}
+    for model_name in MODEL_NAMES:
+        summary[model_name] = {}
+        for metric_name in METRIC_NAMES:
+            summary[model_name][metric_name] = _summarize(
+                per_sequence[model_name][metric_name],
+                bootstrap_rng,
+                bootstrap_samples,
+            )
+
+    return ExperimentResult(
+        T=T,
+        N=N,
+        master_seed=seed,
+        seeds=seeds,
+        emission_matrix=model.B.copy(),
+        per_sequence=per_sequence,
+        summary=summary,
     )
-    other_rate = (
-        float(sim.fire_events[~low_mask].mean())
-        if (~low_mask).any()
-        else float("nan")
+
+
+def run_d4_experiment(
+    T: int = DEFAULT_T,
+    N: int = DEFAULT_N,
+    seed: int = DEFAULT_MASTER_SEED,
+    bootstrap_samples: int = DEFAULT_BOOTSTRAP_SAMPLES,
+    decoder: str = "posterior",
+    altered_mixing: float = PROVISIONAL_ALTERED_MIXING,
+) -> dict[str, ExperimentResult]:
+    """Ejecuta el escenario base y el escenario con B alterada.
+
+    Ambos escenarios comparten T, N, semilla maestra y regla de decisión.
+    El valor de ``altered_mixing`` es provisional (ver
+    ``PROVISIONAL_ALTERED_MIXING``).
+    """
+    base = run_experiment(
+        T=T,
+        N=N,
+        seed=seed,
+        bootstrap_samples=bootstrap_samples,
+        decoder=decoder,
     )
-
-    if np.isnan(low_rate) or np.isnan(other_rate):
-        risk_ratio = float("nan")
-    elif other_rate == 0:
-        risk_ratio = float("inf") if low_rate > 0 else float("nan")
-    else:
-        risk_ratio = low_rate / other_rate
-
-    return {
-        "humidity_event_correlation": correlation,
-        "danger_event_correlation": danger_correlation,
-        "humidity_bands": bands,
-        "low_humidity_event_rate": low_rate,
-        "other_humidity_event_rate": other_rate,
-        "low_humidity_risk_ratio": risk_ratio,
-        "total_fire_events": int(sim.fire_events.sum()),
-    }
+    altered_B = make_altered_emission_matrix(
+        DEFAULT_EMISSION_MATRIX,
+        mixing=altered_mixing,
+    )
+    altered = run_experiment(
+        T=T,
+        N=N,
+        seed=seed,
+        emission_matrix=altered_B,
+        bootstrap_samples=bootstrap_samples,
+        decoder=decoder,
+    )
+    return {"base": base, "B_alterada": altered}
 
 
-def group_consecutive_days(days: Iterable[int]) -> list[tuple[int, int]]:
-    """Agrupa días consecutivos en intervalos inclusivos."""
-    ordered = sorted(set(int(day) for day in days))
-    if not ordered:
-        return []
-
-    groups: list[tuple[int, int]] = []
-    start = previous = ordered[0]
-
-    for day in ordered[1:]:
-        if day == previous + 1:
-            previous = day
-            continue
-        groups.append((start, previous))
-        start = previous = day
-
-    groups.append((start, previous))
-    return groups
-
-
-def compute_metrics(sim: SeasonSimulation) -> dict[str, object]:
-    """Calcula todas las métricas operativas y de validación del modelo."""
-    transition_observed = empirical_transition_to_extreme(sim.true_states)
-    transition_inferred = empirical_transition_to_extreme(sim.inferred_states)
-
-    if sim.alerts:
-        alert_days = [int(alert["day"]) for alert in sim.alerts]
-        alert_windows = group_consecutive_days(alert_days)
-    else:
-        alert_windows = []
-
-    return {
-        "risk_counts_true": risk_counts(sim.true_states, sim.model),
-        "risk_counts_inferred": risk_counts(sim.inferred_states, sim.model),
-        "extreme_windows": extreme_windows(sim.inferred_states, min_length=2),
-        "extreme_days_inferred": int(np.sum(sim.inferred_states == 2)),
-        "transition_to_extreme_observed": transition_observed,
-        "transition_to_extreme_inferred": transition_inferred,
-        "model_transition_to_extreme": sim.model.transition_probability_to_extreme(),
-        "comparison": compare_states(
-            sim.true_states, sim.inferred_states, sim.model
-        ),
-        "humidity_fire": humidity_fire_analysis(sim),
-        "alert_count": len(sim.alerts),
-        "burn_ban_days": int(
-            sum(alert["level"] == "PROHIBICIÓN TOTAL" for alert in sim.alerts)
-        ),
-        "restriction_days": int(
-            sum(alert["level"] == "RESTRICCIÓN PREVENTIVA" for alert in sim.alerts)
-        ),
-        "alert_windows": alert_windows,
-        "mean_danger_index": float(sim.danger_index.mean()),
-        "max_danger_index": float(sim.danger_index.max()),
-        "mean_humidity": float(sim.humidity.mean()),
-    }
+def format_summary(result: ExperimentResult) -> str:
+    """Tabla legible con media, desviación e IC de cada modelo y métrica."""
+    lines: list[str] = []
+    lines.append(
+        f"Protocolo D4 | T={result.T} | N={result.N} | "
+        f"semilla maestra={result.master_seed}"
+    )
+    lines.append("Cifras simuladas; no son evidencia de validez ecológica.")
+    lines.append("")
+    header = (
+        f"{'Modelo':<7} {'Macro-F1':>10} {'recall s3':>10} "
+        f"{'exactitud':>10}"
+    )
+    lines.append(header)
+    lines.append("-" * len(header))
+    for model_name in MODEL_NAMES:
+        values = []
+        for metric_name in METRIC_NAMES:
+            stats = result.summary[model_name][metric_name]
+            mean = stats["mean"]
+            values.append(f"{mean:.4f}" if mean is not None else "n/a")
+        lines.append(
+            f"{model_name:<7} {values[0]:>10} {values[1]:>10} {values[2]:>10}"
+        )
+    return "\n".join(lines)

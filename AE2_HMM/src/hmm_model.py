@@ -1,14 +1,18 @@
-"""Modelo Oculto de Markov (HMM) para evaluar riesgo de incendio forestal.
+"""Modelo Oculto de Markov (HMM) para el protocolo D4.
 
-Estados ocultos:
-    - Riesgo Bajo
-    - Riesgo Moderado
-    - Riesgo Extremo
+Estados latentes
+----------------
+``s1``, ``s2`` y ``s3`` son etiquetas puras, tal como exige D3.1. Los alias
+mnemónicos "Riesgo Bajo", "Riesgo Moderado" y "Riesgo Extremo" se conservan
+solo para presentación; no implican una definición física.
 
-Observaciones:
-    - Humedad Alta
-    - Humedad Media
-    - Humedad Baja
+Observaciones
+-------------
+``Alta`` > ``Media`` > ``Baja`` es una escala ordinal de humedad (D3.2). No se
+asignan porcentajes ni umbrales numéricos.
+
+Este módulo implementa únicamente inferencia con A, B y π fijos (D5a):
+simulación, Forward, Forward–Backward y Viterbi. No implementa Baum-Welch.
 """
 
 from __future__ import annotations
@@ -17,26 +21,25 @@ from typing import Sequence
 
 import numpy as np
 
-# Estados ocultos del modelo.
-STATES: tuple[str, ...] = (
+# Etiquetas canónicas de los estados latentes (D3.1).
+STATES: tuple[str, ...] = ("s1", "s2", "s3")
+
+# Alias mnemónicos solo para tablas y figuras.
+STATE_ALIASES: tuple[str, ...] = (
     "Riesgo Bajo",
     "Riesgo Moderado",
     "Riesgo Extremo",
 )
 
-# Observaciones emitidas por cada estado oculto.
-OBSERVATIONS: tuple[str, ...] = (
-    "Humedad Alta",
-    "Humedad Media",
-    "Humedad Baja",
-)
+# Observaciones ordinales de humedad (D3.2).
+OBSERVATIONS: tuple[str, ...] = ("Alta", "Media", "Baja")
 
 # Matriz de transición A: A[i, j] = P(S_t = j | S_{t-1} = i).
 DEFAULT_TRANSITION_MATRIX: np.ndarray = np.array(
     [
-        [0.70, 0.25, 0.05],  # Riesgo Bajo
-        [0.30, 0.50, 0.20],  # Riesgo Moderado
-        [0.10, 0.30, 0.60],  # Riesgo Extremo
+        [0.70, 0.25, 0.05],
+        [0.30, 0.50, 0.20],
+        [0.10, 0.30, 0.60],
     ],
     dtype=float,
 )
@@ -44,40 +47,38 @@ DEFAULT_TRANSITION_MATRIX: np.ndarray = np.array(
 # Matriz de emisión B: B[i, k] = P(O_t = k | S_t = i).
 DEFAULT_EMISSION_MATRIX: np.ndarray = np.array(
     [
-        [0.70, 0.25, 0.05],  # Riesgo Bajo   -> humedad alta
-        [0.20, 0.60, 0.20],  # Riesgo Moderado
-        [0.05, 0.25, 0.70],  # Riesgo Extremo -> humedad baja
+        [0.70, 0.25, 0.05],
+        [0.20, 0.60, 0.20],
+        [0.05, 0.25, 0.70],
     ],
     dtype=float,
 )
 
-# Distribución inicial pi: pi[i] = P(S_1 = i).
+# Distribución inicial π: π[i] = P(S_1 = i). Es un prior en t = 1,
+# no la distribución estacionaria de A.
 DEFAULT_INITIAL_PROBABILITIES: np.ndarray = np.array(
     [0.50, 0.30, 0.20],
     dtype=float,
 )
 
-# Puntuación de peligro asociada a cada estado para construir el índice 0-100.
-RISK_SCORES: np.ndarray = np.array([10.0, 50.0, 100.0], dtype=float)
-
 
 class HMM:
-    """Modelo Oculto de Markov de tres estados y tres observaciones.
+    """HMM discreto de tres estados y tres observaciones.
 
     Parameters
     ----------
     transition_matrix:
-        Matriz A de tamaño (3, 3). Cada fila debe sumar 1.
+        Matriz A de tamaño (K, K). Cada fila debe sumar 1.
     emission_matrix:
-        Matriz B de tamaño (3, 3). Cada fila debe sumar 1.
+        Matriz B de tamaño (K, O). Cada fila debe sumar 1.
     initial_probabilities:
-        Vector pi de tamaño (3,). Debe sumar 1.
+        Vector π de tamaño (K,). Debe sumar 1.
     states:
-        Nombres de los estados ocultos. Por defecto usa ``STATES``.
+        Nombres de los estados latentes. Por defecto usa ``STATES``.
     observations:
         Nombres de las observaciones. Por defecto usa ``OBSERVATIONS``.
     seed:
-        Semilla opcional para reproducibilidad de las simulaciones.
+        Semilla opcional para ``simulate`` cuando no se pasa un ``rng``.
     """
 
     def __init__(
@@ -124,43 +125,38 @@ class HMM:
     # ------------------------------------------------------------------
     @property
     def n_states(self) -> int:
-        """Número de estados ocultos."""
         return len(self.states)
 
     @property
     def n_observations(self) -> int:
-        """Número de observaciones posibles."""
         return len(self.observations)
 
     @property
     def A(self) -> np.ndarray:
-        """Alias de la matriz de transición."""
         return self.transition_matrix
 
     @property
     def B(self) -> np.ndarray:
-        """Alias de la matriz de emisión."""
         return self.emission_matrix
 
     @property
     def pi(self) -> np.ndarray:
-        """Alias de la distribución inicial."""
         return self.initial_probabilities
 
     @property
-    def extreme_state_index(self) -> int:
-        """Índice del estado de riesgo extremo."""
-        return self.n_states - 1
+    def state_aliases(self) -> tuple[str, ...]:
+        """Alias mnemónicos, en el mismo orden que ``states``."""
+        if len(self.states) == len(STATE_ALIASES):
+            return STATE_ALIASES
+        return self.states
 
     def state_index(self, state: str) -> int:
-        """Devuelve el índice de un estado oculto por su nombre."""
         try:
             return self.states.index(state)
         except ValueError as exc:
             raise ValueError(f"Estado desconocido: {state!r}") from exc
 
     def observation_index(self, observation: str) -> int:
-        """Devuelve el índice de una observación por su nombre."""
         try:
             return self.observations.index(observation)
         except ValueError as exc:
@@ -174,19 +170,9 @@ class HMM:
         n_steps: int,
         rng: np.random.Generator | None = None,
     ) -> dict[str, np.ndarray]:
-        """Genera una secuencia de estados ocultos y observaciones.
+        """Genera una secuencia de estados latentes y observaciones.
 
-        Parameters
-        ----------
-        n_steps:
-            Número de días a simular.
-        rng:
-            Generador aleatorio opcional. Si no se indica, usa ``self.rng``.
-
-        Returns
-        -------
-        dict
-            Diccionario con ``states`` y ``observations`` como índices enteros.
+        Un paso es una ocasión de observación, sin unidad física (D3.3).
         """
         if n_steps <= 0:
             raise ValueError("n_steps debe ser mayor que cero.")
@@ -214,24 +200,122 @@ class HMM:
         }
 
     # ------------------------------------------------------------------
-    # Decodificación de Viterbi
+    # Forward
+    # ------------------------------------------------------------------
+    def forward(
+        self,
+        observations: Sequence[int | str] | np.ndarray,
+    ) -> dict[str, np.ndarray | float]:
+        """Calcula α escalada y la log-verosimilitud de la secuencia.
+
+        Returns
+        -------
+        dict
+            ``alpha``: matriz (T, K) con α normalizada por paso.
+            ``log_likelihood``: log P(O_1:T).
+            ``scales``: factores de escala de cada paso.
+        """
+        obs = self._as_observation_indices(observations)
+        n_steps = len(obs)
+
+        if n_steps == 0:
+            return {
+                "alpha": np.empty((0, self.n_states), dtype=float),
+                "log_likelihood": 0.0,
+                "scales": np.empty(0, dtype=float),
+            }
+
+        alpha = np.zeros((n_steps, self.n_states), dtype=float)
+        scales = np.ones(n_steps, dtype=float)
+        log_likelihood = 0.0
+
+        alpha[0] = self.pi * self.B[:, obs[0]]
+        scales[0] = alpha[0].sum()
+        if scales[0] <= 0:
+            return {
+                "alpha": alpha,
+                "log_likelihood": float("-inf"),
+                "scales": scales,
+            }
+        alpha[0] /= scales[0]
+        log_likelihood += float(np.log(scales[0]))
+
+        for t in range(1, n_steps):
+            alpha[t] = (alpha[t - 1] @ self.A) * self.B[:, obs[t]]
+            scales[t] = alpha[t].sum()
+            if scales[t] <= 0:
+                return {
+                    "alpha": alpha,
+                    "log_likelihood": float("-inf"),
+                    "scales": scales,
+                }
+            alpha[t] /= scales[t]
+            log_likelihood += float(np.log(scales[t]))
+
+        return {
+            "alpha": alpha,
+            "log_likelihood": log_likelihood,
+            "scales": scales,
+        }
+
+    # ------------------------------------------------------------------
+    # Forward–Backward (posteriores marginales)
+    # ------------------------------------------------------------------
+    def forward_backward(
+        self,
+        observations: Sequence[int | str] | np.ndarray,
+    ) -> np.ndarray:
+        """Calcula P(S_t | O_1:T) con escalamiento numérico.
+
+        Returns
+        -------
+        np.ndarray
+            Matriz (T, K) con las probabilidades posteriores.
+        """
+        obs = self._as_observation_indices(observations)
+        n_steps = len(obs)
+
+        if n_steps == 0:
+            return np.empty((0, self.n_states), dtype=float)
+
+        alpha = np.zeros((n_steps, self.n_states), dtype=float)
+        beta = np.zeros((n_steps, self.n_states), dtype=float)
+        scales = np.ones(n_steps, dtype=float)
+
+        alpha[0] = self.pi * self.B[:, obs[0]]
+        scales[0] = alpha[0].sum()
+        if scales[0] <= 0:
+            raise ValueError("La secuencia tiene probabilidad cero bajo el modelo.")
+        alpha[0] /= scales[0]
+
+        for t in range(1, n_steps):
+            alpha[t] = (alpha[t - 1] @ self.A) * self.B[:, obs[t]]
+            scales[t] = alpha[t].sum()
+            if scales[t] <= 0:
+                raise ValueError(
+                    "La secuencia tiene probabilidad cero bajo el modelo."
+                )
+            alpha[t] /= scales[t]
+
+        beta[-1] = 1.0
+        for t in range(n_steps - 2, -1, -1):
+            beta[t] = (
+                self.A @ (self.B[:, obs[t + 1]] * beta[t + 1])
+            ) / scales[t + 1]
+
+        posterior = alpha * beta
+        row_sums = posterior.sum(axis=1, keepdims=True)
+        row_sums[row_sums == 0] = 1.0
+        return posterior / row_sums
+
+    # ------------------------------------------------------------------
+    # Viterbi
     # ------------------------------------------------------------------
     def viterbi(
         self,
         observations: Sequence[int | str] | np.ndarray,
     ) -> np.ndarray:
-        """Infiere la secuencia de estados más probable (algoritmo de Viterbi).
-
-        Parameters
-        ----------
-        observations:
-            Secuencia de índices o nombres de observaciones.
-
-        Returns
-        -------
-        np.ndarray
-            Índices de los estados ocultos más probables para cada día.
-        """
+        """Infiere la secuencia de estados más probable (ruta MAP)."""
         obs = self._as_observation_indices(observations)
         n_steps = len(obs)
 
@@ -251,7 +335,9 @@ class HMM:
             for state in range(self.n_states):
                 candidates = delta[t - 1] + log_a[:, state]
                 psi[t, state] = int(np.argmax(candidates))
-                delta[t, state] = candidates[psi[t, state]] + log_b[state, obs[t]]
+                delta[t, state] = (
+                    candidates[psi[t, state]] + log_b[state, obs[t]]
+                )
 
         path = np.empty(n_steps, dtype=int)
         path[-1] = int(np.argmax(delta[-1]))
@@ -262,116 +348,8 @@ class HMM:
         return path
 
     # ------------------------------------------------------------------
-    # Probabilidades posteriores (forward-backward)
-    # ------------------------------------------------------------------
-    def forward_backward(
-        self,
-        observations: Sequence[int | str] | np.ndarray,
-    ) -> np.ndarray:
-        """Calcula P(S_t | O_1:T) para cada día usando escalamiento numérico.
-
-        Returns
-        -------
-        np.ndarray
-            Matriz de forma (T, n_states) con las probabilidades posteriores.
-        """
-        obs = self._as_observation_indices(observations)
-        n_steps = len(obs)
-
-        if n_steps == 0:
-            return np.empty((0, self.n_states), dtype=float)
-
-        alpha = np.zeros((n_steps, self.n_states), dtype=float)
-        beta = np.zeros((n_steps, self.n_states), dtype=float)
-        scales = np.ones(n_steps, dtype=float)
-
-        alpha[0] = self.pi * self.B[:, obs[0]]
-        scales[0] = alpha[0].sum()
-        alpha[0] /= scales[0]
-
-        for t in range(1, n_steps):
-            alpha[t] = (alpha[t - 1] @ self.A) * self.B[:, obs[t]]
-            scales[t] = alpha[t].sum()
-            if scales[t] == 0:
-                scales[t] = 1.0
-            alpha[t] /= scales[t]
-
-        beta[-1] = 1.0
-        for t in range(n_steps - 2, -1, -1):
-            beta[t] = (
-                self.A @ (self.B[:, obs[t + 1]] * beta[t + 1])
-            ) / scales[t + 1]
-
-        posterior = alpha * beta
-        row_sums = posterior.sum(axis=1, keepdims=True)
-        row_sums[row_sums == 0] = 1.0
-        return posterior / row_sums
-
-    # ------------------------------------------------------------------
-    # Índice de peligro y transiciones
-    # ------------------------------------------------------------------
-    def danger_index(
-        self,
-        posterior: np.ndarray,
-        risk_scores: Sequence[float] | np.ndarray = RISK_SCORES,
-    ) -> np.ndarray:
-        """Convierte las probabilidades posteriores en un índice de 0 a 100.
-
-        El índice es el valor esperado del peligro de los estados:
-        Riesgo Bajo = 10, Moderado = 50, Extremo = 100.
-        """
-        scores = np.asarray(risk_scores, dtype=float)
-        if scores.shape != (self.n_states,):
-            raise ValueError(
-                f"risk_scores debe tener forma ({self.n_states},)."
-            )
-
-        probabilities = np.asarray(posterior, dtype=float)
-        if probabilities.ndim != 2 or probabilities.shape[1] != self.n_states:
-            raise ValueError(
-                "posterior debe tener forma (T, n_states)."
-            )
-
-        return np.clip(probabilities @ scores, 0.0, 100.0)
-
-    def transition_probability_to_extreme(
-        self,
-        current_state: int | str | None = None,
-    ) -> float | np.ndarray:
-        """Probabilidad de pasar al estado de riesgo extremo.
-
-        Si se indica un estado, devuelve P(S_t = Extremo | S_{t-1} = estado).
-        Si no, devuelve el vector de probabilidades para cada estado de origen.
-        """
-        probabilities = self.A[:, self.extreme_state_index]
-
-        if current_state is None:
-            return probabilities.copy()
-
-        index = self._as_state_index(current_state)
-        return float(probabilities[index])
-
-    def expected_transition_to_extreme(
-        self,
-        current_distribution: Sequence[float] | np.ndarray,
-    ) -> float:
-        """Probabilidad de riesgo extremo mañana dada una distribución actual."""
-        distribution = self._validate_distribution(
-            "current_distribution", current_distribution, self.n_states
-        )
-        return float(distribution @ self.A[:, self.extreme_state_index])
-
-    # ------------------------------------------------------------------
     # Utilidades internas
     # ------------------------------------------------------------------
-    def _as_state_index(self, state: int | str) -> int:
-        if isinstance(state, str):
-            return self.state_index(state)
-        index = int(state)
-        if not 0 <= index < self.n_states:
-            raise ValueError(f"Índice de estado fuera de rango: {index}")
-        return index
-
     def _as_observation_indices(
         self,
         observations: Sequence[int | str] | np.ndarray,
@@ -405,7 +383,6 @@ class HMM:
         expected_rows: int,
         expected_columns: int,
     ) -> np.ndarray:
-        """Valida forma, no negatividad y suma estocástica por fila."""
         array = np.asarray(matrix, dtype=float)
 
         if array.shape != (expected_rows, expected_columns):
@@ -431,7 +408,6 @@ class HMM:
         distribution: Sequence[float] | np.ndarray,
         expected_size: int,
     ) -> np.ndarray:
-        """Valida forma, no negatividad y suma unitaria de una distribución."""
         array = np.asarray(distribution, dtype=float)
 
         if array.shape != (expected_size,):
@@ -455,3 +431,28 @@ class HMM:
             f"HMM(n_states={self.n_states}, "
             f"n_observations={self.n_observations})"
         )
+
+
+def stationary_distribution(
+    transition_matrix: Sequence[Sequence[float]] | np.ndarray,
+) -> np.ndarray:
+    """Devuelve la distribución estacionaria de una matriz estocástica.
+
+    Se resuelve el sistema (Aᵀ − I)ξ = 0 con la restricción Σξ = 1. La
+    distribución resultante se usa solo en M1, el baseline observable.
+    """
+    A = np.asarray(transition_matrix, dtype=float)
+    if A.ndim != 2 or A.shape[0] != A.shape[1]:
+        raise ValueError("transition_matrix debe ser cuadrada.")
+
+    n = A.shape[0]
+    system = np.vstack([A.T - np.eye(n), np.ones((1, n))])
+    target = np.zeros(n + 1)
+    target[-1] = 1.0
+
+    xi, *_ = np.linalg.lstsq(system, target, rcond=None)
+    xi = np.clip(xi, 0.0, None)
+    total = xi.sum()
+    if total <= 0:
+        raise ValueError("No se pudo calcular la distribución estacionaria.")
+    return xi / total

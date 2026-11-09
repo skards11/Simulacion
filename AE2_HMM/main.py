@@ -1,78 +1,111 @@
-"""Punto de entrada del sistema HMM de riesgo de incendios forestales.
+"""Punto de entrada del protocolo D4.
 
-Uso local:
-    python main.py
+Uso:
+    python main.py --quick     # humo: T=50, N=20, bootstrap=200
+    python main.py             # protocolo completo: T=500, N=2000
 
-Uso en Google Colab (desde la carpeta del proyecto):
-    !python main.py
-
-El programa imprime el reporte operativo y muestra tres figuras:
-    1. Humedad diaria con bandas de riesgo y posibles focos.
-    2. Índice de peligro y comparación real vs inferido (Viterbi).
-    3. Panel resumen: conteos, matriz de confusión y focos por humedad.
+El protocolo completo puede tardar varios minutos. Las cifras son simuladas.
 """
 
 from __future__ import annotations
 
+import argparse
+import json
 import sys
 from pathlib import Path
 
-import matplotlib.pyplot as plt
-
-from src.hmm_model import HMM
-from src.simulation import compute_metrics, run_simulation
-from src.utils import (
-    format_report,
-    plot_danger_index_and_comparison,
-    plot_humidity_and_risk,
-    plot_summary_dashboard,
-    results_dataframe,
+from src.simulation import (
+    DEFAULT_BOOTSTRAP_SAMPLES,
+    DEFAULT_MASTER_SEED,
+    DEFAULT_N,
+    DEFAULT_T,
+    PROVISIONAL_ALTERED_MIXING,
+    format_summary,
+    run_d4_experiment,
 )
 
-N_DAYS = 120
-SEED = 42
-ALERT_THRESHOLD = 75.0
-OUTPUT_DIR = Path("outputs")
+
+def _parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Protocolo D4: comparación M0/M1/M2 sobre secuencias HMM."
+    )
+    parser.add_argument("--T", type=int, default=DEFAULT_T, help="Pasos por secuencia.")
+    parser.add_argument("--N", type=int, default=DEFAULT_N, help="Número de secuencias.")
+    parser.add_argument(
+        "--seed",
+        type=int,
+        default=DEFAULT_MASTER_SEED,
+        help="Semilla maestra; cada secuencia recibe una semilla derivada.",
+    )
+    parser.add_argument(
+        "--bootstrap",
+        type=int,
+        default=DEFAULT_BOOTSTRAP_SAMPLES,
+        help="Réplicas de bootstrap para el IC de secuencias.",
+    )
+    parser.add_argument(
+        "--decoder",
+        choices=("posterior", "viterbi"),
+        default="posterior",
+        help="Regla de decodificación para M2.",
+    )
+    parser.add_argument(
+        "--altered-mixing",
+        type=float,
+        default=PROVISIONAL_ALTERED_MIXING,
+        help="Mezcla provisional con uniforme para el escenario B alterada.",
+    )
+    parser.add_argument(
+        "--quick",
+        action="store_true",
+        help="Atajo de humo: T=50, N=20, bootstrap=200.",
+    )
+    parser.add_argument(
+        "--save",
+        type=Path,
+        default=None,
+        help="Ruta opcional para guardar el resumen en JSON.",
+    )
+    return parser.parse_args()
 
 
 def main() -> None:
-    # Evita errores de codificación al imprimir acentos en consolas Windows.
     if hasattr(sys.stdout, "reconfigure"):
         try:
             sys.stdout.reconfigure(encoding="utf-8")
         except Exception:
             pass
 
-    model = HMM(seed=SEED)
-    simulation = run_simulation(
-        model=model,
-        n_days=N_DAYS,
-        seed=SEED,
-        alert_threshold=ALERT_THRESHOLD,
-    )
-    metrics = compute_metrics(simulation)
+    args = _parse_args()
+    T, N, bootstrap = args.T, args.N, args.bootstrap
+    if args.quick:
+        T, N, bootstrap = 50, 20, 200
 
-    print(format_report(simulation, metrics))
-
-    # Tabla diaria (útil en Colab para inspeccionar o descargar resultados).
-    dataframe = results_dataframe(simulation)
-    print("\nPrimeros 8 días de la tabla de resultados:")
-    print(dataframe.head(8).to_string(index=False))
-
-    OUTPUT_DIR.mkdir(exist_ok=True)
-    plot_humidity_and_risk(
-        simulation, save_path=OUTPUT_DIR / "humedad_y_riesgo.png"
+    results = run_d4_experiment(
+        T=T,
+        N=N,
+        seed=args.seed,
+        bootstrap_samples=bootstrap,
+        decoder=args.decoder,
+        altered_mixing=args.altered_mixing,
     )
-    plot_danger_index_and_comparison(
-        simulation, save_path=OUTPUT_DIR / "indice_y_comparacion.png"
-    )
-    plot_summary_dashboard(
-        simulation, save_path=OUTPUT_DIR / "resumen_metricas.png"
-    )
-    dataframe.to_csv(OUTPUT_DIR / "resultados_diarios.csv", index=False)
 
-    print(f"\nFiguras y CSV guardados en: {OUTPUT_DIR.resolve()}")
-    plt.show()
+    for scenario_name, result in results.items():
+        print("=" * 72)
+        print(f"Escenario: {scenario_name}")
+        print(format_summary(result))
+
+    if args.save is not None:
+        payload = {
+            scenario_name: result.to_dict()
+            for scenario_name, result in results.items()
+        }
+        args.save.parent.mkdir(parents=True, exist_ok=True)
+        args.save.write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+        print(f"\nResumen guardado en: {args.save.resolve()}")
 
 
 if __name__ == "__main__":
