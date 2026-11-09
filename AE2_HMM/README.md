@@ -26,11 +26,18 @@ proyecto en `legacy/`.
 │   └── __init__.py
 ├── tests/
 │   └── test_protocol.py    # Pruebas del protocolo
+├── scripts/
+│   └── report_d4.py        # Tablas y figura desde el JSON
 ├── outputs/                # Resultados simulados del protocolo D4
 ├── legacy/                 # Simulación exploratoria anterior (120 días)
-├── materiales/             # Caso didáctico
+├── materiales/             # Caso didáctico y plantilla
+├── manuscrito_anteproyecto.md
 └── decisiones.md           # Bitácora de decisiones D1–D6
 ```
+
+## Manuscrito
+
+Borrador de anteproyecto: `manuscrito_anteproyecto.md`. Incluye resultados simulados, limitaciones, declaración de uso de IA y referencias marcadas como pendientes de verificación.
 
 ## Instalación
 
