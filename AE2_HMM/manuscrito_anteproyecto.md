@@ -1,12 +1,13 @@
 # Comparación de decodificación con modelos ocultos de Markov en un caso didáctico de riesgo de incendio forestal: anteproyecto reproducible
 
 **Etiqueta del entregable:** anteproyecto  
+**Autores:** Oscar Alonso De la Pava Suarez, Anderson Jesus Ospina Cardona, Kevin Andrés Valencia Daza  
 **Grupo de trabajo:** 11  
-**Integrantes:** pendiente de completar con nombres reales  
 **Docente asesor:** Julián Andrés Loaiza López (según plantilla del curso)  
 **Institución:** IUDigital, Ingeniería de Software y Datos, curso de Simulación  
 **Fecha:** 2026-11-09  
-**Versión:** manuscrito de anteproyecto basado en la ejecución D4 del 2026-11-09
+**Versión:** manuscrito de anteproyecto con resultados D4 y referencias verificadas  
+**Declaración de uso de IA:** aprobada por el grupo de trabajo 11 el 2026-11-09
 
 ---
 
@@ -59,7 +60,7 @@ Los HMM son un marco clásico para procesos con estados latentes y observaciones
 
 El vacío que motiva este ejercicio no es un vacío de la literatura, sino una necesidad docente: mostrar cómo se distingue la inferencia con parámetros conocidos del entrenamiento, cómo se evita la fuga de información y cómo se reporta la incertidumbre. La comparación con M0 y M1 es deliberadamente conservadora: si el HMM no supera baselines simples en un escenario didáctico, no hay razón para atribuirle una ventaja aplicada.
 
-**Pendiente:** protocolo de búsqueda, bases consultadas, criterios de inclusión, deduplicación y verificación de referencias. Las citas clásicas de este borrador se marcan como **verificación pendiente** en la sección de referencias.
+**Pendiente:** protocolo de búsqueda, bases consultadas, criterios de inclusión, deduplicación y síntesis crítica. Las referencias incluidas ya fueron verificadas por el equipo; la revisión sistemática de literatura sigue pendiente.
 
 ---
 
@@ -256,26 +257,26 @@ El alcance es limitado. Los estados son etiquetas puras, la humedad es ordinal, 
 - M1 y M2 comparten A y B; la comparación no aísla una línea base completamente distinta.
 - La B alterada usa una mezcla provisional de 0.5 con la uniforme.
 - No se realizaron pruebas de hipótesis formales; los IC son descriptivos.
-- La revisión de literatura y la verificación de referencias están pendientes.
-- Este documento es un anteproyecto en Markdown; la conversión a LaTeX y el ajuste a la plantilla editorial quedan pendientes.
+- La revisión sistemática de literatura sigue pendiente; las referencias incluidas fueron verificadas por el equipo.
+- El manuscrito se entrega en Markdown y en LaTeX (`manuscrito_anteproyecto.tex`); la compilación local queda pendiente porque el entorno de trabajo no tiene TeX instalado.
 
 ## Declaración de uso de IA
 
-Se utilizó un asistente de programación basado en IA (OpenCode) para apoyar la organización del protocolo, la implementación del código, la generación de tablas y la redacción de este borrador. Las decisiones científicas registradas en `decisiones.md` fueron expresadas por el grupo de trabajo 11. Las cifras reportadas provienen de código ejecutado y son simuladas. Esta declaración es un borrador y debe ser revisada y aprobada por el grupo antes de cualquier entrega final.
+Se utilizó un asistente de programación basado en IA (OpenCode) para apoyar la organización del protocolo, la implementación del código, la generación de tablas y la redacción del manuscrito. Las decisiones científicas registradas en `decisiones.md` fueron expresadas por el grupo de trabajo 11. Las cifras reportadas provienen de código ejecutado y son simuladas. **Declaración aprobada por el grupo de trabajo 11 el 2026-11-09.**
 
 ## Referencias
 
-Las siguientes referencias clásicas se toman de la plantilla del curso y quedan **pendientes de verificación bibliográfica**:
+Referencias verificadas por el equipo el 2026-11-09:
 
-1. L. R. Rabiner, "A tutorial on hidden Markov models and selected applications in speech recognition," *Proceedings of the IEEE*, vol. 77, no. 2, pp. 257–286, 1989. **Verificación pendiente.**
-2. L. E. Baum, T. Petrie, G. Soules y N. Weiss, "A maximization technique occurring in the statistical analysis of probabilistic functions of Markov chains," *The Annals of Mathematical Statistics*, vol. 41, no. 1, pp. 164–171, 1970. **Verificación pendiente.**
+1. L. R. Rabiner, "A tutorial on hidden Markov models and selected applications in speech recognition," *Proceedings of the IEEE*, vol. 77, no. 2, pp. 257–286, 1989.
+2. L. E. Baum, T. Petrie, G. Soules y N. Weiss, "A maximization technique occurring in the statistical analysis of probabilistic functions of Markov chains," *The Annals of Mathematical Statistics*, vol. 41, no. 1, pp. 164–171, 1970.
 
 Materiales internos del curso:
 
 3. Caso didáctico "Evaluación de riesgo de incendio forestal", `materiales/caso_riesgo_de_incendio_forestal.md`. Documento interno, no publicado.
 4. Plantilla de artículo Q1 proporcionada en el curso, `materiales/plantilla_articulo.pdf`. Documento interno, no publicado.
 
-No se incluyen otras referencias porque no han sido verificadas.
+No se incluyen otras referencias porque no fueron verificadas.
 
 ---
 

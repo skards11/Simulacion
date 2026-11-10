@@ -32,12 +32,13 @@ proyecto en `legacy/`.
 ├── legacy/                 # Simulación exploratoria anterior (120 días)
 ├── materiales/             # Caso didáctico y plantilla
 ├── manuscrito_anteproyecto.md
+├── manuscrito_anteproyecto.tex
 └── decisiones.md           # Bitácora de decisiones D1–D6
 ```
 
 ## Manuscrito
 
-Borrador de anteproyecto: `manuscrito_anteproyecto.md`. Incluye resultados simulados, limitaciones, declaración de uso de IA y referencias marcadas como pendientes de verificación.
+Anteproyecto en Markdown (`manuscrito_anteproyecto.md`) y LaTeX (`manuscrito_anteproyecto.tex`). Incluye autores, resultados simulados, limitaciones, declaración de uso de IA aprobada y las referencias verificadas por el equipo. El `.tex` no se ha compilado en este entorno porque no hay TeX instalado.
 
 ## Instalación
 

@@ -114,7 +114,7 @@ Observaciones descriptivas, sin convertirlas en superioridad general:
 
 ## Próximo paso
 
-D1–D6 están cerradas, el protocolo D4 se ejecutó y el manuscrito de **anteproyecto** está redactado en `manuscrito_anteproyecto.md`. Siguiente: revisión integral del manuscrito —completar nombres reales, verificar referencias, aprobar la declaración de uso de IA y decidir si se convierte a LaTeX—. No se deben registrar aprobaciones que el equipo no exprese.
+D1–D6 están cerradas, el protocolo D4 se ejecutó y el manuscrito de **anteproyecto** está redactado en Markdown (`manuscrito_anteproyecto.md`) y LaTeX (`manuscrito_anteproyecto.tex`). El equipo completó los autores, verificó las dos referencias clásicas y aprobó la declaración de uso de IA el 2026-11-09. Siguiente: compilar el PDF en un entorno con TeX instalado y revisar el ajuste final a la plantilla editorial. No se deben registrar aprobaciones que el equipo no exprese.
 
 ## Bitácora
 
@@ -131,6 +131,10 @@ D1–D6 están cerradas, el protocolo D4 se ejecutó y el manuscrito de **antepr
 | 2026-11-09 | Aislamiento legacy y refactor D4 | Mover versión de 120 días a `legacy/`; raíz con T=500/N=2000 y macro-F1 | Pruebas del protocolo; código legado congelado | **Reubicación y refactor ejecutados** | Cambios en el repositorio; `legacy/README.md` |
 | 2026-11-09 | Ejecución D4 | Correr T=500/N=2000, semilla 20261109, escenario base y B alterada | Pruebas de la raíz y del legado; resultados guardados y regenerables | **Ejecución completada; sin nueva decisión científica** | `outputs/protocolo_d4_resumen.json`; `.csv`; `.md`; `.png`; `.log` |
 | 2026-11-09 | Manuscrito de anteproyecto | Redactar el manuscrito con resultados D4, limitaciones y declaración de IA | Cada cifra trazada a `outputs/`; referencias marcadas como pendientes | **Borrador de anteproyecto redactado; sin aprobación final** | `manuscrito_anteproyecto.md` |
+| 2026-11-09 | Autoría | Registrar los nombres de los integrantes | Coinciden con el grupo de trabajo 11 | **Autores registrados** | Mensaje del equipo; `manuscrito_anteproyecto.md` |
+| 2026-11-09 | Referencias | Verificar Rabiner (1989) y Baum et al. (1970) | Comprobadas por el equipo | **Referencias verificadas** | Mensaje del equipo; `manuscrito_anteproyecto.md` |
+| 2026-11-09 | Declaración de uso de IA | Revisar y aprobar la declaración | Aprobada por el grupo de trabajo 11 | **Declaración de IA aprobada** | Mensaje del equipo; `manuscrito_anteproyecto.md` |
+| 2026-11-09 | Conversión a LaTeX | Convertir el manuscrito y ajustarlo a la plantilla | Estructura, tablas, figura y bibliografía revisadas; sin compilar por ausencia de TeX | **Conversión a LaTeX realizada** | `manuscrito_anteproyecto.tex` |
 
 ## Cómo retomar
 
