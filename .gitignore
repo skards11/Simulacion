@@ -12,3 +12,10 @@ __pycache__/
 # ConfiguraciÃ³n local de IDEs / Editores
 .vscode/
 .idea/
+# Artefactos de compilación LaTeX
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
