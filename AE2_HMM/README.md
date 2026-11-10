@@ -33,12 +33,19 @@ proyecto en `legacy/`.
 ├── materiales/             # Caso didáctico y plantilla
 ├── manuscrito_anteproyecto.md
 ├── manuscrito_anteproyecto.tex
+├── manuscrito_anteproyecto.pdf
 └── decisiones.md           # Bitácora de decisiones D1–D6
 ```
 
 ## Manuscrito
 
-Anteproyecto en Markdown (`manuscrito_anteproyecto.md`) y LaTeX (`manuscrito_anteproyecto.tex`). Incluye autores, resultados simulados, limitaciones, declaración de uso de IA aprobada y las referencias verificadas por el equipo. El `.tex` no se ha compilado en este entorno porque no hay TeX instalado.
+Anteproyecto en Markdown (`manuscrito_anteproyecto.md`), LaTeX (`manuscrito_anteproyecto.tex`) y PDF (`manuscrito_anteproyecto.pdf`). Incluye autores, resultados simulados, limitaciones, declaración de uso de IA aprobada y las referencias verificadas por el equipo.
+
+Para recompilar el PDF sin una instalación completa de TeX:
+
+```powershell
+tectonic manuscrito_anteproyecto.tex
+```
 
 ## Instalación
 

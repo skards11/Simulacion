@@ -17,6 +17,7 @@
 \usepackage[hidelinks]{hyperref}
 
 \geometry{margin=2.5cm}
+\addto\captionsspanish{\renewcommand{\tablename}{Tabla}}
 \captionsetup{font=small,labelfont=bf}
 \setlist[itemize]{topsep=2pt,itemsep=2pt,parsep=0pt}
 \setlist[enumerate]{topsep=2pt,itemsep=2pt,parsep=0pt}
@@ -233,7 +234,7 @@ Las tablas y la figura se regeneran con \texttt{python scripts/report\_d4.py}. L
 Fase & Actividad & Evidencia\\
 \midrule
 F1 & Protocolo y alcance & \texttt{decisiones.md}, D1--D6\\
-F2 & Materiales del caso & \texttt{materiales/caso\_riesgo\_de\_incendio\_forestal.md}\\
+F2 & Materiales del caso & \texttt{materiales/caso\_riesgo\_de\_\allowbreak incendio\_forestal.md}\\
 F3 & Formalización del HMM & \texttt{src/hmm\_model.py}; sección 3\\
 F4 & Implementación y pruebas & \texttt{src/simulation.py}; \texttt{tests/test\_protocol.py}\\
 F5 & Simulación pareada & \texttt{outputs/protocolo\_d4\_resumen.json}\\
@@ -310,7 +311,7 @@ El alcance es limitado. Los estados son etiquetas puras, la humedad es ordinal, 
 % ------------------------------------------------------------------
 \section{Conclusiones}
 
-\textbf{Respuesta a P1.} El HMM puede formalizarse de manera completa con \(S=\{s_1,s_2,s_3\}\), \(V=\{\text{Alta},\text{Media},\text{Baja}\}\), \(A\), \(B\) y \(\pi\), sin inventar porcentajes de humedad ni definiciones físicas para los estados. La formalización es suficiente para implementar Forward, Forward--Backward y Viterbi.
+\textbf{Respuesta a P1.} El HMM puede formalizarse de manera completa con \(S=\{s_1,s_2,s_3\}\), \(V=\{\)Alta, Media, Baja\(\}\), \(A\), \(B\) y \(\pi\), sin inventar porcentajes de humedad ni definiciones físicas para los estados. La formalización es suficiente para implementar Forward, Forward--Backward y Viterbi.
 
 \textbf{Respuesta a P2.} Con \(A\), \(B\) y \(\pi\) fijos, en el escenario base M1 y M2 obtuvieron macro-F1 \(\approx 0.6749\) y exactitud \(\approx 0.6828\), frente a 0.6608 y 0.6650 de M0. Sin embargo, M0 obtuvo mayor recall de \(s_3\) (0.6996 frente a 0.6691). La conclusión depende de la métrica y no autoriza a afirmar superioridad general.
 
@@ -330,7 +331,7 @@ El alcance es limitado. Los estados son etiquetas puras, la humedad es ordinal, 
   \item La \(B\) alterada usa una mezcla provisional de 0.5 con la uniforme.
   \item No se realizaron pruebas de hipótesis formales; los IC son descriptivos.
   \item La revisión sistemática de literatura sigue pendiente; las referencias incluidas fueron verificadas por el equipo.
-  \item El manuscrito se entrega en Markdown y en LaTeX; la compilación local queda pendiente porque el entorno de trabajo no tiene TeX instalado.
+  \item El manuscrito se entrega en Markdown, LaTeX y PDF; el PDF se compiló con Tectonic 0.17.0.
 \end{itemize}
 
 % ------------------------------------------------------------------

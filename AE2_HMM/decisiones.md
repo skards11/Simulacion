@@ -114,7 +114,7 @@ Observaciones descriptivas, sin convertirlas en superioridad general:
 
 ## Próximo paso
 
-D1–D6 están cerradas, el protocolo D4 se ejecutó y el manuscrito de **anteproyecto** está redactado en Markdown (`manuscrito_anteproyecto.md`) y LaTeX (`manuscrito_anteproyecto.tex`). El equipo completó los autores, verificó las dos referencias clásicas y aprobó la declaración de uso de IA el 2026-11-09. Siguiente: compilar el PDF en un entorno con TeX instalado y revisar el ajuste final a la plantilla editorial. No se deben registrar aprobaciones que el equipo no exprese.
+D1–D6 están cerradas, el protocolo D4 se ejecutó y el manuscrito de **anteproyecto** está redactado en Markdown (`manuscrito_anteproyecto.md`), LaTeX (`manuscrito_anteproyecto.tex`) y PDF (`manuscrito_anteproyecto.pdf`). El equipo completó los autores, verificó las dos referencias clásicas y aprobó la declaración de uso de IA el 2026-11-09. El PDF se compiló con Tectonic 0.17.0. Siguiente: revisión final del PDF contra la plantilla editorial. No se deben registrar aprobaciones que el equipo no exprese.
 
 ## Bitácora
 
@@ -134,7 +134,8 @@ D1–D6 están cerradas, el protocolo D4 se ejecutó y el manuscrito de **antepr
 | 2026-11-09 | Autoría | Registrar los nombres de los integrantes | Coinciden con el grupo de trabajo 11 | **Autores registrados** | Mensaje del equipo; `manuscrito_anteproyecto.md` |
 | 2026-11-09 | Referencias | Verificar Rabiner (1989) y Baum et al. (1970) | Comprobadas por el equipo | **Referencias verificadas** | Mensaje del equipo; `manuscrito_anteproyecto.md` |
 | 2026-11-09 | Declaración de uso de IA | Revisar y aprobar la declaración | Aprobada por el grupo de trabajo 11 | **Declaración de IA aprobada** | Mensaje del equipo; `manuscrito_anteproyecto.md` |
-| 2026-11-09 | Conversión a LaTeX | Convertir el manuscrito y ajustarlo a la plantilla | Estructura, tablas, figura y bibliografía revisadas; sin compilar por ausencia de TeX | **Conversión a LaTeX realizada** | `manuscrito_anteproyecto.tex` |
+| 2026-11-09 | Conversión a LaTeX | Convertir el manuscrito y ajustarlo a la plantilla | Estructura, tablas, figura y bibliografía revisadas | **Conversión a LaTeX realizada** | `manuscrito_anteproyecto.tex` |
+| 2026-11-09 | Compilación del PDF | Instalar Tectonic 0.17.0 y compilar el manuscrito | Compilación sin errores; PDF de 8 páginas revisado visualmente | **PDF generado** | `manuscrito_anteproyecto.pdf` |
 
 ## Cómo retomar
 

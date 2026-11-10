@@ -258,7 +258,7 @@ El alcance es limitado. Los estados son etiquetas puras, la humedad es ordinal, 
 - La B alterada usa una mezcla provisional de 0.5 con la uniforme.
 - No se realizaron pruebas de hipótesis formales; los IC son descriptivos.
 - La revisión sistemática de literatura sigue pendiente; las referencias incluidas fueron verificadas por el equipo.
-- El manuscrito se entrega en Markdown y en LaTeX (`manuscrito_anteproyecto.tex`); la compilación local queda pendiente porque el entorno de trabajo no tiene TeX instalado.
+- El manuscrito se entrega en Markdown, LaTeX y PDF; el PDF se compiló con Tectonic 0.17.0.
 
 ## Declaración de uso de IA
 
