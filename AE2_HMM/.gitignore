@@ -1,0 +1,19 @@
+# Entorno virtual y cachés de Python
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Salidas de LaTeX/Tectonic
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Sistema operativo y editores
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

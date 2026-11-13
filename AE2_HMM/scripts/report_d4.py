@@ -1,11 +1,10 @@
-"""Genera tablas y una figura a partir del JSON del protocolo D4.
+"""Genera tablas y figura a partir del JSON del experimento HMM.
 
 Uso:
     python scripts/report_d4.py
-    python scripts/report_d4.py --input outputs/protocolo_d4_resumen.json
+    python scripts/report_d4.py --input outputs/experimento_hmm_resumen.json
 
-El JSON es la fuente de verdad de la ejecución. Este script no recalcula el
-experimento ni modifica M1 o la B alterada.
+El JSON es la fuente de verdad. Este script no recalcula el experimento.
 """
 
 from __future__ import annotations
@@ -19,38 +18,87 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 MODEL_NAMES = ("M0", "M1", "M2")
-METRIC_NAMES = ("macro_f1", "recall_s3", "accuracy")
+METRIC_NAMES = ("macro_f1", "accuracy", "recall_s3")
 METRIC_LABELS = {
     "macro_f1": "Macro-F1",
-    "recall_s3": "Recall s3",
     "accuracy": "Exactitud",
+    "recall_s3": "Recall Riesgo Extremo",
 }
+STATE_LABELS = ("Riesgo Bajo", "Riesgo Moderado", "Riesgo Extremo")
+STATE_SHORT = ("RB", "RM", "RE")
 
 
 def _load(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _rows(payload: dict) -> list[dict[str, object]]:
+def _metric_rows(payload: dict) -> list[dict[str, object]]:
     rows: list[dict[str, object]] = []
-    for scenario, result in payload.items():
-        for model in MODEL_NAMES:
-            for metric in METRIC_NAMES:
-                stats = result["summary"][model][metric]
+    for model_name in MODEL_NAMES:
+        for metric_name in METRIC_NAMES:
+            stats = payload["models"][model_name][metric_name]
+            rows.append(
+                {
+                    "modelo": model_name,
+                    "metrica": metric_name,
+                    "media": stats["mean"],
+                    "sd": stats["sd"],
+                    "minimo": stats["min"],
+                    "maximo": stats["max"],
+                    "mediana": stats["median"],
+                    "q1": stats["q1"],
+                    "q3": stats["q3"],
+                    "ric": stats["iqr"],
+                    "ic_inferior": stats["ci_low"],
+                    "ic_superior": stats["ci_high"],
+                    "n": stats["n"],
+                }
+            )
+    return rows
+
+
+def _confusion_rows(payload: dict) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    for model_name in MODEL_NAMES:
+        counts = np.asarray(
+            payload["models"][model_name]["confusion_matrix_counts"],
+            dtype=int,
+        )
+        normalized = np.asarray(
+            payload["models"][model_name]["confusion_matrix_normalized"],
+            dtype=float,
+        )
+        for true_index, true_label in enumerate(STATE_LABELS):
+            for predicted_index, predicted_label in enumerate(STATE_LABELS):
                 rows.append(
                     {
-                        "escenario": scenario,
-                        "modelo": model,
-                        "metrica": metric,
-                        "media": stats["mean"],
-                        "sd": stats["sd"],
-                        "ic_inferior": stats["ci_low"],
-                        "ic_superior": stats["ci_high"],
-                        "T": result["T"],
-                        "N": result["N"],
-                        "semilla_maestra": result["master_seed"],
+                        "modelo": model_name,
+                        "estado_real": true_label,
+                        "estado_predicho": predicted_label,
+                        "conteo": int(counts[true_index, predicted_index]),
+                        "proporcion_fila": float(
+                            normalized[true_index, predicted_index]
+                        ),
                     }
                 )
+    return rows
+
+
+def _comparison_rows(payload: dict) -> list[dict[str, object]]:
+    rows: list[dict[str, object]] = []
+    for comparison_name, comparison in payload["comparisons"].items():
+        rows.append(
+            {
+                "comparacion": comparison_name,
+                "diferencia_media": comparison["mean_difference"],
+                "diferencia_mediana": comparison["median_difference"],
+                "estadistico_wilcoxon": comparison["wilcoxon_statistic"],
+                "p_valor": comparison["p_value_raw"],
+                "p_valor_holm": comparison["p_value_holm"],
+                "delta_cliff": comparison["cliff_delta"],
+                "n_pares": comparison["n_pairs"],
+            }
+        )
     return rows
 
 
@@ -62,91 +110,149 @@ def _write_csv(rows: list[dict[str, object]], path: Path) -> None:
         writer.writerows(rows)
 
 
-def _markdown_table(result: dict) -> str:
+def _markdown(payload: dict) -> str:
+    metadata = payload["metadata"]
     lines = [
-        "| Modelo | Macro-F1 (media [IC 95 %]) | Recall s3 | Exactitud |",
-        "|---|---:|---:|---:|",
-    ]
-    for model in MODEL_NAMES:
-        cells = []
-        for metric in METRIC_NAMES:
-            stats = result["summary"][model][metric]
-            mean = stats["mean"]
-            low, high = stats["ci_low"], stats["ci_high"]
-            if low is None or high is None:
-                cells.append(f"{mean:.4f}")
-            else:
-                cells.append(f"{mean:.4f} [{low:.4f}, {high:.4f}]")
-        lines.append(f"| {model} | {cells[0]} | {cells[1]} | {cells[2]} |")
-    return "\n".join(lines)
-
-
-def _write_markdown(payload: dict, path: Path) -> None:
-    blocks = [
-        "# Resultados simulados — protocolo D4",
+        "# Resultados simulados — experimento HMM M0/M1/M2",
         "",
         "Cifras simuladas; no son evidencia de validez ecológica.",
         "",
+        f"- T = {metadata['T']}",
+        f"- N = {metadata['N']}",
+        f"- Semilla maestra = {metadata['master_seed']}",
+        f"- Secuencias de semilla: `{metadata['seed_sequence']}`",
+        f"- Mezcla de B alterada: m = {metadata['mixing']}",
+        f"- Corrección: {metadata['holm_correction']}",
+        "",
+        "## Métricas por modelo",
+        "",
+        "| Modelo | Media | Desviación Estándar | Mínimo | Máximo | Mediana | RIC | IC 95 % [P2.5, P97.5] |",
+        "|---|---:|---:|---:|---:|---:|---:|---:|",
     ]
-    for scenario, result in payload.items():
-        blocks.append(f"## Escenario: {scenario}")
-        blocks.append("")
-        blocks.append(
-            f"T = {result['T']}, N = {result['N']}, "
-            f"semilla maestra = {result['master_seed']}."
+    for model_name in MODEL_NAMES:
+        stats = payload["models"][model_name]["macro_f1"]
+        lines.append(
+            f"| {model_name} | {stats['mean']:.4f} | {stats['sd']:.4f} | "
+            f"{stats['min']:.4f} | {stats['max']:.4f} | "
+            f"{stats['median']:.4f} | {stats['iqr']:.4f} | "
+            f"[{stats['ci_low']:.4f}, {stats['ci_high']:.4f}] |"
         )
-        blocks.append("")
-        blocks.append(_markdown_table(result))
-        blocks.append("")
-    path.write_text("\n".join(blocks), encoding="utf-8")
+
+    lines.extend(
+        [
+            "",
+            "## Contrastes pareados",
+            "",
+            "| Contraste | Diferencia media | p crudo | p Holm | Delta de Cliff |",
+            "|---|---:|---:|---:|---:|",
+        ]
+    )
+    for comparison_name in ("M0_vs_M1", "M0_vs_M2"):
+        comparison = payload["comparisons"][comparison_name]
+        lines.append(
+            f"| {comparison_name} | {comparison['mean_difference']:.4f} | "
+            f"{comparison['p_value_raw']:.3e} | "
+            f"{comparison['p_value_holm']:.3e} | "
+            f"{comparison['cliff_delta']:.4f} |"
+        )
+
+    lines.extend(["", "## Criterios de éxito", ""])
+    for criterion_name, criterion in payload["criteria"].items():
+        status = "CUMPLE" if criterion["met"] else "NO CUMPLE"
+        lines.append(f"- **{criterion_name}:** {status}")
+
+    lines.extend(["", "## Matriz de confusión normalizada por fila", ""])
+    for model_name in MODEL_NAMES:
+        matrix = np.asarray(
+            payload["models"][model_name]["confusion_matrix_normalized"],
+            dtype=float,
+        )
+        lines.append(f"### {model_name}")
+        lines.append("")
+        lines.append("| Real \\ Predicho | RB | RM | RE |")
+        lines.append("|---|---:|---:|---:|")
+        for index, label in enumerate(STATE_LABELS):
+            cells = " | ".join(f"{value:.4f}" for value in matrix[index])
+            lines.append(f"| {label} | {cells} |")
+        lines.append("")
+
+    return "\n".join(lines)
 
 
 def _plot(payload: dict, path: Path) -> None:
-    scenarios = list(payload.keys())
+    fig = plt.figure(figsize=(15, 9), constrained_layout=True)
+    grid = fig.add_gridspec(2, 3, height_ratios=(1.0, 1.15))
+
+    ax_bar = fig.add_subplot(grid[0, :2])
+    ax_box = fig.add_subplot(grid[0, 2])
+    axes_confusion = [fig.add_subplot(grid[1, index]) for index in range(3)]
+
+    means = np.array(
+        [payload["models"][model]["macro_f1"]["mean"] for model in MODEL_NAMES]
+    )
+    lows = np.array(
+        [payload["models"][model]["macro_f1"]["ci_low"] for model in MODEL_NAMES]
+    )
+    highs = np.array(
+        [payload["models"][model]["macro_f1"]["ci_high"] for model in MODEL_NAMES]
+    )
     x = np.arange(len(MODEL_NAMES))
-    width = 0.8 / max(len(scenarios), 1)
+    ax_bar.bar(
+        x,
+        means,
+        yerr=np.vstack([means - lows, highs - means]),
+        capsize=5,
+        color=("#4c72b0", "#dd8452", "#55a868"),
+        alpha=0.9,
+    )
+    ax_bar.set_xticks(x, labels=MODEL_NAMES)
+    ax_bar.set_ylim(0.0, 1.0)
+    ax_bar.set_ylabel("Macro-F1")
+    ax_bar.set_title("Macro-F1 por modelo (media e IC 95 % percentil)")
+    ax_bar.grid(axis="y", alpha=0.25)
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 4.8), sharey=True)
-    for scenario_index, scenario in enumerate(scenarios):
-        result = payload[scenario]
-        offset = (scenario_index - (len(scenarios) - 1) / 2) * width
-        for axis, metric in zip(axes, METRIC_NAMES):
-            means = np.array(
-                [result["summary"][model][metric]["mean"] for model in MODEL_NAMES]
-            )
-            lows = np.array(
-                [result["summary"][model][metric]["ci_low"] for model in MODEL_NAMES],
-                dtype=float,
-            )
-            highs = np.array(
-                [result["summary"][model][metric]["ci_high"] for model in MODEL_NAMES],
-                dtype=float,
-            )
-            yerr = np.vstack([means - lows, highs - means])
-            axis.bar(
-                x + offset,
-                means,
-                width,
-                yerr=yerr,
-                capsize=4,
-                label=scenario,
-                alpha=0.85,
-            )
-            axis.set_title(METRIC_LABELS[metric])
-            axis.set_xticks(x, labels=MODEL_NAMES)
-            axis.set_ylim(0.0, 1.0)
-            axis.grid(axis="y", alpha=0.25)
+    sequences = [
+        np.asarray(payload["per_sequence"][model]["macro_f1"], dtype=float)
+        for model in MODEL_NAMES
+    ]
+    ax_box.boxplot(sequences, tick_labels=MODEL_NAMES, showfliers=False)
+    ax_box.set_ylim(0.0, 1.0)
+    ax_box.set_title("Distribución por secuencia")
+    ax_box.grid(axis="y", alpha=0.25)
 
-    axes[0].set_ylabel("Valor")
-    axes[0].legend(loc="lower right")
+    for axis, model_name in zip(axes_confusion, MODEL_NAMES):
+        matrix = np.asarray(
+            payload["models"][model_name]["confusion_matrix_normalized"],
+            dtype=float,
+        )
+        image = axis.imshow(matrix, vmin=0.0, vmax=1.0, cmap="Blues")
+        axis.set_xticks(range(3), labels=STATE_SHORT)
+        axis.set_yticks(range(3), labels=STATE_SHORT)
+        axis.set_xlabel("Predicho")
+        axis.set_ylabel("Real")
+        axis.set_title(f"Matriz de confusión — {model_name}")
+        for row in range(3):
+            for column in range(3):
+                value = matrix[row, column]
+                axis.text(
+                    column,
+                    row,
+                    f"{value:.2f}",
+                    ha="center",
+                    va="center",
+                    color="white" if value > 0.55 else "black",
+                    fontsize=9,
+                )
+
+    fig.colorbar(image, ax=axes_confusion, fraction=0.025, pad=0.02)
     fig.suptitle(
-        "Protocolo D4 — cifras simuladas (media e IC 95 % por bootstrap de secuencias)",
-        fontsize=12,
+        "Experimento HMM — cifras simuladas (T = "
+        f"{payload['metadata']['T']}, N = {payload['metadata']['N']})",
+        fontsize=13,
         fontweight="bold",
     )
-    fig.tight_layout()
     path.parent.mkdir(parents=True, exist_ok=True)
-    fig.savefig(path, dpi=150, bbox_inches="tight")
+    fig.savefig(path, dpi=300, bbox_inches="tight")
     plt.close(fig)
 
 
@@ -155,16 +261,26 @@ def main() -> None:
     parser.add_argument(
         "--input",
         type=Path,
-        default=Path("outputs/protocolo_d4_resumen.json"),
+        default=Path("outputs/experimento_hmm_resumen.json"),
     )
     parser.add_argument("--outdir", type=Path, default=Path("outputs"))
     args = parser.parse_args()
 
     payload = _load(args.input)
-    rows = _rows(payload)
-    _write_csv(rows, args.outdir / "protocolo_d4_resumen.csv")
-    _write_markdown(payload, args.outdir / "protocolo_d4_resumen.md")
-    _plot(payload, args.outdir / "protocolo_d4_metricas.png")
+    _write_csv(_metric_rows(payload), args.outdir / "experimento_hmm_metricas.csv")
+    _write_csv(
+        _confusion_rows(payload),
+        args.outdir / "experimento_hmm_confusion.csv",
+    )
+    _write_csv(
+        _comparison_rows(payload),
+        args.outdir / "experimento_hmm_comparaciones.csv",
+    )
+    (args.outdir / "experimento_hmm_resumen.md").write_text(
+        _markdown(payload),
+        encoding="utf-8",
+    )
+    _plot(payload, args.outdir / "experimento_hmm_comparativa.png")
     print(f"Tablas y figura generadas en: {args.outdir.resolve()}")
 
 

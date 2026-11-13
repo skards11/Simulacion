@@ -7,6 +7,8 @@
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx}
 \usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{rotating}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{geometry}
@@ -93,13 +95,59 @@ La justificación del ejercicio es metodológica. Un HMM puede parecer atractivo
 \end{itemize}
 
 % ------------------------------------------------------------------
-\section{Estado del arte (provisional)}
+\section{Estado del arte}
 
-Los HMM son un marco clásico para procesos con estados latentes y observaciones indirectas. Los trabajos fundacionales de Rabiner \cite{rabiner1989} y Baum et al. \cite{baum1970} sistematizaron los problemas de evaluación, decodificación y aprendizaje. La literatura aplicada es amplia en voz, bioinformática, diagnóstico industrial y análisis de series temporales. Sin embargo, este anteproyecto \textbf{no realizó todavía una revisión sistemática}; por tanto, no se presenta una síntesis crítica cerrada ni se usan referencias no verificadas.
+\subsection{Alcance y protocolo de la revisión}
 
-El vacío que motiva este ejercicio no es un vacío de la literatura, sino una necesidad docente: mostrar cómo se distingue la inferencia con parámetros conocidos del entrenamiento, cómo se evita la fuga de información y cómo se reporta la incertidumbre. La comparación con M0 y M1 es deliberadamente conservadora: si el HMM no supera baselines simples en un escenario didáctico, no hay razón para atribuirle una ventaja aplicada.
+Esta revisión se realizó sobre un corpus cerrado de ocho documentos suministrados en \texttt{docs/referencias/} y dos referencias fundacionales verificadas por el equipo \cite{rabiner1989,baum1970}. Los criterios de inclusión fueron: (i) que el trabajo emplee un HMM o una variante declarada ---HSMM o QHMM---; (ii) que describa el algoritmo de inferencia o de estimación; (iii) que reporte métricas, criterios de selección o resultados cuantitativos; y (iv) que el texto completo esté disponible. No se consultaron bases bibliográficas externas ni se aplicó un protocolo PRISMA; por tanto, el alcance es una \textbf{revisión estructurada y reproducible}, no una síntesis exhaustiva de toda la literatura. Todo metadato que no aparece explícitamente en el documento fuente se marca \texttt{[NO VERIFICADO]}.
 
-\textbf{Pendiente:} protocolo de búsqueda, bases consultadas, criterios de inclusión, deduplicación y síntesis crítica. Las referencias incluidas ya fueron verificadas por el equipo; la revisión sistemática de literatura sigue pendiente.
+\subsection{Fundamentos metodológicos}
+
+Los HMM modelan una secuencia observada como la realización de una cadena de Markov latente. Rabiner \cite{rabiner1989} sistematizó los tres problemas canónicos ---evaluación, decodificación y aprendizaje--- y presentó Forward--Backward, Viterbi y Baum--Welch como sus soluciones algorítmicas; su artículo es una revisión metodológica con aplicaciones en reconocimiento de voz. Baum, Petrie, Soules y Weiss \cite{baum1970} establecieron la técnica de maximización que fundamenta la reestimación tipo EM conocida como Baum--Welch para funciones probabilísticas de cadenas de Markov. Ambos trabajos son la base del marco teórico de este anteproyecto, pero ninguno reporta una comparación empírica entre decodificación con HMM y baselines simples en un problema ordinal didáctico; su aporte es conceptual y algorítmico.
+
+\subsection{Aplicaciones y desarrollos recientes}
+
+\textbf{Monitorización ambiental y calidad del agua.} Wanjala, Makokha y Khamala \cite{wanjala2025} aplicaron un HMM multivariante con emisiones gaussianas a variables satelitales de aerosoles y clima en Kenia (2000--2022). Estimaron parámetros por máxima verosimilitud con EM, seleccionaron el número de estados mediante BIC y decodificaron con Viterbi. El texto de la Sección~2.6 afirma que el BIC seleccionó un modelo de tres estados, aunque el encabezado de la Tabla~1 dice ``5-state model''; la discrepancia se conserva aquí como limitación de reporte del estudio. Los autores no reportan exactitud ni F1, sino BIC y correspondencia cualitativa de los meses anómalos con conteos de incendios MODIS y con el índice SPEI (Sección~2.6). Grammenos \cite{grammenos2025} modeló la ocurrencia diaria de lluvia en Ceará, Brasil, con modelos Bernoulli ocultos de primer orden, estimación EM/Baum--Welch, selección AIC/BIC y decodificación Viterbi; identificó cuatro estados ocultos sobre secuencias de 90 días en 24 años (1975--2002). Tran et al. \cite{tran2026} combinaron un HMM gaussiano de tres estados con una red LSTM de dos ramas y atención para clasificar la calidad de agua costera en Vietnam; usaron Baum--Welch y Viterbi para extraer estados y reportaron exactitud de 74.87\,\% y F1 de 64.11\,\%, frente a 44\,\% del HMM aislado, 68.2\,\% de la LSTM y 70.77\,\% de ARIMA (resumen, p.~1). El documento es un preprint de Preprints.org y declara no haber sido revisado por pares (p.~1).
+
+\textbf{Movimiento animal, mantenimiento industrial y análisis secuencial.} Nicosia \cite{nicosia2026} propuso el ``tubo de Viterbi tropical'' para cuantificar la incertidumbre de trayectorias casi óptimas en lugar de devolver una única ruta. Lo aplicó a un HMM de movimiento de dos estados con longitud de paso y ángulo de giro, sobre datos GPS y acústicos de murciélagos; reportó enriquecimiento de alimentación de 2.25 (IC 95\,\%: 1.73--2.85) en segmentos robustos de forrajeo y de 0.27 (0.16--0.44) en desplazamiento (resumen, p.~1; Sección~7.2). Liu et al. \cite{liu_sf} propusieron un HSMM modificado con optimización co-evolutiva para pronóstico de vida útil remanente de motores de turbofán; en la Tabla~4 (p.~35) reportan RMSE de 12.77 y Score de 259 en el Dataset\#1, y RMSE de 12.59 y Score de 472 en el Dataset\#3. El año de publicación y el DOI de este preprint de SSRN no aparecen en el documento y se marcan \texttt{[NO VERIFICADO]}. Deb, Pandey y Pakray \cite{deb2026} construyeron un QHMM que codifica emisiones en estados cuánticos y convierte matrices de transición en operadores mediante Gram--Schmidt; lo evaluaron en etiquetado gramatical (POS tagging) con corpus reales en inglés y código mixto inglés--hindi. El HMM clásico con Viterbi alcanzó 58.96\,\% de exactitud y el QHMM obtuvo mayor F1 en muchas etiquetas, aunque no en todas (Sección~6.5).
+
+\textbf{Robustez estadística y reproducibilidad.} Pouzo, Psaradakis y Sola \cite{pouzo2025} analizaron la robustez de la estimación por cuasi-máxima verosimilitud (QML) cuando el proceso generador tiene regímenes HMM con transiciones dependientes de covariables, pero se estima una mixtura con regímenes i.i.d. Demostraron consistencia de los parámetros de la ecuación de resultado bajo condiciones de regularidad y evaluaron el sesgo mediante un estudio Monte Carlo con 1{,}000 muestras y tamaños \(T\in\{200,800,1{,}600,3{,}200\}\) (Sección~3). Shevtsov \cite{shevtsov2025} implementó un HMM discreto didáctico con Forward, Viterbi y Baum--Welch en espacio logarítmico, comparó su implementación con \texttt{hmmlearn} y cuantificó el error de reconstrucción de \(\pi\), \(A\) y \(B\) con la norma de Frobenius, variando topologías, inicializaciones, 3/6/10 estados y 30 réplicas independientes (Secciones~4.2--4.3 y 5). Su enfoque es el más cercano al propósito reproducible de este anteproyecto, pero se centra en el \textbf{aprendizaje} de parámetros con datos simulados, no en comparar reglas de decodificación con parámetros fijos.
+
+\subsection{Síntesis comparativa}
+
+La Tabla~\ref{tab:comparativa} resume los diez trabajos. Las columnas ``Tipo de HMM'' e ``Inferencia'' describen lo declarado por cada fuente; ``Datos'' distingue simulación de datos reales; ``Evidencia'' indica la página o sección exacta que respalda la caracterización.
+
+\begin{sidewaystable}[p]
+\centering
+\caption{Comparación de trabajos previos sobre HMM y variantes.}
+\label{tab:comparativa}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}>{\raggedright\arraybackslash}p{0.6cm}>{\raggedright\arraybackslash}p{0.9cm}>{\raggedright\arraybackslash}p{2.6cm}>{\raggedright\arraybackslash}p{3.5cm}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}p{2.4cm}>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}p{2.9cm}@{}}
+\toprule
+Ref. & Año & Base / revista & DOI & Dominio & Tipo de HMM & Inferencia & Métricas & Datos & Evidencia\\
+\midrule
+{}[1] & 1989 & \emph{Proc. IEEE} 77(2) & \texttt{[NV]} & Voz / ASR & Discreto & Forward--Backward, Viterbi, Baum--Welch & Revisión; sin métricas propias & No aplica & pp. 257--286\\
+{}[2] & 1970 & \emph{Ann. Math. Stat.} 41(1) & \texttt{[NV]} & Teoría estadística & Discreto & EM / Baum--Welch & Convergencia; sin clasificación & Teoría & pp. 164--171\\
+{}[3] & 2025 & \emph{Open Access Libr. J.} 12 & \url{https://doi.org/10.4236/oalib.1114160} & Aerosoles y clima & Continuo & EM, BIC, Viterbi & BIC; MODIS/SPEI & Reales 2000--2022 & Sec. 2.5--2.7; Tabla 1\\
+{}[4] & 2025 & Tesis MSc, AUEB & \url{https://doi.org/10.26219/heal.aueb.9331} & Lluvia (Ceará) & Discreto (Bernoulli) & EM, AIC/BIC, Viterbi & AIC/BIC; 4 estados & Reales 1975--2002 & Resumen p. 7; Sec. 2.3, 2.4.1, 2.7, 4.3--4.5\\
+{}[5] & 2026 & Preprints.org & \url{https://doi.org/10.20944/preprints202605.1728.v1} & Calidad de agua & Continuo & Baum--Welch, Viterbi, LSTM & Exactitud 74.87\,\%; F1 64.11\,\% & Reales (1{,}305) & Resumen p. 1; Sec. 2.2.1, 2.3, 3\\
+{}[6] & 2026 & arXiv 2606.17181v1 & \texttt{[NV]} & Movimiento animal & Continuo & Viterbi + tubo tropical & Enriquecimiento 2.25 / 0.27 & Reales GPS + audio & Resumen p. 1; Sec. 6--7.2; Tabla 5\\
+{}[7] & \texttt{[NV]} & SSRN 4156120 & \texttt{[NV]} & PHM turbofán & Continuo (HSMM) & Forward--Backward, AGA & RMSE 12.77/12.59; Score 259/472 & Reales C-MAPSS & Sec. 5; Tabla 4, p. 35\\
+{}[8] & 2026 & \emph{Evol. Intell.} 19:90 & \url{https://doi.org/10.1007/s12065-026-01205-3} & POS tagging & Discreto (QHMM) & QHMM; HMM + Viterbi & Exactitud, precisión, recall, F1 & Reales & Resumen p. 1; Sec. 5.1--5.2, 6.1, 6.5\\
+{}[9] & 2025 & \emph{Econometric Theory} 41 & \url{https://doi.org/10.1017/S0266466625100017} & Econometría & Continuo & QML; Monte Carlo & Sesgo; razón sd/SE & Simulados & Resumen p. 1; Sec. 2.2, 3\\
+{}[10] & 2025 & Tesis, Univ. Zagreb & \url{urn:nbn:hr:168:443559} & Didáctica & Discreto & Forward, Viterbi, Baum--Welch & Frobenius, Hamming, log-verosimilitud & Simulados & Sec. 4.2--4.3, 5.1, 5.3\\
+\bottomrule
+\end{tabular}
+\end{sidewaystable}
+
+Tres patrones emergen de la tabla. Primero, la mayoría de los trabajos aplicados \textbf{entrena} los parámetros con EM/Baum--Welch y usa el HMM como componente de un sistema mayor; la decodificación con parámetros fijos rara vez se evalúa de forma aislada. Segundo, las métricas son heterogéneas ---BIC, exactitud/F1, RMSE/Score, enriquecimiento--- y pocas veces se reporta la distribución completa de los resultados por réplica. Tercero, solo \cite{nicosia2026,pouzo2025,shevtsov2025} problematizan explícitamente la incertidumbre, la robustez o la reproducibilidad del algoritmo; ninguno compara la decodificación HMM contra baselines simples en un escenario ordinal con secuencias pareadas.
+
+\subsection{Vacío identificado y justificación de D5a}
+
+La literatura revisada muestra que los HMM se aplican con éxito en dominios diversos, pero deja abierto un problema metodológico acotado: \textbf{no hay evidencia controlada sobre si la estructura temporal de un HMM, con \(A\), \(B\) y \(\pi\) fijos, mejora la decodificación frente a reglas simples cuando las observaciones son ordinales y el número de estados es pequeño}. Los estudios aplicados confunden el efecto de la estructura del modelo con el de la estimación de parámetros, porque entrenan y evalúan sobre los mismos datos o sobre datos reales sin un contraste pareado contra baselines. Los estudios metodológicos ---tubos de Viterbi \cite{nicosia2026}, robustez QML \cite{pouzo2025} y validación de implementaciones \cite{shevtsov2025}--- tampoco abordan esa comparación.
+
+Ese es el vacío que justifica \textbf{D5a: inferencia con \(A\), \(B\) y \(\pi\) fijos}. El anteproyecto aísla la decodificación del aprendizaje, usa secuencias sintéticas pareadas, compara M0 (umbral determinista), M1 (baseline observable con prior estacionario) y M2 (HMM completo), y reporta macro-F1, recall de \(s_3\) y exactitud con media, desviación estándar, mínimo, máximo, mediana, RIC e IC 95\,\%, además de pruebas pareadas con corrección de Holm--Bonferroni y Delta de Cliff. El objetivo no es afirmar superioridad ecológica ni predictiva, sino determinar si, en un caso didáctico controlado, la estructura temporal aporta una ventaja medible sobre alternativas simples. La comparación es deliberadamente conservadora: si el HMM no supera a M0 y M1, no hay razón para atribuirle una ventaja aplicada.
 
 % ------------------------------------------------------------------
 \section{Marco teórico}
@@ -283,12 +331,7 @@ M2 & 0.4965 [0.4952, 0.4977] & 0.3996 [0.3968, 0.4025] & 0.5236 [0.5224, 0.5248]
 
 \subsection{Figura de métricas}
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=\textwidth]{outputs/protocolo_d4_metricas.png}
-\caption{Macro-F1, recall de \(s_3\) y exactitud por modelo, con IC 95\,\% por bootstrap de secuencias. Cifras simuladas.}
-\label{fig:metricas}
-\end{figure}
+La figura D4 no se incluye en esta compilación porque los artefactos de \texttt{outputs/} se regeneraron con el protocolo D7; se incorporará cuando la sección de resultados se actualice a D7. Las cifras D4 permanecen en las tablas de resultados de la Sección~5.
 
 \subsection{Observaciones descriptivas}
 
@@ -340,13 +383,37 @@ El alcance es limitado. Los estados son etiquetas puras, la humedad es ordinal, 
 Se utilizó un asistente de programación basado en IA (OpenCode) para apoyar la organización del protocolo, la implementación del código, la generación de tablas y la redacción del manuscrito. Las decisiones científicas registradas en \texttt{decisiones.md} fueron expresadas por el grupo de trabajo 11. Las cifras reportadas provienen de código ejecutado y son simuladas. \textbf{Declaración aprobada por el grupo de trabajo 11 el 2026-11-09.}
 
 % ------------------------------------------------------------------
-\begin{thebibliography}{9}
+\begin{thebibliography}{12}
 
 \bibitem{rabiner1989}
-L. R. Rabiner, ``A tutorial on hidden Markov models and selected applications in speech recognition,'' \emph{Proceedings of the IEEE}, vol. 77, no. 2, pp. 257--286, 1989.
+L. R. Rabiner, ``A tutorial on hidden Markov models and selected applications in speech recognition,'' \emph{Proceedings of the IEEE}, vol. 77, no. 2, pp. 257--286, Feb. 1989. DOI: \texttt{[NO VERIFICADO]}.
 
 \bibitem{baum1970}
-L. E. Baum, T. Petrie, G. Soules y N. Weiss, ``A maximization technique occurring in the statistical analysis of probabilistic functions of Markov chains,'' \emph{The Annals of Mathematical Statistics}, vol. 41, no. 1, pp. 164--171, 1970.
+L. E. Baum, T. Petrie, G. Soules, and N. Weiss, ``A maximization technique occurring in the statistical analysis of probabilistic functions of Markov chains,'' \emph{The Annals of Mathematical Statistics}, vol. 41, no. 1, pp. 164--171, 1970. DOI: \texttt{[NO VERIFICADO]}.
+
+\bibitem{wanjala2025}
+D. W. Wanjala, J. W. Makokha, and G. W. Khamala, ``Anomaly detection in selected aerosol optical properties and associated climate variables using a multivariate hidden Markov model: A case study over Kenya,'' \emph{Open Access Library Journal}, vol. 12, Art. no. e14160, Oct. 2025, doi: 10.4236/oalib.1114160.
+
+\bibitem{grammenos2025}
+K. Grammenos, ``Hidden Markov models and their application in modeling rainfall occurrence,'' M.Sc. thesis, Dept. of Statistics, Athens University of Economics and Business, Athens, Greece, Mar. 2025, doi: 10.26219/heal.aueb.9331.
+
+\bibitem{tran2026}
+Ha Tran Thanh, Giang Truong Tran, Hoa Thi Tran, Ngoc Minh Nguyen, and Thu Minh Phan, ``Integrating hidden Markov models and attention-based LSTM framework for regulation compliance in coastal water quality assessment: A cases study in Vietnam,'' Preprints.org, May 2026, doi: 10.20944/preprints202605.1728.v1.
+
+\bibitem{nicosia2026}
+A. Nicosia, ``Tropical Viterbi tubes for decoding uncertainty in hidden Markov models,'' arXiv:2606.17181v1 [stat.ME], Jun. 2026. DOI: \texttt{[NO VERIFICADO]}.
+
+\bibitem{liu_sf}
+W. Liu, Q. Liu, Z. Li, M. Dong, and Y. Zheng, ``Prognosis and health management of equipment based on modified hidden semi-Markov model with a co-evolutional optimization method,'' SSRN preprint 4156120, s.~f. Año y DOI: \texttt{[NO VERIFICADO]}.
+
+\bibitem{deb2026}
+B. Deb, S. Pandey, and P. Pakray, ``Quantum hidden Markov model for sequential analysis,'' \emph{Evolutionary Intelligence}, vol. 19, Art. no. 90, 2026, doi: 10.1007/s12065-026-01205-3.
+
+\bibitem{pouzo2025}
+D. Pouzo, Z. Psaradakis, and M. Sola, ``On the robustness of mixture models in the presence of hidden Markov regimes with covariate-dependent transition probabilities,'' \emph{Econometric Theory}, vol. 41, pp. 1229--1243, 2025, doi: 10.1017/S0266466625100017.
+
+\bibitem{shevtsov2025}
+E. Shevtsov, ``Hidden Markov models. Simulation, learning and evaluation,'' Bachelor thesis No.~12, Faculty of Electrical Engineering and Computing, University of Zagreb, Zagreb, Croatia, Jun. 2025. [Online]. Available: \url{https://urn.nsk.hr/urn:nbn:hr:168:443559}
 
 \bibitem{caso}
 Caso didáctico ``Evaluación de riesgo de incendio forestal,'' \texttt{materiales/caso\_riesgo\_de\_incendio\_forestal.md}. Documento interno, no publicado.
@@ -407,5 +474,45 @@ D6 & Aprobador/revisor grupo 11; alcance; etiqueta anteproyecto; legado aislado 
 \bottomrule
 \end{tabularx}
 \end{table}
+
+\section{Trazabilidad de las fuentes de la Sección 2}
+
+Cada afirmación de la Sección~2 se respalda en la ubicación exacta que se indica. Las páginas corresponden al PDF suministrado en \texttt{docs/referencias/}; cuando el documento usa numeración propia de revista, se indica la sección para evitar ambigüedad.
+
+\begin{longtable}{@{}p{1.5cm}p{6.3cm}p{6.4cm}@{}}
+\toprule
+Fuente & Afirmación respaldada & Ubicación exacta\\
+\midrule
+\endfirsthead
+\toprule
+Fuente & Afirmación respaldada & Ubicación exacta\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+{[1]} Rabiner & Los tres problemas canónicos y los algoritmos Forward--Backward, Viterbi y Baum--Welch & pp. 257--286 (título, resumen y cuerpo del tutorial)\\
+{[2]} Baum et al. & Técnica de maximización que fundamenta la reestimación EM/Baum--Welch & pp. 164--171\\
+{[3]} Wanjala et al. & HMM multivariante gaussiano; EM; BIC; Viterbi; tres estados & Sec. 2.5--2.6, p. 7; Sec. 2.7, p. 7\\
+{[3]} Wanjala et al. & Datos satelitales de AOD, SSA, AE, SAT y RR en Kenia, 2000--2022 & Sec. 2.2--2.4, pp. 5--6\\
+{[3]} Wanjala et al. & Validación con MODIS y SPEI; discrepancia ``three-state'' vs. ``5-state model'' & Sec. 2.6, p. 7; Tabla 1, p. 7\\
+{[4]} Grammenos & Cuatro estados ocultos; 90 días por temporada; 1975--2002; Ceará & Resumen, p. 7; Sec. 4.2, pp. 28--32\\
+{[4]} Grammenos & Baum--Welch; Viterbi; selección AIC/BIC & Sec. 2.3, p. 25; Sec. 2.4.1, p. 9; Sec. 2.7, p. 13\\
+{[6]} Nicosia & Tubo de Viterbi tropical y trayectorias casi óptimas & Resumen, p. 1; Sec. 3, pp. 14--17\\
+{[6]} Nicosia & HMM de movimiento de dos estados; GPS y grabaciones acústicas de murciélagos & Sec. 1, p. 2; Sec. 7.2, p. 24\\
+{[6]} Nicosia & Enriquecimiento 2.25 (1.73--2.85) y 0.27 (0.16--0.44) & Resumen, p. 1; Sec. 7.3; Tabla 5\\
+{[5]} Tran et al. & HMM gaussiano de tres estados; Baum--Welch; Viterbi & Sec. 2.2.1, pp. 2--3\\
+{[5]} Tran et al. & 1{,}305 registros diarios y cinco parámetros de calidad de agua & Sec. 2.1.2, p. 2\\
+{[5]} Tran et al. & Exactitud 74.87\,\%, F1 64.11\,\%, HMM 44\,\%, LSTM 68.2\,\%, ARIMA 70.77\,\% & Resumen, p. 1; Sec. 3, p. 9\\
+{[7]} Liu et al. & HSMM modificado con optimización co-evolutiva; datos C-MAPSS & Sec. 1--2; Sec. 5, p. 34\\
+{[7]} Liu et al. & RMSE 12.77/12.59 y Score 259/472 & Tabla 4, p. 35\\
+{[8]} Deb et al. & QHMM discreto con codificación cuántica y Gram--Schmidt & Resumen, p. 1; Sec. 4.3\\
+{[8]} Deb et al. & Métricas de exactitud, precisión, recall y F1; HMM clásico 58.96\,\% & Sec. 6.1, p. 12; Sec. 6.5, pp. 12--13\\
+{[9]} Pouzo et al. & Consistencia de QML bajo regímenes HMM mal especificados como mixtura & Resumen, p. 1; Sec. 2.2, p. 10\\
+{[9]} Pouzo et al. & Monte Carlo con 1{,}000 muestras y \(T\in\{200,800,1{,}600,3{,}200\}\); sesgo y razón sd/SE & Sec. 3, p. 10\\
+{[10]} Shevtsov & Forward, Viterbi y Baum--Welch en espacio logarítmico; comparación con \texttt{hmmlearn} & Sec. 4.1--4.2, pp. 31--35; Sec. 5.1, p. 43\\
+{[10]} Shevtsov & Norma de Frobenius; topologías; 3/6/10 estados; 30 réplicas & Sec. 4.1.4, p. 33; Sec. 4.2, pp. 34--35; Sec. 5.3, p. 56\\
+\end{longtable}
+
+\textbf{Discrepancias y datos ausentes.} (i) En [3], el texto de la Sección~2.6 afirma que el BIC seleccionó tres estados, mientras que el encabezado de la Tabla~1 dice ``5-state model''; se reporta la discrepancia y no se elige una cifra por inferencia. (ii) En [7] no aparecen año de publicación ni DOI; ambos se marcan \texttt{[NO VERIFICADO]}. (iii) En [1], [2] y [6] el DOI no está impreso en el corpus; se marca \texttt{[NO VERIFICADO]}. (iv) En [10] no hay DOI; se usa el URN institucional verificable. (v) En [5] el PDF no explicita el año final de la serie temporal; no se completa por inferencia.
 
 \end{document}

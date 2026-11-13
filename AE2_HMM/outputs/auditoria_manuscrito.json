@@ -1,0 +1,496 @@
+{
+  "paginas_totales": 18,
+  "pagina_inicio_referencias": 14,
+  "paginas_cuerpo": 14,
+  "paginas_cuerpo_rango": "10-15",
+  "pagina_inicio_anexo": 15,
+  "resumen_palabras": 228,
+  "resumen_rango": "150-250",
+  "terminos_prohibidos": {
+    "anteproyecto": 0,
+    "provisional": 0,
+    "pendiente": 0
+  },
+  "figuras_dpi": {
+    "fig_metricas_300dpi.png": [
+      299.9994,
+      299.9994
+    ],
+    "fig_confusion_300dpi.png": [
+      299.9994,
+      299.9994
+    ]
+  },
+  "hashes_sha256": {
+    "experimento_hmm_resumen.json": "2bad64f61c416aefdad53298f62e4de9e93e8639918ef6b93558daec1860d289",
+    "tabla_resumen_manuscrito.csv": "c5cee3deaf67d73cf25a03d79bfd7bbbfec1d46a8d23f8c7dcdc525c841900f9",
+    "fig_metricas_300dpi.png": "c66038cba94d677247131c7c8a0b5530aa13c3074ecaa9ecbb693b833590ce54",
+    "fig_confusion_300dpi.png": "bfd7329c55d118ea96b4b6fa348c5f0783797a553faca4c5bf713e84f211b1a0"
+  },
+  "cifras_verificadas": 66,
+  "todas_las_cifras_presentes": true,
+  "filas": [
+    {
+      "afirmacion": "M0.macro_f1.mean",
+      "valor": 0.6601569915977895,
+      "redondeado": "0.6602",
+      "fuente": "models.M0.macro_f1.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.macro_f1.sd",
+      "valor": 0.026271843327391065,
+      "redondeado": "0.0263",
+      "fuente": "models.M0.macro_f1.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.macro_f1.min",
+      "valor": 0.5581211689471418,
+      "redondeado": "0.5581",
+      "fuente": "models.M0.macro_f1.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.macro_f1.max",
+      "valor": 0.7355837254713659,
+      "redondeado": "0.7356",
+      "fuente": "models.M0.macro_f1.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.macro_f1.ci_low",
+      "valor": 0.6088664532274194,
+      "redondeado": "0.6089",
+      "fuente": "models.M0.macro_f1.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.macro_f1.ci_high",
+      "valor": 0.7120871272469248,
+      "redondeado": "0.7121",
+      "fuente": "models.M0.macro_f1.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.accuracy.mean",
+      "valor": 0.6728489999999999,
+      "redondeado": "0.6728",
+      "fuente": "models.M0.accuracy.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.accuracy.sd",
+      "valor": 0.025664967256400995,
+      "redondeado": "0.0257",
+      "fuente": "models.M0.accuracy.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.accuracy.min",
+      "valor": 0.596,
+      "redondeado": "0.5960",
+      "fuente": "models.M0.accuracy.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.accuracy.max",
+      "valor": 0.744,
+      "redondeado": "0.7440",
+      "fuente": "models.M0.accuracy.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.accuracy.ci_low",
+      "valor": 0.622,
+      "redondeado": "0.6220",
+      "fuente": "models.M0.accuracy.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.accuracy.ci_high",
+      "valor": 0.7220499999999997,
+      "redondeado": "0.7220",
+      "fuente": "models.M0.accuracy.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.recall_s3.mean",
+      "valor": 0.6737561620092795,
+      "redondeado": "0.6738",
+      "fuente": "models.M0.recall_s3.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.recall_s3.sd",
+      "valor": 0.0659170588318957,
+      "redondeado": "0.0659",
+      "fuente": "models.M0.recall_s3.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.recall_s3.min",
+      "valor": 0.3888888888888889,
+      "redondeado": "0.3889",
+      "fuente": "models.M0.recall_s3.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.recall_s3.max",
+      "valor": 0.8702290076335878,
+      "redondeado": "0.8702",
+      "fuente": "models.M0.recall_s3.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.recall_s3.ci_low",
+      "valor": 0.5392135549872122,
+      "redondeado": "0.5392",
+      "fuente": "models.M0.recall_s3.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.recall_s3.ci_high",
+      "valor": 0.789484741264927,
+      "redondeado": "0.7895",
+      "fuente": "models.M0.recall_s3.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.macro_f1.mean",
+      "valor": 0.6603433402172537,
+      "redondeado": "0.6603",
+      "fuente": "models.M1.macro_f1.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.macro_f1.sd",
+      "valor": 0.021571861080032655,
+      "redondeado": "0.0216",
+      "fuente": "models.M1.macro_f1.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.macro_f1.min",
+      "valor": 0.5907467341675593,
+      "redondeado": "0.5907",
+      "fuente": "models.M1.macro_f1.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.macro_f1.max",
+      "valor": 0.7323600363075246,
+      "redondeado": "0.7324",
+      "fuente": "models.M1.macro_f1.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.macro_f1.ci_low",
+      "valor": 0.616675027633206,
+      "redondeado": "0.6167",
+      "fuente": "models.M1.macro_f1.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.macro_f1.ci_high",
+      "valor": 0.7026698117505389,
+      "redondeado": "0.7027",
+      "fuente": "models.M1.macro_f1.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.accuracy.mean",
+      "valor": 0.6644860000000001,
+      "redondeado": "0.6645",
+      "fuente": "models.M1.accuracy.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.accuracy.sd",
+      "valor": 0.02113677330135317,
+      "redondeado": "0.0211",
+      "fuente": "models.M1.accuracy.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.accuracy.min",
+      "valor": 0.584,
+      "redondeado": "0.5840",
+      "fuente": "models.M1.accuracy.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.accuracy.max",
+      "valor": 0.738,
+      "redondeado": "0.7380",
+      "fuente": "models.M1.accuracy.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.accuracy.ci_low",
+      "valor": 0.622,
+      "redondeado": "0.6220",
+      "fuente": "models.M1.accuracy.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.accuracy.ci_high",
+      "valor": 0.706,
+      "redondeado": "0.7060",
+      "fuente": "models.M1.accuracy.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.recall_s3.mean",
+      "valor": 0.6989284258565802,
+      "redondeado": "0.6989",
+      "fuente": "models.M1.recall_s3.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.recall_s3.sd",
+      "valor": 0.04296008753334784,
+      "redondeado": "0.0430",
+      "fuente": "models.M1.recall_s3.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.recall_s3.min",
+      "valor": 0.5357142857142857,
+      "redondeado": "0.5357",
+      "fuente": "models.M1.recall_s3.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.recall_s3.max",
+      "valor": 0.8387096774193549,
+      "redondeado": "0.8387",
+      "fuente": "models.M1.recall_s3.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.recall_s3.ci_low",
+      "valor": 0.6110988200589971,
+      "redondeado": "0.6111",
+      "fuente": "models.M1.recall_s3.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M1.recall_s3.ci_high",
+      "valor": 0.7830267295597484,
+      "redondeado": "0.7830",
+      "fuente": "models.M1.recall_s3.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.macro_f1.mean",
+      "valor": 0.49892449551102885,
+      "redondeado": "0.4989",
+      "fuente": "models.M2.macro_f1.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.macro_f1.sd",
+      "valor": 0.02920341242860737,
+      "redondeado": "0.0292",
+      "fuente": "models.M2.macro_f1.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.macro_f1.min",
+      "valor": 0.3686335227696484,
+      "redondeado": "0.3686",
+      "fuente": "models.M2.macro_f1.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.macro_f1.max",
+      "valor": 0.6018592865902002,
+      "redondeado": "0.6019",
+      "fuente": "models.M2.macro_f1.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.macro_f1.ci_low",
+      "valor": 0.4379825611240541,
+      "redondeado": "0.4380",
+      "fuente": "models.M2.macro_f1.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.macro_f1.ci_high",
+      "valor": 0.5558271967561859,
+      "redondeado": "0.5558",
+      "fuente": "models.M2.macro_f1.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.accuracy.mean",
+      "valor": 0.512347,
+      "redondeado": "0.5123",
+      "fuente": "models.M2.accuracy.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.accuracy.sd",
+      "valor": 0.028843050320239854,
+      "redondeado": "0.0288",
+      "fuente": "models.M2.accuracy.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.accuracy.min",
+      "valor": 0.396,
+      "redondeado": "0.3960",
+      "fuente": "models.M2.accuracy.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.accuracy.max",
+      "valor": 0.612,
+      "redondeado": "0.6120",
+      "fuente": "models.M2.accuracy.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.accuracy.ci_low",
+      "valor": 0.45395,
+      "redondeado": "0.4540",
+      "fuente": "models.M2.accuracy.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.accuracy.ci_high",
+      "valor": 0.57,
+      "redondeado": "0.5700",
+      "fuente": "models.M2.accuracy.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.recall_s3.mean",
+      "valor": 0.49080745481121685,
+      "redondeado": "0.4908",
+      "fuente": "models.M2.recall_s3.mean",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.recall_s3.sd",
+      "valor": 0.07171175876002195,
+      "redondeado": "0.0717",
+      "fuente": "models.M2.recall_s3.sd",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.recall_s3.min",
+      "valor": 0.13414634146341464,
+      "redondeado": "0.1341",
+      "fuente": "models.M2.recall_s3.min",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.recall_s3.max",
+      "valor": 0.7333333333333333,
+      "redondeado": "0.7333",
+      "fuente": "models.M2.recall_s3.max",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.recall_s3.ci_low",
+      "valor": 0.3417644334671195,
+      "redondeado": "0.3418",
+      "fuente": "models.M2.recall_s3.ci_low",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.recall_s3.ci_high",
+      "valor": 0.6227004716981128,
+      "redondeado": "0.6227",
+      "fuente": "models.M2.recall_s3.ci_high",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0_vs_M1.mean_difference",
+      "valor": -0.0001863486194642332,
+      "redondeado": "-0.0002",
+      "fuente": "comparisons.M0_vs_M1.mean_difference",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0_vs_M1.p_value_holm",
+      "valor": 0.7780307620007513,
+      "redondeado": "0.7780",
+      "fuente": "comparisons.M0_vs_M1.p_value_holm",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0_vs_M1.cliff_delta",
+      "valor": -0.006,
+      "redondeado": "-0.0060",
+      "fuente": "comparisons.M0_vs_M1.cliff_delta",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0_vs_M2.mean_difference",
+      "valor": 0.16123249608676066,
+      "redondeado": "0.1612",
+      "fuente": "comparisons.M0_vs_M2.mean_difference",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0_vs_M2.p_value_holm",
+      "valor": 0.0,
+      "redondeado": "0.0000",
+      "fuente": "comparisons.M0_vs_M2.p_value_holm",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0_vs_M2.cliff_delta",
+      "valor": 1.0,
+      "redondeado": "1.0000",
+      "fuente": "comparisons.M0_vs_M2.cliff_delta",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.confusion.diag1",
+      "valor": 0.8009851216407989,
+      "redondeado": "0.8010",
+      "fuente": "models.M0.confusion_matrix_normalized[0][0]",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.confusion.diag2",
+      "valor": 0.5148435372199366,
+      "redondeado": "0.5148",
+      "fuente": "models.M0.confusion_matrix_normalized[1][1]",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M0.confusion.diag3",
+      "valor": 0.6765703092747284,
+      "redondeado": "0.6766",
+      "fuente": "models.M0.confusion_matrix_normalized[2][2]",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.confusion.diag1",
+      "valor": 0.5941615250023022,
+      "redondeado": "0.5942",
+      "fuente": "models.M2.confusion_matrix_normalized[0][0]",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.confusion.diag2",
+      "valor": 0.4260690070383165,
+      "redondeado": "0.4261",
+      "fuente": "models.M2.confusion_matrix_normalized[1][1]",
+      "presente_en_texto": true
+    },
+    {
+      "afirmacion": "M2.confusion.diag3",
+      "valor": 0.49234498932778203,
+      "redondeado": "0.4923",
+      "fuente": "models.M2.confusion_matrix_normalized[2][2]",
+      "presente_en_texto": true
+    }
+  ]
+}

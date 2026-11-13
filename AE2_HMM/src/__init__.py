@@ -1,8 +1,8 @@
-"""Paquete del HMM para el protocolo D4.
+"""Paquete del HMM para el experimento M0/M1/M2.
 
 La carpeta ``legacy/`` conserva la simulación exploratoria anterior. Este
 paquete implementa la decodificación con A, B y π fijos (D5a) y el
-experimento comparativo M0/M1/M2 de D4.
+experimento comparativo vigente.
 """
 
 from .hmm_model import (
@@ -16,25 +16,33 @@ from .hmm_model import (
     stationary_distribution,
 )
 from .simulation import (
+    ALTERED_MIXING,
+    CLIFF_DELTA_THRESHOLD,
+    CRITERION_1_MIN_DIFFERENCE,
+    CRITERION_2_MIN_MACRO_F1,
+    DEFAULT_ALPHA,
     DEFAULT_MASTER_SEED,
     DEFAULT_N,
     DEFAULT_T,
     METRIC_NAMES,
     MODEL_NAMES,
-    PROVISIONAL_ALTERED_MIXING,
     ExperimentResult,
     accuracy_score,
+    altered_emission_matrix,
+    cliff_delta_paired,
     compute_sequence_metrics,
+    confusion_matrix_counts,
     decode_m0,
     decode_m1,
     decode_m2,
     format_summary,
+    holm_bonferroni,
     macro_f1_score,
-    make_altered_emission_matrix,
-    observable_markov_law,
+    paired_comparison,
     recall_score,
-    run_d4_experiment,
+    replica_seed_sequences,
     run_experiment,
+    summarize,
 )
 
 __all__ = [
@@ -49,20 +57,28 @@ __all__ = [
     "DEFAULT_T",
     "DEFAULT_N",
     "DEFAULT_MASTER_SEED",
+    "DEFAULT_ALPHA",
+    "ALTERED_MIXING",
+    "CLIFF_DELTA_THRESHOLD",
+    "CRITERION_1_MIN_DIFFERENCE",
+    "CRITERION_2_MIN_MACRO_F1",
     "MODEL_NAMES",
     "METRIC_NAMES",
-    "PROVISIONAL_ALTERED_MIXING",
     "ExperimentResult",
     "run_experiment",
-    "run_d4_experiment",
+    "replica_seed_sequences",
     "compute_sequence_metrics",
     "macro_f1_score",
     "recall_score",
     "accuracy_score",
+    "confusion_matrix_counts",
+    "altered_emission_matrix",
     "decode_m0",
     "decode_m1",
     "decode_m2",
-    "observable_markov_law",
-    "make_altered_emission_matrix",
+    "summarize",
+    "cliff_delta_paired",
+    "paired_comparison",
+    "holm_bonferroni",
     "format_summary",
 ]

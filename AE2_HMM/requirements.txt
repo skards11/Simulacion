@@ -1,8 +1,11 @@
-numpy
-matplotlib
-pandas
-pytest
+# Versiones exactas del entorno con el que se ejecutó el experimento D7.
+# Python 3.12.10 (MSC v.1943 64 bit, Windows).
+numpy==2.5.4
+scipy==1.18.1
+matplotlib==3.11.2
+pandas==3.1.0
+pytest==9.2.0
 
-# Ejecución del notebook
-jupyter
-ipykernel
+# Ejecución del notebook legado (no es necesaria para el experimento de la raíz).
+jupyter==1.1.1
+ipykernel==7.4.0

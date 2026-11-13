@@ -1,15 +1,15 @@
-"""Modelo Oculto de Markov (HMM) para el protocolo D4.
+"""Modelo Oculto de Markov (HMM) para el experimento de decodificación.
 
 Estados latentes
 ----------------
-``s1``, ``s2`` y ``s3`` son etiquetas puras, tal como exige D3.1. Los alias
-mnemónicos "Riesgo Bajo", "Riesgo Moderado" y "Riesgo Extremo" se conservan
-solo para presentación; no implican una definición física.
+Los estados canónicos son ``Riesgo Bajo``, ``Riesgo Moderado`` y
+``Riesgo Extremo``. Son etiquetas didácticas puras: no implican una medición
+física de riesgo.
 
 Observaciones
 -------------
-``Alta`` > ``Media`` > ``Baja`` es una escala ordinal de humedad (D3.2). No se
-asignan porcentajes ni umbrales numéricos.
+``Humedad Alta`` > ``Humedad Media`` > ``Humedad Baja`` es una escala ordinal
+de humedad. No se asignan porcentajes ni umbrales numéricos.
 
 Este módulo implementa únicamente inferencia con A, B y π fijos (D5a):
 simulación, Forward, Forward–Backward y Viterbi. No implementa Baum-Welch.
@@ -21,18 +21,22 @@ from typing import Sequence
 
 import numpy as np
 
-# Etiquetas canónicas de los estados latentes (D3.1).
-STATES: tuple[str, ...] = ("s1", "s2", "s3")
-
-# Alias mnemónicos solo para tablas y figuras.
-STATE_ALIASES: tuple[str, ...] = (
+# Etiquetas canónicas de los estados latentes.
+STATES: tuple[str, ...] = (
     "Riesgo Bajo",
     "Riesgo Moderado",
     "Riesgo Extremo",
 )
 
-# Observaciones ordinales de humedad (D3.2).
-OBSERVATIONS: tuple[str, ...] = ("Alta", "Media", "Baja")
+# Alias de presentación: coinciden con los estados canónicos.
+STATE_ALIASES: tuple[str, ...] = STATES
+
+# Observaciones ordinales de humedad.
+OBSERVATIONS: tuple[str, ...] = (
+    "Humedad Alta",
+    "Humedad Media",
+    "Humedad Baja",
+)
 
 # Matriz de transición A: A[i, j] = P(S_t = j | S_{t-1} = i).
 DEFAULT_TRANSITION_MATRIX: np.ndarray = np.array(
@@ -439,7 +443,8 @@ def stationary_distribution(
     """Devuelve la distribución estacionaria de una matriz estocástica.
 
     Se resuelve el sistema (Aᵀ − I)ξ = 0 con la restricción Σξ = 1. La
-    distribución resultante se usa solo en M1, el baseline observable.
+    distribución resultante es una herramienta de diagnóstico; el protocolo
+    experimental vigente no la usa como baseline.
     """
     A = np.asarray(transition_matrix, dtype=float)
     if A.ndim != 2 or A.shape[0] != A.shape[1]:
