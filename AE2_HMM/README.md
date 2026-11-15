@@ -71,7 +71,7 @@ python scripts/audit_manuscript.py
 ## Video de Sustentación (Pitch)
 
 **Duración:** 2:30 min · **Formato:** MP4, 1920×1080, 16:9 horizontal.
-**Enlace:** [INSERTAR_URL_VIDEO_PITCH]
+**Enlace (ingresar con cuenta de IU Digital):** https://drive.google.com/file/d/1grlPo-SNem1dtfTXmOKOxdlIIeq0SFeo/view?usp=sharing
 
 | Integrante | Rol en el pitch | Correo institucional |
 |---|---|---|
