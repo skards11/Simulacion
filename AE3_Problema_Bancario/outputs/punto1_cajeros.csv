@@ -1,0 +1,26 @@
+﻿escenario,escenario_etiqueta,cajero,tipo_caja,clientes_atendidos_prom,tiempo_servicio_prom,tiempo_servicio_ic_inf,tiempo_servicio_ic_sup,tiempo_espera_prom,tiempo_espera_p90,tiempo_sistema_prom,utilizacion_prom,cola_prom,menor_tiempo_servicio,mayor_tiempo_servicio,menor_tiempo_espera,mayor_tiempo_espera
+mixto_3,3 cajas mixtas (actual),0,Mixta,66.2333,3.1621,2.9975,3.3267,0.8522,2.0855,4.0143,0.4281,0.1149,True,False,False,True
+mixto_3,3 cajas mixtas (actual),1,Mixta,66.4667,3.2009,2.9832,3.4186,0.8157,2.3277,4.0166,0.4327,0.1108,False,False,False,False
+mixto_3,3 cajas mixtas (actual),2,Mixta,65.3667,3.2315,3.0452,3.4178,0.7175,2.208,3.949,0.4314,0.0996,False,True,True,False
+mixto_4,4 cajas mixtas,0,Mixta,50.5333,3.1889,2.9629,3.415,0.1747,0.082,3.3636,0.3278,0.0185,False,False,True,False
+mixto_4,4 cajas mixtas,1,Mixta,48.3333,3.2858,3.1008,3.4709,0.2405,0.005,3.5263,0.3269,0.0244,False,True,False,False
+mixto_4,4 cajas mixtas,2,Mixta,49.5333,3.2627,3.0671,3.4582,0.2613,0.0475,3.5239,0.329,0.0267,False,False,False,True
+mixto_4,4 cajas mixtas,3,Mixta,49.6667,3.04,2.8163,3.2636,0.1882,0.0602,3.2282,0.3098,0.019,True,False,False,False
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,0,Retiro,137.6333,2.3428,2.2646,2.421,5.5515,16.1262,7.8943,0.6596,1.5952,True,False,False,True
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,Consignación o pago,29.8,5.2523,4.8833,5.6212,0.906,2.2898,6.1582,0.3197,0.056,False,True,False,False
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,Consignación o pago,30.6333,4.9526,4.5079,5.3974,0.8899,2.4168,5.8426,0.308,0.0547,False,False,True,False
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,0,Retiro,137.6333,2.3428,2.2646,2.421,5.5515,16.1262,7.8943,0.6596,1.5952,True,False,False,True
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,Consignación o pago,21.6667,4.8572,4.3956,5.3189,0.1558,0.1553,5.0131,0.2144,0.0069,False,False,False,False
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,Consignación o pago,20.2,5.1583,4.6659,5.6506,0.2082,0.0982,5.3664,0.211,0.0087,False,False,False,False
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,Consignación o pago,18.5667,5.3675,4.7966,5.9384,0.1226,0.0452,5.4901,0.2026,0.0047,False,True,True,False
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,0,Retiro,70.4667,2.3162,2.1852,2.4472,0.5176,1.2587,2.8338,0.3342,0.0762,True,False,True,False
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,Retiro,67.1667,2.3923,2.2815,2.503,0.5911,1.7491,2.9834,0.3309,0.0837,False,False,False,False
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,Consignación o pago,60.4333,5.0674,4.7434,5.3915,8.526,22.9438,13.5934,0.6185,1.0651,False,True,False,True
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,0,Retiro,68.7333,2.3562,2.225,2.4873,0.5706,1.6326,2.9268,0.3321,0.0824,False,False,False,False
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,Retiro,68.9,2.3444,2.2454,2.4434,0.5659,1.6312,2.9104,0.3329,0.0826,True,False,True,False
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,Consignación o pago,30.1,5.0959,4.706,5.4859,0.8651,2.2686,5.961,0.3168,0.056,False,True,False,False
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,Consignación o pago,30.3333,5.073,4.696,5.4501,0.8729,2.4973,5.946,0.3104,0.052,False,False,False,True
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,0,Retiro,47.3667,2.2824,2.1244,2.4405,0.1063,0.0006,2.3887,0.2218,0.0104,True,False,False,False
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,Retiro,45.6667,2.3573,2.1934,2.5212,0.0774,0.0,2.4347,0.221,0.0076,False,False,True,False
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,Retiro,44.6,2.4479,2.2607,2.6352,0.0933,0.0,2.5412,0.2227,0.0089,False,False,False,False
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,Consignación o pago,60.4333,5.0674,4.7434,5.3915,8.526,22.9438,13.5934,0.6185,1.0651,False,True,False,True

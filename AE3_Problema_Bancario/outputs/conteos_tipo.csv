@@ -1,0 +1,1681 @@
+﻿scenario,scenario_label,replica,action,action_label,user_type,user_type_label,count
+mixto_3,3 cajas mixtas (actual),1,retiro,Retiro,rapido,Rápido,34
+mixto_3,3 cajas mixtas (actual),1,retiro,Retiro,normal,Normal,57
+mixto_3,3 cajas mixtas (actual),1,retiro,Retiro,lento,Lento,16
+mixto_3,3 cajas mixtas (actual),1,retiro,Retiro,muy_lento,Muy lento,27
+mixto_3,3 cajas mixtas (actual),1,pago,Consignación o pago,rapido,Rápido,8
+mixto_3,3 cajas mixtas (actual),1,pago,Consignación o pago,normal,Normal,20
+mixto_3,3 cajas mixtas (actual),1,pago,Consignación o pago,lento,Lento,20
+mixto_3,3 cajas mixtas (actual),1,pago,Consignación o pago,muy_lento,Muy lento,32
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,retiro,Retiro,rapido,Rápido,34
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,retiro,Retiro,normal,Normal,57
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,retiro,Retiro,lento,Lento,16
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,pago,Consignación o pago,rapido,Rápido,8
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,pago,Consignación o pago,normal,Normal,20
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,pago,Consignación o pago,lento,Lento,20
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,1,pago,Consignación o pago,muy_lento,Muy lento,32
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,retiro,Retiro,rapido,Rápido,34
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,retiro,Retiro,normal,Normal,57
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,retiro,Retiro,lento,Lento,16
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,pago,Consignación o pago,rapido,Rápido,8
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,pago,Consignación o pago,normal,Normal,20
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,pago,Consignación o pago,lento,Lento,20
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,1,pago,Consignación o pago,muy_lento,Muy lento,32
+mixto_4,4 cajas mixtas,1,retiro,Retiro,rapido,Rápido,34
+mixto_4,4 cajas mixtas,1,retiro,Retiro,normal,Normal,57
+mixto_4,4 cajas mixtas,1,retiro,Retiro,lento,Lento,16
+mixto_4,4 cajas mixtas,1,retiro,Retiro,muy_lento,Muy lento,27
+mixto_4,4 cajas mixtas,1,pago,Consignación o pago,rapido,Rápido,8
+mixto_4,4 cajas mixtas,1,pago,Consignación o pago,normal,Normal,20
+mixto_4,4 cajas mixtas,1,pago,Consignación o pago,lento,Lento,20
+mixto_4,4 cajas mixtas,1,pago,Consignación o pago,muy_lento,Muy lento,32
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,retiro,Retiro,rapido,Rápido,34
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,retiro,Retiro,normal,Normal,57
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,retiro,Retiro,lento,Lento,16
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,pago,Consignación o pago,rapido,Rápido,8
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,pago,Consignación o pago,normal,Normal,20
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,pago,Consignación o pago,lento,Lento,20
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,1,pago,Consignación o pago,muy_lento,Muy lento,32
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,retiro,Retiro,rapido,Rápido,34
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,retiro,Retiro,normal,Normal,57
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,retiro,Retiro,lento,Lento,16
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,retiro,Retiro,muy_lento,Muy lento,27
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,pago,Consignación o pago,rapido,Rápido,8
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,pago,Consignación o pago,normal,Normal,20
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,pago,Consignación o pago,lento,Lento,20
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,1,pago,Consignación o pago,muy_lento,Muy lento,32
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,retiro,Retiro,rapido,Rápido,34
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,retiro,Retiro,normal,Normal,57
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,retiro,Retiro,lento,Lento,16
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,pago,Consignación o pago,rapido,Rápido,8
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,pago,Consignación o pago,normal,Normal,20
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,pago,Consignación o pago,lento,Lento,20
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,1,pago,Consignación o pago,muy_lento,Muy lento,32
+mixto_3,3 cajas mixtas (actual),2,retiro,Retiro,rapido,Rápido,33
+mixto_3,3 cajas mixtas (actual),2,retiro,Retiro,normal,Normal,59
+mixto_3,3 cajas mixtas (actual),2,retiro,Retiro,lento,Lento,26
+mixto_3,3 cajas mixtas (actual),2,retiro,Retiro,muy_lento,Muy lento,30
+mixto_3,3 cajas mixtas (actual),2,pago,Consignación o pago,rapido,Rápido,8
+mixto_3,3 cajas mixtas (actual),2,pago,Consignación o pago,normal,Normal,10
+mixto_3,3 cajas mixtas (actual),2,pago,Consignación o pago,lento,Lento,14
+mixto_3,3 cajas mixtas (actual),2,pago,Consignación o pago,muy_lento,Muy lento,20
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,retiro,Retiro,rapido,Rápido,33
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,retiro,Retiro,normal,Normal,59
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,retiro,Retiro,lento,Lento,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,retiro,Retiro,muy_lento,Muy lento,30
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,pago,Consignación o pago,rapido,Rápido,8
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,2,pago,Consignación o pago,muy_lento,Muy lento,20
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,retiro,Retiro,rapido,Rápido,33
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,retiro,Retiro,normal,Normal,59
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,retiro,Retiro,lento,Lento,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,retiro,Retiro,muy_lento,Muy lento,30
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,pago,Consignación o pago,rapido,Rápido,8
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,2,pago,Consignación o pago,muy_lento,Muy lento,20
+mixto_4,4 cajas mixtas,2,retiro,Retiro,rapido,Rápido,33
+mixto_4,4 cajas mixtas,2,retiro,Retiro,normal,Normal,59
+mixto_4,4 cajas mixtas,2,retiro,Retiro,lento,Lento,26
+mixto_4,4 cajas mixtas,2,retiro,Retiro,muy_lento,Muy lento,30
+mixto_4,4 cajas mixtas,2,pago,Consignación o pago,rapido,Rápido,8
+mixto_4,4 cajas mixtas,2,pago,Consignación o pago,normal,Normal,10
+mixto_4,4 cajas mixtas,2,pago,Consignación o pago,lento,Lento,14
+mixto_4,4 cajas mixtas,2,pago,Consignación o pago,muy_lento,Muy lento,20
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,retiro,Retiro,rapido,Rápido,33
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,retiro,Retiro,normal,Normal,59
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,retiro,Retiro,lento,Lento,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,retiro,Retiro,muy_lento,Muy lento,30
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,pago,Consignación o pago,rapido,Rápido,8
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,2,pago,Consignación o pago,muy_lento,Muy lento,20
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,retiro,Retiro,rapido,Rápido,33
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,retiro,Retiro,normal,Normal,59
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,retiro,Retiro,lento,Lento,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,retiro,Retiro,muy_lento,Muy lento,30
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,pago,Consignación o pago,rapido,Rápido,8
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,pago,Consignación o pago,normal,Normal,10
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,pago,Consignación o pago,lento,Lento,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,2,pago,Consignación o pago,muy_lento,Muy lento,20
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,retiro,Retiro,rapido,Rápido,33
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,retiro,Retiro,normal,Normal,59
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,retiro,Retiro,lento,Lento,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,retiro,Retiro,muy_lento,Muy lento,30
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,pago,Consignación o pago,rapido,Rápido,8
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,2,pago,Consignación o pago,muy_lento,Muy lento,20
+mixto_3,3 cajas mixtas (actual),3,retiro,Retiro,rapido,Rápido,43
+mixto_3,3 cajas mixtas (actual),3,retiro,Retiro,normal,Normal,56
+mixto_3,3 cajas mixtas (actual),3,retiro,Retiro,lento,Lento,21
+mixto_3,3 cajas mixtas (actual),3,retiro,Retiro,muy_lento,Muy lento,28
+mixto_3,3 cajas mixtas (actual),3,pago,Consignación o pago,rapido,Rápido,7
+mixto_3,3 cajas mixtas (actual),3,pago,Consignación o pago,normal,Normal,8
+mixto_3,3 cajas mixtas (actual),3,pago,Consignación o pago,lento,Lento,14
+mixto_3,3 cajas mixtas (actual),3,pago,Consignación o pago,muy_lento,Muy lento,30
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,3,retiro,Retiro,rapido,Rápido,43
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,3,retiro,Retiro,normal,Normal,56
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,3,retiro,Retiro,lento,Lento,21
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,3,retiro,Retiro,muy_lento,Muy lento,28
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,3,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,3,pago,Consignación o pago,normal,Normal,8
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,3,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,3,pago,Consignación o pago,muy_lento,Muy lento,30
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,3,retiro,Retiro,rapido,Rápido,43
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,3,retiro,Retiro,normal,Normal,56
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,3,retiro,Retiro,lento,Lento,21
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,3,retiro,Retiro,muy_lento,Muy lento,28
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,3,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,3,pago,Consignación o pago,normal,Normal,8
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,3,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,3,pago,Consignación o pago,muy_lento,Muy lento,30
+mixto_4,4 cajas mixtas,3,retiro,Retiro,rapido,Rápido,43
+mixto_4,4 cajas mixtas,3,retiro,Retiro,normal,Normal,56
+mixto_4,4 cajas mixtas,3,retiro,Retiro,lento,Lento,21
+mixto_4,4 cajas mixtas,3,retiro,Retiro,muy_lento,Muy lento,28
+mixto_4,4 cajas mixtas,3,pago,Consignación o pago,rapido,Rápido,7
+mixto_4,4 cajas mixtas,3,pago,Consignación o pago,normal,Normal,8
+mixto_4,4 cajas mixtas,3,pago,Consignación o pago,lento,Lento,14
+mixto_4,4 cajas mixtas,3,pago,Consignación o pago,muy_lento,Muy lento,30
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,retiro,Retiro,rapido,Rápido,43
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,retiro,Retiro,normal,Normal,56
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,retiro,Retiro,lento,Lento,21
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,retiro,Retiro,muy_lento,Muy lento,28
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,pago,Consignación o pago,normal,Normal,8
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,3,pago,Consignación o pago,muy_lento,Muy lento,30
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,retiro,Retiro,rapido,Rápido,43
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,retiro,Retiro,normal,Normal,56
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,retiro,Retiro,lento,Lento,21
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,retiro,Retiro,muy_lento,Muy lento,28
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,pago,Consignación o pago,rapido,Rápido,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,pago,Consignación o pago,normal,Normal,8
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,pago,Consignación o pago,lento,Lento,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,3,pago,Consignación o pago,muy_lento,Muy lento,30
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,retiro,Retiro,rapido,Rápido,43
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,retiro,Retiro,normal,Normal,56
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,retiro,Retiro,lento,Lento,21
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,retiro,Retiro,muy_lento,Muy lento,28
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,pago,Consignación o pago,normal,Normal,8
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,3,pago,Consignación o pago,muy_lento,Muy lento,30
+mixto_3,3 cajas mixtas (actual),4,retiro,Retiro,rapido,Rápido,28
+mixto_3,3 cajas mixtas (actual),4,retiro,Retiro,normal,Normal,43
+mixto_3,3 cajas mixtas (actual),4,retiro,Retiro,lento,Lento,26
+mixto_3,3 cajas mixtas (actual),4,retiro,Retiro,muy_lento,Muy lento,19
+mixto_3,3 cajas mixtas (actual),4,pago,Consignación o pago,rapido,Rápido,4
+mixto_3,3 cajas mixtas (actual),4,pago,Consignación o pago,normal,Normal,13
+mixto_3,3 cajas mixtas (actual),4,pago,Consignación o pago,lento,Lento,22
+mixto_3,3 cajas mixtas (actual),4,pago,Consignación o pago,muy_lento,Muy lento,21
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,4,retiro,Retiro,rapido,Rápido,28
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,4,retiro,Retiro,normal,Normal,43
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,4,retiro,Retiro,lento,Lento,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,4,retiro,Retiro,muy_lento,Muy lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,4,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,4,pago,Consignación o pago,normal,Normal,13
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,4,pago,Consignación o pago,lento,Lento,22
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,4,pago,Consignación o pago,muy_lento,Muy lento,21
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,4,retiro,Retiro,rapido,Rápido,28
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,4,retiro,Retiro,normal,Normal,43
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,4,retiro,Retiro,lento,Lento,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,4,retiro,Retiro,muy_lento,Muy lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,4,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,4,pago,Consignación o pago,normal,Normal,13
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,4,pago,Consignación o pago,lento,Lento,22
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,4,pago,Consignación o pago,muy_lento,Muy lento,21
+mixto_4,4 cajas mixtas,4,retiro,Retiro,rapido,Rápido,28
+mixto_4,4 cajas mixtas,4,retiro,Retiro,normal,Normal,43
+mixto_4,4 cajas mixtas,4,retiro,Retiro,lento,Lento,26
+mixto_4,4 cajas mixtas,4,retiro,Retiro,muy_lento,Muy lento,19
+mixto_4,4 cajas mixtas,4,pago,Consignación o pago,rapido,Rápido,4
+mixto_4,4 cajas mixtas,4,pago,Consignación o pago,normal,Normal,13
+mixto_4,4 cajas mixtas,4,pago,Consignación o pago,lento,Lento,22
+mixto_4,4 cajas mixtas,4,pago,Consignación o pago,muy_lento,Muy lento,21
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,4,retiro,Retiro,rapido,Rápido,28
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,4,retiro,Retiro,normal,Normal,43
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,4,retiro,Retiro,lento,Lento,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,4,retiro,Retiro,muy_lento,Muy lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,4,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,4,pago,Consignación o pago,normal,Normal,13
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,4,pago,Consignación o pago,lento,Lento,22
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,4,pago,Consignación o pago,muy_lento,Muy lento,21
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,4,retiro,Retiro,rapido,Rápido,28
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,4,retiro,Retiro,normal,Normal,43
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,4,retiro,Retiro,lento,Lento,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,4,retiro,Retiro,muy_lento,Muy lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,4,pago,Consignación o pago,rapido,Rápido,4
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,4,pago,Consignación o pago,normal,Normal,13
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,4,pago,Consignación o pago,lento,Lento,22
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,4,pago,Consignación o pago,muy_lento,Muy lento,21
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,4,retiro,Retiro,rapido,Rápido,28
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,4,retiro,Retiro,normal,Normal,43
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,4,retiro,Retiro,lento,Lento,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,4,retiro,Retiro,muy_lento,Muy lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,4,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,4,pago,Consignación o pago,normal,Normal,13
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,4,pago,Consignación o pago,lento,Lento,22
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,4,pago,Consignación o pago,muy_lento,Muy lento,21
+mixto_3,3 cajas mixtas (actual),5,retiro,Retiro,rapido,Rápido,27
+mixto_3,3 cajas mixtas (actual),5,retiro,Retiro,normal,Normal,49
+mixto_3,3 cajas mixtas (actual),5,retiro,Retiro,lento,Lento,28
+mixto_3,3 cajas mixtas (actual),5,retiro,Retiro,muy_lento,Muy lento,30
+mixto_3,3 cajas mixtas (actual),5,pago,Consignación o pago,rapido,Rápido,9
+mixto_3,3 cajas mixtas (actual),5,pago,Consignación o pago,normal,Normal,10
+mixto_3,3 cajas mixtas (actual),5,pago,Consignación o pago,lento,Lento,17
+mixto_3,3 cajas mixtas (actual),5,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,5,retiro,Retiro,rapido,Rápido,27
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,5,retiro,Retiro,normal,Normal,49
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,5,retiro,Retiro,lento,Lento,28
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,5,retiro,Retiro,muy_lento,Muy lento,30
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,5,pago,Consignación o pago,rapido,Rápido,9
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,5,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,5,pago,Consignación o pago,lento,Lento,17
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,5,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,5,retiro,Retiro,rapido,Rápido,27
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,5,retiro,Retiro,normal,Normal,49
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,5,retiro,Retiro,lento,Lento,28
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,5,retiro,Retiro,muy_lento,Muy lento,30
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,5,pago,Consignación o pago,rapido,Rápido,9
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,5,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,5,pago,Consignación o pago,lento,Lento,17
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,5,pago,Consignación o pago,muy_lento,Muy lento,18
+mixto_4,4 cajas mixtas,5,retiro,Retiro,rapido,Rápido,27
+mixto_4,4 cajas mixtas,5,retiro,Retiro,normal,Normal,49
+mixto_4,4 cajas mixtas,5,retiro,Retiro,lento,Lento,28
+mixto_4,4 cajas mixtas,5,retiro,Retiro,muy_lento,Muy lento,30
+mixto_4,4 cajas mixtas,5,pago,Consignación o pago,rapido,Rápido,9
+mixto_4,4 cajas mixtas,5,pago,Consignación o pago,normal,Normal,10
+mixto_4,4 cajas mixtas,5,pago,Consignación o pago,lento,Lento,17
+mixto_4,4 cajas mixtas,5,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,5,retiro,Retiro,rapido,Rápido,27
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,5,retiro,Retiro,normal,Normal,49
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,5,retiro,Retiro,lento,Lento,28
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,5,retiro,Retiro,muy_lento,Muy lento,30
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,5,pago,Consignación o pago,rapido,Rápido,9
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,5,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,5,pago,Consignación o pago,lento,Lento,17
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,5,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,5,retiro,Retiro,rapido,Rápido,27
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,5,retiro,Retiro,normal,Normal,49
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,5,retiro,Retiro,lento,Lento,28
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,5,retiro,Retiro,muy_lento,Muy lento,30
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,5,pago,Consignación o pago,rapido,Rápido,9
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,5,pago,Consignación o pago,normal,Normal,10
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,5,pago,Consignación o pago,lento,Lento,17
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,5,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,5,retiro,Retiro,rapido,Rápido,27
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,5,retiro,Retiro,normal,Normal,49
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,5,retiro,Retiro,lento,Lento,28
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,5,retiro,Retiro,muy_lento,Muy lento,30
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,5,pago,Consignación o pago,rapido,Rápido,9
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,5,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,5,pago,Consignación o pago,lento,Lento,17
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,5,pago,Consignación o pago,muy_lento,Muy lento,18
+mixto_3,3 cajas mixtas (actual),6,retiro,Retiro,rapido,Rápido,34
+mixto_3,3 cajas mixtas (actual),6,retiro,Retiro,normal,Normal,55
+mixto_3,3 cajas mixtas (actual),6,retiro,Retiro,lento,Lento,14
+mixto_3,3 cajas mixtas (actual),6,retiro,Retiro,muy_lento,Muy lento,25
+mixto_3,3 cajas mixtas (actual),6,pago,Consignación o pago,rapido,Rápido,11
+mixto_3,3 cajas mixtas (actual),6,pago,Consignación o pago,normal,Normal,10
+mixto_3,3 cajas mixtas (actual),6,pago,Consignación o pago,lento,Lento,14
+mixto_3,3 cajas mixtas (actual),6,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,6,retiro,Retiro,rapido,Rápido,34
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,6,retiro,Retiro,normal,Normal,55
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,6,retiro,Retiro,lento,Lento,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,6,retiro,Retiro,muy_lento,Muy lento,25
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,6,pago,Consignación o pago,rapido,Rápido,11
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,6,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,6,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,6,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,6,retiro,Retiro,rapido,Rápido,34
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,6,retiro,Retiro,normal,Normal,55
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,6,retiro,Retiro,lento,Lento,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,6,retiro,Retiro,muy_lento,Muy lento,25
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,6,pago,Consignación o pago,rapido,Rápido,11
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,6,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,6,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,6,pago,Consignación o pago,muy_lento,Muy lento,25
+mixto_4,4 cajas mixtas,6,retiro,Retiro,rapido,Rápido,34
+mixto_4,4 cajas mixtas,6,retiro,Retiro,normal,Normal,55
+mixto_4,4 cajas mixtas,6,retiro,Retiro,lento,Lento,14
+mixto_4,4 cajas mixtas,6,retiro,Retiro,muy_lento,Muy lento,25
+mixto_4,4 cajas mixtas,6,pago,Consignación o pago,rapido,Rápido,11
+mixto_4,4 cajas mixtas,6,pago,Consignación o pago,normal,Normal,10
+mixto_4,4 cajas mixtas,6,pago,Consignación o pago,lento,Lento,14
+mixto_4,4 cajas mixtas,6,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,6,retiro,Retiro,rapido,Rápido,34
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,6,retiro,Retiro,normal,Normal,55
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,6,retiro,Retiro,lento,Lento,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,6,retiro,Retiro,muy_lento,Muy lento,25
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,6,pago,Consignación o pago,rapido,Rápido,11
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,6,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,6,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,6,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,6,retiro,Retiro,rapido,Rápido,34
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,6,retiro,Retiro,normal,Normal,55
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,6,retiro,Retiro,lento,Lento,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,6,retiro,Retiro,muy_lento,Muy lento,25
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,6,pago,Consignación o pago,rapido,Rápido,11
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,6,pago,Consignación o pago,normal,Normal,10
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,6,pago,Consignación o pago,lento,Lento,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,6,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,6,retiro,Retiro,rapido,Rápido,34
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,6,retiro,Retiro,normal,Normal,55
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,6,retiro,Retiro,lento,Lento,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,6,retiro,Retiro,muy_lento,Muy lento,25
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,6,pago,Consignación o pago,rapido,Rápido,11
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,6,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,6,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,6,pago,Consignación o pago,muy_lento,Muy lento,25
+mixto_3,3 cajas mixtas (actual),7,retiro,Retiro,rapido,Rápido,30
+mixto_3,3 cajas mixtas (actual),7,retiro,Retiro,normal,Normal,57
+mixto_3,3 cajas mixtas (actual),7,retiro,Retiro,lento,Lento,24
+mixto_3,3 cajas mixtas (actual),7,retiro,Retiro,muy_lento,Muy lento,23
+mixto_3,3 cajas mixtas (actual),7,pago,Consignación o pago,rapido,Rápido,4
+mixto_3,3 cajas mixtas (actual),7,pago,Consignación o pago,normal,Normal,12
+mixto_3,3 cajas mixtas (actual),7,pago,Consignación o pago,lento,Lento,14
+mixto_3,3 cajas mixtas (actual),7,pago,Consignación o pago,muy_lento,Muy lento,34
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,7,retiro,Retiro,rapido,Rápido,30
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,7,retiro,Retiro,normal,Normal,57
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,7,retiro,Retiro,lento,Lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,7,retiro,Retiro,muy_lento,Muy lento,23
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,7,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,7,pago,Consignación o pago,normal,Normal,12
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,7,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,7,pago,Consignación o pago,muy_lento,Muy lento,34
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,7,retiro,Retiro,rapido,Rápido,30
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,7,retiro,Retiro,normal,Normal,57
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,7,retiro,Retiro,lento,Lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,7,retiro,Retiro,muy_lento,Muy lento,23
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,7,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,7,pago,Consignación o pago,normal,Normal,12
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,7,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,7,pago,Consignación o pago,muy_lento,Muy lento,34
+mixto_4,4 cajas mixtas,7,retiro,Retiro,rapido,Rápido,30
+mixto_4,4 cajas mixtas,7,retiro,Retiro,normal,Normal,57
+mixto_4,4 cajas mixtas,7,retiro,Retiro,lento,Lento,24
+mixto_4,4 cajas mixtas,7,retiro,Retiro,muy_lento,Muy lento,23
+mixto_4,4 cajas mixtas,7,pago,Consignación o pago,rapido,Rápido,4
+mixto_4,4 cajas mixtas,7,pago,Consignación o pago,normal,Normal,12
+mixto_4,4 cajas mixtas,7,pago,Consignación o pago,lento,Lento,14
+mixto_4,4 cajas mixtas,7,pago,Consignación o pago,muy_lento,Muy lento,34
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,7,retiro,Retiro,rapido,Rápido,30
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,7,retiro,Retiro,normal,Normal,57
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,7,retiro,Retiro,lento,Lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,7,retiro,Retiro,muy_lento,Muy lento,23
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,7,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,7,pago,Consignación o pago,normal,Normal,12
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,7,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,7,pago,Consignación o pago,muy_lento,Muy lento,34
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,7,retiro,Retiro,rapido,Rápido,30
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,7,retiro,Retiro,normal,Normal,57
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,7,retiro,Retiro,lento,Lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,7,retiro,Retiro,muy_lento,Muy lento,23
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,7,pago,Consignación o pago,rapido,Rápido,4
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,7,pago,Consignación o pago,normal,Normal,12
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,7,pago,Consignación o pago,lento,Lento,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,7,pago,Consignación o pago,muy_lento,Muy lento,34
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,7,retiro,Retiro,rapido,Rápido,30
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,7,retiro,Retiro,normal,Normal,57
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,7,retiro,Retiro,lento,Lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,7,retiro,Retiro,muy_lento,Muy lento,23
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,7,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,7,pago,Consignación o pago,normal,Normal,12
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,7,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,7,pago,Consignación o pago,muy_lento,Muy lento,34
+mixto_3,3 cajas mixtas (actual),8,retiro,Retiro,rapido,Rápido,26
+mixto_3,3 cajas mixtas (actual),8,retiro,Retiro,normal,Normal,53
+mixto_3,3 cajas mixtas (actual),8,retiro,Retiro,lento,Lento,19
+mixto_3,3 cajas mixtas (actual),8,retiro,Retiro,muy_lento,Muy lento,27
+mixto_3,3 cajas mixtas (actual),8,pago,Consignación o pago,rapido,Rápido,2
+mixto_3,3 cajas mixtas (actual),8,pago,Consignación o pago,normal,Normal,12
+mixto_3,3 cajas mixtas (actual),8,pago,Consignación o pago,lento,Lento,13
+mixto_3,3 cajas mixtas (actual),8,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,8,retiro,Retiro,rapido,Rápido,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,8,retiro,Retiro,normal,Normal,53
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,8,retiro,Retiro,lento,Lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,8,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,8,pago,Consignación o pago,rapido,Rápido,2
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,8,pago,Consignación o pago,normal,Normal,12
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,8,pago,Consignación o pago,lento,Lento,13
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,8,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,8,retiro,Retiro,rapido,Rápido,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,8,retiro,Retiro,normal,Normal,53
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,8,retiro,Retiro,lento,Lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,8,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,8,pago,Consignación o pago,rapido,Rápido,2
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,8,pago,Consignación o pago,normal,Normal,12
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,8,pago,Consignación o pago,lento,Lento,13
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,8,pago,Consignación o pago,muy_lento,Muy lento,23
+mixto_4,4 cajas mixtas,8,retiro,Retiro,rapido,Rápido,26
+mixto_4,4 cajas mixtas,8,retiro,Retiro,normal,Normal,53
+mixto_4,4 cajas mixtas,8,retiro,Retiro,lento,Lento,19
+mixto_4,4 cajas mixtas,8,retiro,Retiro,muy_lento,Muy lento,27
+mixto_4,4 cajas mixtas,8,pago,Consignación o pago,rapido,Rápido,2
+mixto_4,4 cajas mixtas,8,pago,Consignación o pago,normal,Normal,12
+mixto_4,4 cajas mixtas,8,pago,Consignación o pago,lento,Lento,13
+mixto_4,4 cajas mixtas,8,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,8,retiro,Retiro,rapido,Rápido,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,8,retiro,Retiro,normal,Normal,53
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,8,retiro,Retiro,lento,Lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,8,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,8,pago,Consignación o pago,rapido,Rápido,2
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,8,pago,Consignación o pago,normal,Normal,12
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,8,pago,Consignación o pago,lento,Lento,13
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,8,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,8,retiro,Retiro,rapido,Rápido,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,8,retiro,Retiro,normal,Normal,53
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,8,retiro,Retiro,lento,Lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,8,retiro,Retiro,muy_lento,Muy lento,27
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,8,pago,Consignación o pago,rapido,Rápido,2
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,8,pago,Consignación o pago,normal,Normal,12
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,8,pago,Consignación o pago,lento,Lento,13
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,8,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,8,retiro,Retiro,rapido,Rápido,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,8,retiro,Retiro,normal,Normal,53
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,8,retiro,Retiro,lento,Lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,8,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,8,pago,Consignación o pago,rapido,Rápido,2
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,8,pago,Consignación o pago,normal,Normal,12
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,8,pago,Consignación o pago,lento,Lento,13
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,8,pago,Consignación o pago,muy_lento,Muy lento,23
+mixto_3,3 cajas mixtas (actual),9,retiro,Retiro,rapido,Rápido,21
+mixto_3,3 cajas mixtas (actual),9,retiro,Retiro,normal,Normal,48
+mixto_3,3 cajas mixtas (actual),9,retiro,Retiro,lento,Lento,20
+mixto_3,3 cajas mixtas (actual),9,retiro,Retiro,muy_lento,Muy lento,21
+mixto_3,3 cajas mixtas (actual),9,pago,Consignación o pago,rapido,Rápido,7
+mixto_3,3 cajas mixtas (actual),9,pago,Consignación o pago,normal,Normal,10
+mixto_3,3 cajas mixtas (actual),9,pago,Consignación o pago,lento,Lento,14
+mixto_3,3 cajas mixtas (actual),9,pago,Consignación o pago,muy_lento,Muy lento,31
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,9,retiro,Retiro,rapido,Rápido,21
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,9,retiro,Retiro,normal,Normal,48
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,9,retiro,Retiro,lento,Lento,20
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,9,retiro,Retiro,muy_lento,Muy lento,21
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,9,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,9,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,9,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,9,pago,Consignación o pago,muy_lento,Muy lento,31
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,9,retiro,Retiro,rapido,Rápido,21
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,9,retiro,Retiro,normal,Normal,48
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,9,retiro,Retiro,lento,Lento,20
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,9,retiro,Retiro,muy_lento,Muy lento,21
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,9,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,9,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,9,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,9,pago,Consignación o pago,muy_lento,Muy lento,31
+mixto_4,4 cajas mixtas,9,retiro,Retiro,rapido,Rápido,21
+mixto_4,4 cajas mixtas,9,retiro,Retiro,normal,Normal,48
+mixto_4,4 cajas mixtas,9,retiro,Retiro,lento,Lento,20
+mixto_4,4 cajas mixtas,9,retiro,Retiro,muy_lento,Muy lento,21
+mixto_4,4 cajas mixtas,9,pago,Consignación o pago,rapido,Rápido,7
+mixto_4,4 cajas mixtas,9,pago,Consignación o pago,normal,Normal,10
+mixto_4,4 cajas mixtas,9,pago,Consignación o pago,lento,Lento,14
+mixto_4,4 cajas mixtas,9,pago,Consignación o pago,muy_lento,Muy lento,31
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,9,retiro,Retiro,rapido,Rápido,21
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,9,retiro,Retiro,normal,Normal,48
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,9,retiro,Retiro,lento,Lento,20
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,9,retiro,Retiro,muy_lento,Muy lento,21
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,9,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,9,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,9,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,9,pago,Consignación o pago,muy_lento,Muy lento,31
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,9,retiro,Retiro,rapido,Rápido,21
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,9,retiro,Retiro,normal,Normal,48
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,9,retiro,Retiro,lento,Lento,20
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,9,retiro,Retiro,muy_lento,Muy lento,21
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,9,pago,Consignación o pago,rapido,Rápido,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,9,pago,Consignación o pago,normal,Normal,10
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,9,pago,Consignación o pago,lento,Lento,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,9,pago,Consignación o pago,muy_lento,Muy lento,31
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,9,retiro,Retiro,rapido,Rápido,21
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,9,retiro,Retiro,normal,Normal,48
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,9,retiro,Retiro,lento,Lento,20
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,9,retiro,Retiro,muy_lento,Muy lento,21
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,9,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,9,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,9,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,9,pago,Consignación o pago,muy_lento,Muy lento,31
+mixto_3,3 cajas mixtas (actual),10,retiro,Retiro,rapido,Rápido,45
+mixto_3,3 cajas mixtas (actual),10,retiro,Retiro,normal,Normal,65
+mixto_3,3 cajas mixtas (actual),10,retiro,Retiro,lento,Lento,29
+mixto_3,3 cajas mixtas (actual),10,retiro,Retiro,muy_lento,Muy lento,27
+mixto_3,3 cajas mixtas (actual),10,pago,Consignación o pago,rapido,Rápido,7
+mixto_3,3 cajas mixtas (actual),10,pago,Consignación o pago,normal,Normal,21
+mixto_3,3 cajas mixtas (actual),10,pago,Consignación o pago,lento,Lento,22
+mixto_3,3 cajas mixtas (actual),10,pago,Consignación o pago,muy_lento,Muy lento,22
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,10,retiro,Retiro,rapido,Rápido,45
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,10,retiro,Retiro,normal,Normal,65
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,10,retiro,Retiro,lento,Lento,29
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,10,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,10,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,10,pago,Consignación o pago,normal,Normal,21
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,10,pago,Consignación o pago,lento,Lento,22
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,10,pago,Consignación o pago,muy_lento,Muy lento,22
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,10,retiro,Retiro,rapido,Rápido,45
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,10,retiro,Retiro,normal,Normal,65
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,10,retiro,Retiro,lento,Lento,29
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,10,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,10,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,10,pago,Consignación o pago,normal,Normal,21
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,10,pago,Consignación o pago,lento,Lento,22
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,10,pago,Consignación o pago,muy_lento,Muy lento,22
+mixto_4,4 cajas mixtas,10,retiro,Retiro,rapido,Rápido,45
+mixto_4,4 cajas mixtas,10,retiro,Retiro,normal,Normal,65
+mixto_4,4 cajas mixtas,10,retiro,Retiro,lento,Lento,29
+mixto_4,4 cajas mixtas,10,retiro,Retiro,muy_lento,Muy lento,27
+mixto_4,4 cajas mixtas,10,pago,Consignación o pago,rapido,Rápido,7
+mixto_4,4 cajas mixtas,10,pago,Consignación o pago,normal,Normal,21
+mixto_4,4 cajas mixtas,10,pago,Consignación o pago,lento,Lento,22
+mixto_4,4 cajas mixtas,10,pago,Consignación o pago,muy_lento,Muy lento,22
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,10,retiro,Retiro,rapido,Rápido,45
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,10,retiro,Retiro,normal,Normal,65
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,10,retiro,Retiro,lento,Lento,29
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,10,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,10,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,10,pago,Consignación o pago,normal,Normal,21
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,10,pago,Consignación o pago,lento,Lento,22
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,10,pago,Consignación o pago,muy_lento,Muy lento,22
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,10,retiro,Retiro,rapido,Rápido,45
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,10,retiro,Retiro,normal,Normal,65
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,10,retiro,Retiro,lento,Lento,29
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,10,retiro,Retiro,muy_lento,Muy lento,27
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,10,pago,Consignación o pago,rapido,Rápido,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,10,pago,Consignación o pago,normal,Normal,21
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,10,pago,Consignación o pago,lento,Lento,22
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,10,pago,Consignación o pago,muy_lento,Muy lento,22
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,10,retiro,Retiro,rapido,Rápido,45
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,10,retiro,Retiro,normal,Normal,65
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,10,retiro,Retiro,lento,Lento,29
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,10,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,10,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,10,pago,Consignación o pago,normal,Normal,21
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,10,pago,Consignación o pago,lento,Lento,22
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,10,pago,Consignación o pago,muy_lento,Muy lento,22
+mixto_3,3 cajas mixtas (actual),11,retiro,Retiro,rapido,Rápido,32
+mixto_3,3 cajas mixtas (actual),11,retiro,Retiro,normal,Normal,64
+mixto_3,3 cajas mixtas (actual),11,retiro,Retiro,lento,Lento,23
+mixto_3,3 cajas mixtas (actual),11,retiro,Retiro,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),11,pago,Consignación o pago,rapido,Rápido,3
+mixto_3,3 cajas mixtas (actual),11,pago,Consignación o pago,normal,Normal,7
+mixto_3,3 cajas mixtas (actual),11,pago,Consignación o pago,lento,Lento,24
+mixto_3,3 cajas mixtas (actual),11,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,11,retiro,Retiro,rapido,Rápido,32
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,11,retiro,Retiro,normal,Normal,64
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,11,retiro,Retiro,lento,Lento,23
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,11,retiro,Retiro,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,11,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,11,pago,Consignación o pago,normal,Normal,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,11,pago,Consignación o pago,lento,Lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,11,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,11,retiro,Retiro,rapido,Rápido,32
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,11,retiro,Retiro,normal,Normal,64
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,11,retiro,Retiro,lento,Lento,23
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,11,retiro,Retiro,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,11,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,11,pago,Consignación o pago,normal,Normal,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,11,pago,Consignación o pago,lento,Lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,11,pago,Consignación o pago,muy_lento,Muy lento,25
+mixto_4,4 cajas mixtas,11,retiro,Retiro,rapido,Rápido,32
+mixto_4,4 cajas mixtas,11,retiro,Retiro,normal,Normal,64
+mixto_4,4 cajas mixtas,11,retiro,Retiro,lento,Lento,23
+mixto_4,4 cajas mixtas,11,retiro,Retiro,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,11,pago,Consignación o pago,rapido,Rápido,3
+mixto_4,4 cajas mixtas,11,pago,Consignación o pago,normal,Normal,7
+mixto_4,4 cajas mixtas,11,pago,Consignación o pago,lento,Lento,24
+mixto_4,4 cajas mixtas,11,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,11,retiro,Retiro,rapido,Rápido,32
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,11,retiro,Retiro,normal,Normal,64
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,11,retiro,Retiro,lento,Lento,23
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,11,retiro,Retiro,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,11,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,11,pago,Consignación o pago,normal,Normal,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,11,pago,Consignación o pago,lento,Lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,11,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,11,retiro,Retiro,rapido,Rápido,32
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,11,retiro,Retiro,normal,Normal,64
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,11,retiro,Retiro,lento,Lento,23
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,11,retiro,Retiro,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,11,pago,Consignación o pago,rapido,Rápido,3
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,11,pago,Consignación o pago,normal,Normal,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,11,pago,Consignación o pago,lento,Lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,11,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,11,retiro,Retiro,rapido,Rápido,32
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,11,retiro,Retiro,normal,Normal,64
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,11,retiro,Retiro,lento,Lento,23
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,11,retiro,Retiro,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,11,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,11,pago,Consignación o pago,normal,Normal,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,11,pago,Consignación o pago,lento,Lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,11,pago,Consignación o pago,muy_lento,Muy lento,25
+mixto_3,3 cajas mixtas (actual),12,retiro,Retiro,rapido,Rápido,19
+mixto_3,3 cajas mixtas (actual),12,retiro,Retiro,normal,Normal,45
+mixto_3,3 cajas mixtas (actual),12,retiro,Retiro,lento,Lento,19
+mixto_3,3 cajas mixtas (actual),12,retiro,Retiro,muy_lento,Muy lento,27
+mixto_3,3 cajas mixtas (actual),12,pago,Consignación o pago,rapido,Rápido,5
+mixto_3,3 cajas mixtas (actual),12,pago,Consignación o pago,normal,Normal,9
+mixto_3,3 cajas mixtas (actual),12,pago,Consignación o pago,lento,Lento,17
+mixto_3,3 cajas mixtas (actual),12,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,12,retiro,Retiro,rapido,Rápido,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,12,retiro,Retiro,normal,Normal,45
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,12,retiro,Retiro,lento,Lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,12,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,12,pago,Consignación o pago,rapido,Rápido,5
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,12,pago,Consignación o pago,normal,Normal,9
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,12,pago,Consignación o pago,lento,Lento,17
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,12,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,12,retiro,Retiro,rapido,Rápido,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,12,retiro,Retiro,normal,Normal,45
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,12,retiro,Retiro,lento,Lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,12,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,12,pago,Consignación o pago,rapido,Rápido,5
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,12,pago,Consignación o pago,normal,Normal,9
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,12,pago,Consignación o pago,lento,Lento,17
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,12,pago,Consignación o pago,muy_lento,Muy lento,23
+mixto_4,4 cajas mixtas,12,retiro,Retiro,rapido,Rápido,19
+mixto_4,4 cajas mixtas,12,retiro,Retiro,normal,Normal,45
+mixto_4,4 cajas mixtas,12,retiro,Retiro,lento,Lento,19
+mixto_4,4 cajas mixtas,12,retiro,Retiro,muy_lento,Muy lento,27
+mixto_4,4 cajas mixtas,12,pago,Consignación o pago,rapido,Rápido,5
+mixto_4,4 cajas mixtas,12,pago,Consignación o pago,normal,Normal,9
+mixto_4,4 cajas mixtas,12,pago,Consignación o pago,lento,Lento,17
+mixto_4,4 cajas mixtas,12,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,12,retiro,Retiro,rapido,Rápido,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,12,retiro,Retiro,normal,Normal,45
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,12,retiro,Retiro,lento,Lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,12,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,12,pago,Consignación o pago,rapido,Rápido,5
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,12,pago,Consignación o pago,normal,Normal,9
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,12,pago,Consignación o pago,lento,Lento,17
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,12,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,12,retiro,Retiro,rapido,Rápido,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,12,retiro,Retiro,normal,Normal,45
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,12,retiro,Retiro,lento,Lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,12,retiro,Retiro,muy_lento,Muy lento,27
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,12,pago,Consignación o pago,rapido,Rápido,5
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,12,pago,Consignación o pago,normal,Normal,9
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,12,pago,Consignación o pago,lento,Lento,17
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,12,pago,Consignación o pago,muy_lento,Muy lento,23
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,12,retiro,Retiro,rapido,Rápido,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,12,retiro,Retiro,normal,Normal,45
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,12,retiro,Retiro,lento,Lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,12,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,12,pago,Consignación o pago,rapido,Rápido,5
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,12,pago,Consignación o pago,normal,Normal,9
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,12,pago,Consignación o pago,lento,Lento,17
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,12,pago,Consignación o pago,muy_lento,Muy lento,23
+mixto_3,3 cajas mixtas (actual),13,retiro,Retiro,rapido,Rápido,26
+mixto_3,3 cajas mixtas (actual),13,retiro,Retiro,normal,Normal,50
+mixto_3,3 cajas mixtas (actual),13,retiro,Retiro,lento,Lento,24
+mixto_3,3 cajas mixtas (actual),13,retiro,Retiro,muy_lento,Muy lento,26
+mixto_3,3 cajas mixtas (actual),13,pago,Consignación o pago,rapido,Rápido,3
+mixto_3,3 cajas mixtas (actual),13,pago,Consignación o pago,normal,Normal,7
+mixto_3,3 cajas mixtas (actual),13,pago,Consignación o pago,lento,Lento,12
+mixto_3,3 cajas mixtas (actual),13,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,13,retiro,Retiro,rapido,Rápido,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,13,retiro,Retiro,normal,Normal,50
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,13,retiro,Retiro,lento,Lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,13,retiro,Retiro,muy_lento,Muy lento,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,13,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,13,pago,Consignación o pago,normal,Normal,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,13,pago,Consignación o pago,lento,Lento,12
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,13,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,13,retiro,Retiro,rapido,Rápido,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,13,retiro,Retiro,normal,Normal,50
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,13,retiro,Retiro,lento,Lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,13,retiro,Retiro,muy_lento,Muy lento,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,13,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,13,pago,Consignación o pago,normal,Normal,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,13,pago,Consignación o pago,lento,Lento,12
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,13,pago,Consignación o pago,muy_lento,Muy lento,18
+mixto_4,4 cajas mixtas,13,retiro,Retiro,rapido,Rápido,26
+mixto_4,4 cajas mixtas,13,retiro,Retiro,normal,Normal,50
+mixto_4,4 cajas mixtas,13,retiro,Retiro,lento,Lento,24
+mixto_4,4 cajas mixtas,13,retiro,Retiro,muy_lento,Muy lento,26
+mixto_4,4 cajas mixtas,13,pago,Consignación o pago,rapido,Rápido,3
+mixto_4,4 cajas mixtas,13,pago,Consignación o pago,normal,Normal,7
+mixto_4,4 cajas mixtas,13,pago,Consignación o pago,lento,Lento,12
+mixto_4,4 cajas mixtas,13,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,13,retiro,Retiro,rapido,Rápido,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,13,retiro,Retiro,normal,Normal,50
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,13,retiro,Retiro,lento,Lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,13,retiro,Retiro,muy_lento,Muy lento,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,13,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,13,pago,Consignación o pago,normal,Normal,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,13,pago,Consignación o pago,lento,Lento,12
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,13,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,13,retiro,Retiro,rapido,Rápido,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,13,retiro,Retiro,normal,Normal,50
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,13,retiro,Retiro,lento,Lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,13,retiro,Retiro,muy_lento,Muy lento,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,13,pago,Consignación o pago,rapido,Rápido,3
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,13,pago,Consignación o pago,normal,Normal,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,13,pago,Consignación o pago,lento,Lento,12
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,13,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,13,retiro,Retiro,rapido,Rápido,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,13,retiro,Retiro,normal,Normal,50
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,13,retiro,Retiro,lento,Lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,13,retiro,Retiro,muy_lento,Muy lento,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,13,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,13,pago,Consignación o pago,normal,Normal,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,13,pago,Consignación o pago,lento,Lento,12
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,13,pago,Consignación o pago,muy_lento,Muy lento,18
+mixto_3,3 cajas mixtas (actual),14,retiro,Retiro,rapido,Rápido,28
+mixto_3,3 cajas mixtas (actual),14,retiro,Retiro,normal,Normal,66
+mixto_3,3 cajas mixtas (actual),14,retiro,Retiro,lento,Lento,20
+mixto_3,3 cajas mixtas (actual),14,retiro,Retiro,muy_lento,Muy lento,22
+mixto_3,3 cajas mixtas (actual),14,pago,Consignación o pago,rapido,Rápido,4
+mixto_3,3 cajas mixtas (actual),14,pago,Consignación o pago,normal,Normal,11
+mixto_3,3 cajas mixtas (actual),14,pago,Consignación o pago,lento,Lento,26
+mixto_3,3 cajas mixtas (actual),14,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,14,retiro,Retiro,rapido,Rápido,28
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,14,retiro,Retiro,normal,Normal,66
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,14,retiro,Retiro,lento,Lento,20
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,14,retiro,Retiro,muy_lento,Muy lento,22
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,14,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,14,pago,Consignación o pago,normal,Normal,11
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,14,pago,Consignación o pago,lento,Lento,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,14,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,14,retiro,Retiro,rapido,Rápido,28
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,14,retiro,Retiro,normal,Normal,66
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,14,retiro,Retiro,lento,Lento,20
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,14,retiro,Retiro,muy_lento,Muy lento,22
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,14,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,14,pago,Consignación o pago,normal,Normal,11
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,14,pago,Consignación o pago,lento,Lento,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,14,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,14,retiro,Retiro,rapido,Rápido,28
+mixto_4,4 cajas mixtas,14,retiro,Retiro,normal,Normal,66
+mixto_4,4 cajas mixtas,14,retiro,Retiro,lento,Lento,20
+mixto_4,4 cajas mixtas,14,retiro,Retiro,muy_lento,Muy lento,22
+mixto_4,4 cajas mixtas,14,pago,Consignación o pago,rapido,Rápido,4
+mixto_4,4 cajas mixtas,14,pago,Consignación o pago,normal,Normal,11
+mixto_4,4 cajas mixtas,14,pago,Consignación o pago,lento,Lento,26
+mixto_4,4 cajas mixtas,14,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,14,retiro,Retiro,rapido,Rápido,28
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,14,retiro,Retiro,normal,Normal,66
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,14,retiro,Retiro,lento,Lento,20
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,14,retiro,Retiro,muy_lento,Muy lento,22
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,14,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,14,pago,Consignación o pago,normal,Normal,11
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,14,pago,Consignación o pago,lento,Lento,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,14,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,14,retiro,Retiro,rapido,Rápido,28
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,14,retiro,Retiro,normal,Normal,66
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,14,retiro,Retiro,lento,Lento,20
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,14,retiro,Retiro,muy_lento,Muy lento,22
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,14,pago,Consignación o pago,rapido,Rápido,4
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,14,pago,Consignación o pago,normal,Normal,11
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,14,pago,Consignación o pago,lento,Lento,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,14,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,14,retiro,Retiro,rapido,Rápido,28
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,14,retiro,Retiro,normal,Normal,66
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,14,retiro,Retiro,lento,Lento,20
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,14,retiro,Retiro,muy_lento,Muy lento,22
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,14,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,14,pago,Consignación o pago,normal,Normal,11
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,14,pago,Consignación o pago,lento,Lento,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,14,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),15,retiro,Retiro,rapido,Rápido,30
+mixto_3,3 cajas mixtas (actual),15,retiro,Retiro,normal,Normal,57
+mixto_3,3 cajas mixtas (actual),15,retiro,Retiro,lento,Lento,19
+mixto_3,3 cajas mixtas (actual),15,retiro,Retiro,muy_lento,Muy lento,21
+mixto_3,3 cajas mixtas (actual),15,pago,Consignación o pago,rapido,Rápido,9
+mixto_3,3 cajas mixtas (actual),15,pago,Consignación o pago,normal,Normal,14
+mixto_3,3 cajas mixtas (actual),15,pago,Consignación o pago,lento,Lento,16
+mixto_3,3 cajas mixtas (actual),15,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,15,retiro,Retiro,rapido,Rápido,30
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,15,retiro,Retiro,normal,Normal,57
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,15,retiro,Retiro,lento,Lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,15,retiro,Retiro,muy_lento,Muy lento,21
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,15,pago,Consignación o pago,rapido,Rápido,9
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,15,pago,Consignación o pago,normal,Normal,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,15,pago,Consignación o pago,lento,Lento,16
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,15,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,15,retiro,Retiro,rapido,Rápido,30
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,15,retiro,Retiro,normal,Normal,57
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,15,retiro,Retiro,lento,Lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,15,retiro,Retiro,muy_lento,Muy lento,21
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,15,pago,Consignación o pago,rapido,Rápido,9
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,15,pago,Consignación o pago,normal,Normal,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,15,pago,Consignación o pago,lento,Lento,16
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,15,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,15,retiro,Retiro,rapido,Rápido,30
+mixto_4,4 cajas mixtas,15,retiro,Retiro,normal,Normal,57
+mixto_4,4 cajas mixtas,15,retiro,Retiro,lento,Lento,19
+mixto_4,4 cajas mixtas,15,retiro,Retiro,muy_lento,Muy lento,21
+mixto_4,4 cajas mixtas,15,pago,Consignación o pago,rapido,Rápido,9
+mixto_4,4 cajas mixtas,15,pago,Consignación o pago,normal,Normal,14
+mixto_4,4 cajas mixtas,15,pago,Consignación o pago,lento,Lento,16
+mixto_4,4 cajas mixtas,15,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,15,retiro,Retiro,rapido,Rápido,30
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,15,retiro,Retiro,normal,Normal,57
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,15,retiro,Retiro,lento,Lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,15,retiro,Retiro,muy_lento,Muy lento,21
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,15,pago,Consignación o pago,rapido,Rápido,9
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,15,pago,Consignación o pago,normal,Normal,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,15,pago,Consignación o pago,lento,Lento,16
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,15,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,15,retiro,Retiro,rapido,Rápido,30
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,15,retiro,Retiro,normal,Normal,57
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,15,retiro,Retiro,lento,Lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,15,retiro,Retiro,muy_lento,Muy lento,21
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,15,pago,Consignación o pago,rapido,Rápido,9
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,15,pago,Consignación o pago,normal,Normal,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,15,pago,Consignación o pago,lento,Lento,16
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,15,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,15,retiro,Retiro,rapido,Rápido,30
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,15,retiro,Retiro,normal,Normal,57
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,15,retiro,Retiro,lento,Lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,15,retiro,Retiro,muy_lento,Muy lento,21
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,15,pago,Consignación o pago,rapido,Rápido,9
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,15,pago,Consignación o pago,normal,Normal,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,15,pago,Consignación o pago,lento,Lento,16
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,15,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),16,retiro,Retiro,rapido,Rápido,38
+mixto_3,3 cajas mixtas (actual),16,retiro,Retiro,normal,Normal,56
+mixto_3,3 cajas mixtas (actual),16,retiro,Retiro,lento,Lento,19
+mixto_3,3 cajas mixtas (actual),16,retiro,Retiro,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),16,pago,Consignación o pago,rapido,Rápido,7
+mixto_3,3 cajas mixtas (actual),16,pago,Consignación o pago,normal,Normal,14
+mixto_3,3 cajas mixtas (actual),16,pago,Consignación o pago,lento,Lento,20
+mixto_3,3 cajas mixtas (actual),16,pago,Consignación o pago,muy_lento,Muy lento,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,16,retiro,Retiro,rapido,Rápido,38
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,16,retiro,Retiro,normal,Normal,56
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,16,retiro,Retiro,lento,Lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,16,retiro,Retiro,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,16,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,16,pago,Consignación o pago,normal,Normal,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,16,pago,Consignación o pago,lento,Lento,20
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,16,pago,Consignación o pago,muy_lento,Muy lento,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,16,retiro,Retiro,rapido,Rápido,38
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,16,retiro,Retiro,normal,Normal,56
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,16,retiro,Retiro,lento,Lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,16,retiro,Retiro,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,16,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,16,pago,Consignación o pago,normal,Normal,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,16,pago,Consignación o pago,lento,Lento,20
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,16,pago,Consignación o pago,muy_lento,Muy lento,26
+mixto_4,4 cajas mixtas,16,retiro,Retiro,rapido,Rápido,38
+mixto_4,4 cajas mixtas,16,retiro,Retiro,normal,Normal,56
+mixto_4,4 cajas mixtas,16,retiro,Retiro,lento,Lento,19
+mixto_4,4 cajas mixtas,16,retiro,Retiro,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,16,pago,Consignación o pago,rapido,Rápido,7
+mixto_4,4 cajas mixtas,16,pago,Consignación o pago,normal,Normal,14
+mixto_4,4 cajas mixtas,16,pago,Consignación o pago,lento,Lento,20
+mixto_4,4 cajas mixtas,16,pago,Consignación o pago,muy_lento,Muy lento,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,16,retiro,Retiro,rapido,Rápido,38
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,16,retiro,Retiro,normal,Normal,56
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,16,retiro,Retiro,lento,Lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,16,retiro,Retiro,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,16,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,16,pago,Consignación o pago,normal,Normal,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,16,pago,Consignación o pago,lento,Lento,20
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,16,pago,Consignación o pago,muy_lento,Muy lento,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,16,retiro,Retiro,rapido,Rápido,38
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,16,retiro,Retiro,normal,Normal,56
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,16,retiro,Retiro,lento,Lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,16,retiro,Retiro,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,16,pago,Consignación o pago,rapido,Rápido,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,16,pago,Consignación o pago,normal,Normal,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,16,pago,Consignación o pago,lento,Lento,20
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,16,pago,Consignación o pago,muy_lento,Muy lento,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,16,retiro,Retiro,rapido,Rápido,38
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,16,retiro,Retiro,normal,Normal,56
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,16,retiro,Retiro,lento,Lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,16,retiro,Retiro,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,16,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,16,pago,Consignación o pago,normal,Normal,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,16,pago,Consignación o pago,lento,Lento,20
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,16,pago,Consignación o pago,muy_lento,Muy lento,26
+mixto_3,3 cajas mixtas (actual),17,retiro,Retiro,rapido,Rápido,24
+mixto_3,3 cajas mixtas (actual),17,retiro,Retiro,normal,Normal,60
+mixto_3,3 cajas mixtas (actual),17,retiro,Retiro,lento,Lento,26
+mixto_3,3 cajas mixtas (actual),17,retiro,Retiro,muy_lento,Muy lento,26
+mixto_3,3 cajas mixtas (actual),17,pago,Consignación o pago,rapido,Rápido,4
+mixto_3,3 cajas mixtas (actual),17,pago,Consignación o pago,normal,Normal,9
+mixto_3,3 cajas mixtas (actual),17,pago,Consignación o pago,lento,Lento,20
+mixto_3,3 cajas mixtas (actual),17,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,17,retiro,Retiro,rapido,Rápido,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,17,retiro,Retiro,normal,Normal,60
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,17,retiro,Retiro,lento,Lento,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,17,retiro,Retiro,muy_lento,Muy lento,26
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,17,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,17,pago,Consignación o pago,normal,Normal,9
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,17,pago,Consignación o pago,lento,Lento,20
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,17,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,17,retiro,Retiro,rapido,Rápido,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,17,retiro,Retiro,normal,Normal,60
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,17,retiro,Retiro,lento,Lento,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,17,retiro,Retiro,muy_lento,Muy lento,26
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,17,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,17,pago,Consignación o pago,normal,Normal,9
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,17,pago,Consignación o pago,lento,Lento,20
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,17,pago,Consignación o pago,muy_lento,Muy lento,19
+mixto_4,4 cajas mixtas,17,retiro,Retiro,rapido,Rápido,24
+mixto_4,4 cajas mixtas,17,retiro,Retiro,normal,Normal,60
+mixto_4,4 cajas mixtas,17,retiro,Retiro,lento,Lento,26
+mixto_4,4 cajas mixtas,17,retiro,Retiro,muy_lento,Muy lento,26
+mixto_4,4 cajas mixtas,17,pago,Consignación o pago,rapido,Rápido,4
+mixto_4,4 cajas mixtas,17,pago,Consignación o pago,normal,Normal,9
+mixto_4,4 cajas mixtas,17,pago,Consignación o pago,lento,Lento,20
+mixto_4,4 cajas mixtas,17,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,17,retiro,Retiro,rapido,Rápido,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,17,retiro,Retiro,normal,Normal,60
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,17,retiro,Retiro,lento,Lento,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,17,retiro,Retiro,muy_lento,Muy lento,26
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,17,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,17,pago,Consignación o pago,normal,Normal,9
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,17,pago,Consignación o pago,lento,Lento,20
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,17,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,17,retiro,Retiro,rapido,Rápido,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,17,retiro,Retiro,normal,Normal,60
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,17,retiro,Retiro,lento,Lento,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,17,retiro,Retiro,muy_lento,Muy lento,26
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,17,pago,Consignación o pago,rapido,Rápido,4
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,17,pago,Consignación o pago,normal,Normal,9
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,17,pago,Consignación o pago,lento,Lento,20
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,17,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,17,retiro,Retiro,rapido,Rápido,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,17,retiro,Retiro,normal,Normal,60
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,17,retiro,Retiro,lento,Lento,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,17,retiro,Retiro,muy_lento,Muy lento,26
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,17,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,17,pago,Consignación o pago,normal,Normal,9
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,17,pago,Consignación o pago,lento,Lento,20
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,17,pago,Consignación o pago,muy_lento,Muy lento,19
+mixto_3,3 cajas mixtas (actual),18,retiro,Retiro,rapido,Rápido,32
+mixto_3,3 cajas mixtas (actual),18,retiro,Retiro,normal,Normal,46
+mixto_3,3 cajas mixtas (actual),18,retiro,Retiro,lento,Lento,27
+mixto_3,3 cajas mixtas (actual),18,retiro,Retiro,muy_lento,Muy lento,19
+mixto_3,3 cajas mixtas (actual),18,pago,Consignación o pago,rapido,Rápido,3
+mixto_3,3 cajas mixtas (actual),18,pago,Consignación o pago,normal,Normal,12
+mixto_3,3 cajas mixtas (actual),18,pago,Consignación o pago,lento,Lento,23
+mixto_3,3 cajas mixtas (actual),18,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,18,retiro,Retiro,rapido,Rápido,32
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,18,retiro,Retiro,normal,Normal,46
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,18,retiro,Retiro,lento,Lento,27
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,18,retiro,Retiro,muy_lento,Muy lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,18,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,18,pago,Consignación o pago,normal,Normal,12
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,18,pago,Consignación o pago,lento,Lento,23
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,18,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,18,retiro,Retiro,rapido,Rápido,32
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,18,retiro,Retiro,normal,Normal,46
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,18,retiro,Retiro,lento,Lento,27
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,18,retiro,Retiro,muy_lento,Muy lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,18,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,18,pago,Consignación o pago,normal,Normal,12
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,18,pago,Consignación o pago,lento,Lento,23
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,18,pago,Consignación o pago,muy_lento,Muy lento,25
+mixto_4,4 cajas mixtas,18,retiro,Retiro,rapido,Rápido,32
+mixto_4,4 cajas mixtas,18,retiro,Retiro,normal,Normal,46
+mixto_4,4 cajas mixtas,18,retiro,Retiro,lento,Lento,27
+mixto_4,4 cajas mixtas,18,retiro,Retiro,muy_lento,Muy lento,19
+mixto_4,4 cajas mixtas,18,pago,Consignación o pago,rapido,Rápido,3
+mixto_4,4 cajas mixtas,18,pago,Consignación o pago,normal,Normal,12
+mixto_4,4 cajas mixtas,18,pago,Consignación o pago,lento,Lento,23
+mixto_4,4 cajas mixtas,18,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,18,retiro,Retiro,rapido,Rápido,32
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,18,retiro,Retiro,normal,Normal,46
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,18,retiro,Retiro,lento,Lento,27
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,18,retiro,Retiro,muy_lento,Muy lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,18,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,18,pago,Consignación o pago,normal,Normal,12
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,18,pago,Consignación o pago,lento,Lento,23
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,18,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,18,retiro,Retiro,rapido,Rápido,32
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,18,retiro,Retiro,normal,Normal,46
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,18,retiro,Retiro,lento,Lento,27
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,18,retiro,Retiro,muy_lento,Muy lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,18,pago,Consignación o pago,rapido,Rápido,3
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,18,pago,Consignación o pago,normal,Normal,12
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,18,pago,Consignación o pago,lento,Lento,23
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,18,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,18,retiro,Retiro,rapido,Rápido,32
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,18,retiro,Retiro,normal,Normal,46
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,18,retiro,Retiro,lento,Lento,27
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,18,retiro,Retiro,muy_lento,Muy lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,18,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,18,pago,Consignación o pago,normal,Normal,12
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,18,pago,Consignación o pago,lento,Lento,23
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,18,pago,Consignación o pago,muy_lento,Muy lento,25
+mixto_3,3 cajas mixtas (actual),19,retiro,Retiro,rapido,Rápido,45
+mixto_3,3 cajas mixtas (actual),19,retiro,Retiro,normal,Normal,61
+mixto_3,3 cajas mixtas (actual),19,retiro,Retiro,lento,Lento,24
+mixto_3,3 cajas mixtas (actual),19,retiro,Retiro,muy_lento,Muy lento,30
+mixto_3,3 cajas mixtas (actual),19,pago,Consignación o pago,rapido,Rápido,10
+mixto_3,3 cajas mixtas (actual),19,pago,Consignación o pago,normal,Normal,15
+mixto_3,3 cajas mixtas (actual),19,pago,Consignación o pago,lento,Lento,22
+mixto_3,3 cajas mixtas (actual),19,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,19,retiro,Retiro,rapido,Rápido,45
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,19,retiro,Retiro,normal,Normal,61
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,19,retiro,Retiro,lento,Lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,19,retiro,Retiro,muy_lento,Muy lento,30
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,19,pago,Consignación o pago,rapido,Rápido,10
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,19,pago,Consignación o pago,normal,Normal,15
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,19,pago,Consignación o pago,lento,Lento,22
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,19,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,19,retiro,Retiro,rapido,Rápido,45
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,19,retiro,Retiro,normal,Normal,61
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,19,retiro,Retiro,lento,Lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,19,retiro,Retiro,muy_lento,Muy lento,30
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,19,pago,Consignación o pago,rapido,Rápido,10
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,19,pago,Consignación o pago,normal,Normal,15
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,19,pago,Consignación o pago,lento,Lento,22
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,19,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,19,retiro,Retiro,rapido,Rápido,45
+mixto_4,4 cajas mixtas,19,retiro,Retiro,normal,Normal,61
+mixto_4,4 cajas mixtas,19,retiro,Retiro,lento,Lento,24
+mixto_4,4 cajas mixtas,19,retiro,Retiro,muy_lento,Muy lento,30
+mixto_4,4 cajas mixtas,19,pago,Consignación o pago,rapido,Rápido,10
+mixto_4,4 cajas mixtas,19,pago,Consignación o pago,normal,Normal,15
+mixto_4,4 cajas mixtas,19,pago,Consignación o pago,lento,Lento,22
+mixto_4,4 cajas mixtas,19,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,19,retiro,Retiro,rapido,Rápido,45
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,19,retiro,Retiro,normal,Normal,61
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,19,retiro,Retiro,lento,Lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,19,retiro,Retiro,muy_lento,Muy lento,30
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,19,pago,Consignación o pago,rapido,Rápido,10
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,19,pago,Consignación o pago,normal,Normal,15
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,19,pago,Consignación o pago,lento,Lento,22
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,19,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,19,retiro,Retiro,rapido,Rápido,45
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,19,retiro,Retiro,normal,Normal,61
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,19,retiro,Retiro,lento,Lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,19,retiro,Retiro,muy_lento,Muy lento,30
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,19,pago,Consignación o pago,rapido,Rápido,10
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,19,pago,Consignación o pago,normal,Normal,15
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,19,pago,Consignación o pago,lento,Lento,22
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,19,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,19,retiro,Retiro,rapido,Rápido,45
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,19,retiro,Retiro,normal,Normal,61
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,19,retiro,Retiro,lento,Lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,19,retiro,Retiro,muy_lento,Muy lento,30
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,19,pago,Consignación o pago,rapido,Rápido,10
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,19,pago,Consignación o pago,normal,Normal,15
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,19,pago,Consignación o pago,lento,Lento,22
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,19,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),20,retiro,Retiro,rapido,Rápido,25
+mixto_3,3 cajas mixtas (actual),20,retiro,Retiro,normal,Normal,63
+mixto_3,3 cajas mixtas (actual),20,retiro,Retiro,lento,Lento,23
+mixto_3,3 cajas mixtas (actual),20,retiro,Retiro,muy_lento,Muy lento,27
+mixto_3,3 cajas mixtas (actual),20,pago,Consignación o pago,rapido,Rápido,4
+mixto_3,3 cajas mixtas (actual),20,pago,Consignación o pago,normal,Normal,19
+mixto_3,3 cajas mixtas (actual),20,pago,Consignación o pago,lento,Lento,15
+mixto_3,3 cajas mixtas (actual),20,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,20,retiro,Retiro,rapido,Rápido,25
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,20,retiro,Retiro,normal,Normal,63
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,20,retiro,Retiro,lento,Lento,23
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,20,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,20,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,20,pago,Consignación o pago,normal,Normal,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,20,pago,Consignación o pago,lento,Lento,15
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,20,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,20,retiro,Retiro,rapido,Rápido,25
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,20,retiro,Retiro,normal,Normal,63
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,20,retiro,Retiro,lento,Lento,23
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,20,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,20,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,20,pago,Consignación o pago,normal,Normal,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,20,pago,Consignación o pago,lento,Lento,15
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,20,pago,Consignación o pago,muy_lento,Muy lento,28
+mixto_4,4 cajas mixtas,20,retiro,Retiro,rapido,Rápido,25
+mixto_4,4 cajas mixtas,20,retiro,Retiro,normal,Normal,63
+mixto_4,4 cajas mixtas,20,retiro,Retiro,lento,Lento,23
+mixto_4,4 cajas mixtas,20,retiro,Retiro,muy_lento,Muy lento,27
+mixto_4,4 cajas mixtas,20,pago,Consignación o pago,rapido,Rápido,4
+mixto_4,4 cajas mixtas,20,pago,Consignación o pago,normal,Normal,19
+mixto_4,4 cajas mixtas,20,pago,Consignación o pago,lento,Lento,15
+mixto_4,4 cajas mixtas,20,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,20,retiro,Retiro,rapido,Rápido,25
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,20,retiro,Retiro,normal,Normal,63
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,20,retiro,Retiro,lento,Lento,23
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,20,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,20,pago,Consignación o pago,rapido,Rápido,4
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,20,pago,Consignación o pago,normal,Normal,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,20,pago,Consignación o pago,lento,Lento,15
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,20,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,20,retiro,Retiro,rapido,Rápido,25
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,20,retiro,Retiro,normal,Normal,63
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,20,retiro,Retiro,lento,Lento,23
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,20,retiro,Retiro,muy_lento,Muy lento,27
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,20,pago,Consignación o pago,rapido,Rápido,4
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,20,pago,Consignación o pago,normal,Normal,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,20,pago,Consignación o pago,lento,Lento,15
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,20,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,20,retiro,Retiro,rapido,Rápido,25
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,20,retiro,Retiro,normal,Normal,63
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,20,retiro,Retiro,lento,Lento,23
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,20,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,20,pago,Consignación o pago,rapido,Rápido,4
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,20,pago,Consignación o pago,normal,Normal,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,20,pago,Consignación o pago,lento,Lento,15
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,20,pago,Consignación o pago,muy_lento,Muy lento,28
+mixto_3,3 cajas mixtas (actual),21,retiro,Retiro,rapido,Rápido,35
+mixto_3,3 cajas mixtas (actual),21,retiro,Retiro,normal,Normal,61
+mixto_3,3 cajas mixtas (actual),21,retiro,Retiro,lento,Lento,19
+mixto_3,3 cajas mixtas (actual),21,retiro,Retiro,muy_lento,Muy lento,32
+mixto_3,3 cajas mixtas (actual),21,pago,Consignación o pago,rapido,Rápido,12
+mixto_3,3 cajas mixtas (actual),21,pago,Consignación o pago,normal,Normal,7
+mixto_3,3 cajas mixtas (actual),21,pago,Consignación o pago,lento,Lento,24
+mixto_3,3 cajas mixtas (actual),21,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,21,retiro,Retiro,rapido,Rápido,35
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,21,retiro,Retiro,normal,Normal,61
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,21,retiro,Retiro,lento,Lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,21,retiro,Retiro,muy_lento,Muy lento,32
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,21,pago,Consignación o pago,rapido,Rápido,12
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,21,pago,Consignación o pago,normal,Normal,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,21,pago,Consignación o pago,lento,Lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,21,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,21,retiro,Retiro,rapido,Rápido,35
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,21,retiro,Retiro,normal,Normal,61
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,21,retiro,Retiro,lento,Lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,21,retiro,Retiro,muy_lento,Muy lento,32
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,21,pago,Consignación o pago,rapido,Rápido,12
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,21,pago,Consignación o pago,normal,Normal,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,21,pago,Consignación o pago,lento,Lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,21,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,21,retiro,Retiro,rapido,Rápido,35
+mixto_4,4 cajas mixtas,21,retiro,Retiro,normal,Normal,61
+mixto_4,4 cajas mixtas,21,retiro,Retiro,lento,Lento,19
+mixto_4,4 cajas mixtas,21,retiro,Retiro,muy_lento,Muy lento,32
+mixto_4,4 cajas mixtas,21,pago,Consignación o pago,rapido,Rápido,12
+mixto_4,4 cajas mixtas,21,pago,Consignación o pago,normal,Normal,7
+mixto_4,4 cajas mixtas,21,pago,Consignación o pago,lento,Lento,24
+mixto_4,4 cajas mixtas,21,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,21,retiro,Retiro,rapido,Rápido,35
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,21,retiro,Retiro,normal,Normal,61
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,21,retiro,Retiro,lento,Lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,21,retiro,Retiro,muy_lento,Muy lento,32
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,21,pago,Consignación o pago,rapido,Rápido,12
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,21,pago,Consignación o pago,normal,Normal,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,21,pago,Consignación o pago,lento,Lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,21,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,21,retiro,Retiro,rapido,Rápido,35
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,21,retiro,Retiro,normal,Normal,61
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,21,retiro,Retiro,lento,Lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,21,retiro,Retiro,muy_lento,Muy lento,32
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,21,pago,Consignación o pago,rapido,Rápido,12
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,21,pago,Consignación o pago,normal,Normal,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,21,pago,Consignación o pago,lento,Lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,21,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,21,retiro,Retiro,rapido,Rápido,35
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,21,retiro,Retiro,normal,Normal,61
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,21,retiro,Retiro,lento,Lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,21,retiro,Retiro,muy_lento,Muy lento,32
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,21,pago,Consignación o pago,rapido,Rápido,12
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,21,pago,Consignación o pago,normal,Normal,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,21,pago,Consignación o pago,lento,Lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,21,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),22,retiro,Retiro,rapido,Rápido,42
+mixto_3,3 cajas mixtas (actual),22,retiro,Retiro,normal,Normal,59
+mixto_3,3 cajas mixtas (actual),22,retiro,Retiro,lento,Lento,25
+mixto_3,3 cajas mixtas (actual),22,retiro,Retiro,muy_lento,Muy lento,37
+mixto_3,3 cajas mixtas (actual),22,pago,Consignación o pago,rapido,Rápido,7
+mixto_3,3 cajas mixtas (actual),22,pago,Consignación o pago,normal,Normal,13
+mixto_3,3 cajas mixtas (actual),22,pago,Consignación o pago,lento,Lento,18
+mixto_3,3 cajas mixtas (actual),22,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,22,retiro,Retiro,rapido,Rápido,42
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,22,retiro,Retiro,normal,Normal,59
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,22,retiro,Retiro,lento,Lento,25
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,22,retiro,Retiro,muy_lento,Muy lento,37
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,22,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,22,pago,Consignación o pago,normal,Normal,13
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,22,pago,Consignación o pago,lento,Lento,18
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,22,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,22,retiro,Retiro,rapido,Rápido,42
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,22,retiro,Retiro,normal,Normal,59
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,22,retiro,Retiro,lento,Lento,25
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,22,retiro,Retiro,muy_lento,Muy lento,37
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,22,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,22,pago,Consignación o pago,normal,Normal,13
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,22,pago,Consignación o pago,lento,Lento,18
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,22,pago,Consignación o pago,muy_lento,Muy lento,25
+mixto_4,4 cajas mixtas,22,retiro,Retiro,rapido,Rápido,42
+mixto_4,4 cajas mixtas,22,retiro,Retiro,normal,Normal,59
+mixto_4,4 cajas mixtas,22,retiro,Retiro,lento,Lento,25
+mixto_4,4 cajas mixtas,22,retiro,Retiro,muy_lento,Muy lento,37
+mixto_4,4 cajas mixtas,22,pago,Consignación o pago,rapido,Rápido,7
+mixto_4,4 cajas mixtas,22,pago,Consignación o pago,normal,Normal,13
+mixto_4,4 cajas mixtas,22,pago,Consignación o pago,lento,Lento,18
+mixto_4,4 cajas mixtas,22,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,22,retiro,Retiro,rapido,Rápido,42
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,22,retiro,Retiro,normal,Normal,59
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,22,retiro,Retiro,lento,Lento,25
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,22,retiro,Retiro,muy_lento,Muy lento,37
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,22,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,22,pago,Consignación o pago,normal,Normal,13
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,22,pago,Consignación o pago,lento,Lento,18
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,22,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,22,retiro,Retiro,rapido,Rápido,42
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,22,retiro,Retiro,normal,Normal,59
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,22,retiro,Retiro,lento,Lento,25
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,22,retiro,Retiro,muy_lento,Muy lento,37
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,22,pago,Consignación o pago,rapido,Rápido,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,22,pago,Consignación o pago,normal,Normal,13
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,22,pago,Consignación o pago,lento,Lento,18
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,22,pago,Consignación o pago,muy_lento,Muy lento,25
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,22,retiro,Retiro,rapido,Rápido,42
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,22,retiro,Retiro,normal,Normal,59
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,22,retiro,Retiro,lento,Lento,25
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,22,retiro,Retiro,muy_lento,Muy lento,37
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,22,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,22,pago,Consignación o pago,normal,Normal,13
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,22,pago,Consignación o pago,lento,Lento,18
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,22,pago,Consignación o pago,muy_lento,Muy lento,25
+mixto_3,3 cajas mixtas (actual),23,retiro,Retiro,rapido,Rápido,39
+mixto_3,3 cajas mixtas (actual),23,retiro,Retiro,normal,Normal,57
+mixto_3,3 cajas mixtas (actual),23,retiro,Retiro,lento,Lento,24
+mixto_3,3 cajas mixtas (actual),23,retiro,Retiro,muy_lento,Muy lento,35
+mixto_3,3 cajas mixtas (actual),23,pago,Consignación o pago,rapido,Rápido,7
+mixto_3,3 cajas mixtas (actual),23,pago,Consignación o pago,normal,Normal,14
+mixto_3,3 cajas mixtas (actual),23,pago,Consignación o pago,lento,Lento,14
+mixto_3,3 cajas mixtas (actual),23,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,23,retiro,Retiro,rapido,Rápido,39
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,23,retiro,Retiro,normal,Normal,57
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,23,retiro,Retiro,lento,Lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,23,retiro,Retiro,muy_lento,Muy lento,35
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,23,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,23,pago,Consignación o pago,normal,Normal,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,23,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,23,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,23,retiro,Retiro,rapido,Rápido,39
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,23,retiro,Retiro,normal,Normal,57
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,23,retiro,Retiro,lento,Lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,23,retiro,Retiro,muy_lento,Muy lento,35
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,23,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,23,pago,Consignación o pago,normal,Normal,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,23,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,23,pago,Consignación o pago,muy_lento,Muy lento,28
+mixto_4,4 cajas mixtas,23,retiro,Retiro,rapido,Rápido,39
+mixto_4,4 cajas mixtas,23,retiro,Retiro,normal,Normal,57
+mixto_4,4 cajas mixtas,23,retiro,Retiro,lento,Lento,24
+mixto_4,4 cajas mixtas,23,retiro,Retiro,muy_lento,Muy lento,35
+mixto_4,4 cajas mixtas,23,pago,Consignación o pago,rapido,Rápido,7
+mixto_4,4 cajas mixtas,23,pago,Consignación o pago,normal,Normal,14
+mixto_4,4 cajas mixtas,23,pago,Consignación o pago,lento,Lento,14
+mixto_4,4 cajas mixtas,23,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,23,retiro,Retiro,rapido,Rápido,39
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,23,retiro,Retiro,normal,Normal,57
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,23,retiro,Retiro,lento,Lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,23,retiro,Retiro,muy_lento,Muy lento,35
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,23,pago,Consignación o pago,rapido,Rápido,7
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,23,pago,Consignación o pago,normal,Normal,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,23,pago,Consignación o pago,lento,Lento,14
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,23,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,23,retiro,Retiro,rapido,Rápido,39
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,23,retiro,Retiro,normal,Normal,57
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,23,retiro,Retiro,lento,Lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,23,retiro,Retiro,muy_lento,Muy lento,35
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,23,pago,Consignación o pago,rapido,Rápido,7
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,23,pago,Consignación o pago,normal,Normal,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,23,pago,Consignación o pago,lento,Lento,14
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,23,pago,Consignación o pago,muy_lento,Muy lento,28
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,23,retiro,Retiro,rapido,Rápido,39
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,23,retiro,Retiro,normal,Normal,57
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,23,retiro,Retiro,lento,Lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,23,retiro,Retiro,muy_lento,Muy lento,35
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,23,pago,Consignación o pago,rapido,Rápido,7
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,23,pago,Consignación o pago,normal,Normal,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,23,pago,Consignación o pago,lento,Lento,14
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,23,pago,Consignación o pago,muy_lento,Muy lento,28
+mixto_3,3 cajas mixtas (actual),24,retiro,Retiro,rapido,Rápido,39
+mixto_3,3 cajas mixtas (actual),24,retiro,Retiro,normal,Normal,55
+mixto_3,3 cajas mixtas (actual),24,retiro,Retiro,lento,Lento,19
+mixto_3,3 cajas mixtas (actual),24,retiro,Retiro,muy_lento,Muy lento,38
+mixto_3,3 cajas mixtas (actual),24,pago,Consignación o pago,rapido,Rápido,3
+mixto_3,3 cajas mixtas (actual),24,pago,Consignación o pago,normal,Normal,21
+mixto_3,3 cajas mixtas (actual),24,pago,Consignación o pago,lento,Lento,23
+mixto_3,3 cajas mixtas (actual),24,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,24,retiro,Retiro,rapido,Rápido,39
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,24,retiro,Retiro,normal,Normal,55
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,24,retiro,Retiro,lento,Lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,24,retiro,Retiro,muy_lento,Muy lento,38
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,24,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,24,pago,Consignación o pago,normal,Normal,21
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,24,pago,Consignación o pago,lento,Lento,23
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,24,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,24,retiro,Retiro,rapido,Rápido,39
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,24,retiro,Retiro,normal,Normal,55
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,24,retiro,Retiro,lento,Lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,24,retiro,Retiro,muy_lento,Muy lento,38
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,24,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,24,pago,Consignación o pago,normal,Normal,21
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,24,pago,Consignación o pago,lento,Lento,23
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,24,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,24,retiro,Retiro,rapido,Rápido,39
+mixto_4,4 cajas mixtas,24,retiro,Retiro,normal,Normal,55
+mixto_4,4 cajas mixtas,24,retiro,Retiro,lento,Lento,19
+mixto_4,4 cajas mixtas,24,retiro,Retiro,muy_lento,Muy lento,38
+mixto_4,4 cajas mixtas,24,pago,Consignación o pago,rapido,Rápido,3
+mixto_4,4 cajas mixtas,24,pago,Consignación o pago,normal,Normal,21
+mixto_4,4 cajas mixtas,24,pago,Consignación o pago,lento,Lento,23
+mixto_4,4 cajas mixtas,24,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,24,retiro,Retiro,rapido,Rápido,39
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,24,retiro,Retiro,normal,Normal,55
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,24,retiro,Retiro,lento,Lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,24,retiro,Retiro,muy_lento,Muy lento,38
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,24,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,24,pago,Consignación o pago,normal,Normal,21
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,24,pago,Consignación o pago,lento,Lento,23
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,24,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,24,retiro,Retiro,rapido,Rápido,39
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,24,retiro,Retiro,normal,Normal,55
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,24,retiro,Retiro,lento,Lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,24,retiro,Retiro,muy_lento,Muy lento,38
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,24,pago,Consignación o pago,rapido,Rápido,3
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,24,pago,Consignación o pago,normal,Normal,21
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,24,pago,Consignación o pago,lento,Lento,23
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,24,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,24,retiro,Retiro,rapido,Rápido,39
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,24,retiro,Retiro,normal,Normal,55
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,24,retiro,Retiro,lento,Lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,24,retiro,Retiro,muy_lento,Muy lento,38
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,24,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,24,pago,Consignación o pago,normal,Normal,21
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,24,pago,Consignación o pago,lento,Lento,23
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,24,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),25,retiro,Retiro,rapido,Rápido,32
+mixto_3,3 cajas mixtas (actual),25,retiro,Retiro,normal,Normal,46
+mixto_3,3 cajas mixtas (actual),25,retiro,Retiro,lento,Lento,29
+mixto_3,3 cajas mixtas (actual),25,retiro,Retiro,muy_lento,Muy lento,35
+mixto_3,3 cajas mixtas (actual),25,pago,Consignación o pago,rapido,Rápido,3
+mixto_3,3 cajas mixtas (actual),25,pago,Consignación o pago,normal,Normal,10
+mixto_3,3 cajas mixtas (actual),25,pago,Consignación o pago,lento,Lento,19
+mixto_3,3 cajas mixtas (actual),25,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,25,retiro,Retiro,rapido,Rápido,32
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,25,retiro,Retiro,normal,Normal,46
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,25,retiro,Retiro,lento,Lento,29
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,25,retiro,Retiro,muy_lento,Muy lento,35
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,25,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,25,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,25,pago,Consignación o pago,lento,Lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,25,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,25,retiro,Retiro,rapido,Rápido,32
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,25,retiro,Retiro,normal,Normal,46
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,25,retiro,Retiro,lento,Lento,29
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,25,retiro,Retiro,muy_lento,Muy lento,35
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,25,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,25,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,25,pago,Consignación o pago,lento,Lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,25,pago,Consignación o pago,muy_lento,Muy lento,19
+mixto_4,4 cajas mixtas,25,retiro,Retiro,rapido,Rápido,32
+mixto_4,4 cajas mixtas,25,retiro,Retiro,normal,Normal,46
+mixto_4,4 cajas mixtas,25,retiro,Retiro,lento,Lento,29
+mixto_4,4 cajas mixtas,25,retiro,Retiro,muy_lento,Muy lento,35
+mixto_4,4 cajas mixtas,25,pago,Consignación o pago,rapido,Rápido,3
+mixto_4,4 cajas mixtas,25,pago,Consignación o pago,normal,Normal,10
+mixto_4,4 cajas mixtas,25,pago,Consignación o pago,lento,Lento,19
+mixto_4,4 cajas mixtas,25,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,25,retiro,Retiro,rapido,Rápido,32
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,25,retiro,Retiro,normal,Normal,46
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,25,retiro,Retiro,lento,Lento,29
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,25,retiro,Retiro,muy_lento,Muy lento,35
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,25,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,25,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,25,pago,Consignación o pago,lento,Lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,25,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,25,retiro,Retiro,rapido,Rápido,32
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,25,retiro,Retiro,normal,Normal,46
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,25,retiro,Retiro,lento,Lento,29
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,25,retiro,Retiro,muy_lento,Muy lento,35
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,25,pago,Consignación o pago,rapido,Rápido,3
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,25,pago,Consignación o pago,normal,Normal,10
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,25,pago,Consignación o pago,lento,Lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,25,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,25,retiro,Retiro,rapido,Rápido,32
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,25,retiro,Retiro,normal,Normal,46
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,25,retiro,Retiro,lento,Lento,29
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,25,retiro,Retiro,muy_lento,Muy lento,35
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,25,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,25,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,25,pago,Consignación o pago,lento,Lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,25,pago,Consignación o pago,muy_lento,Muy lento,19
+mixto_3,3 cajas mixtas (actual),26,retiro,Retiro,rapido,Rápido,34
+mixto_3,3 cajas mixtas (actual),26,retiro,Retiro,normal,Normal,57
+mixto_3,3 cajas mixtas (actual),26,retiro,Retiro,lento,Lento,28
+mixto_3,3 cajas mixtas (actual),26,retiro,Retiro,muy_lento,Muy lento,27
+mixto_3,3 cajas mixtas (actual),26,pago,Consignación o pago,rapido,Rápido,9
+mixto_3,3 cajas mixtas (actual),26,pago,Consignación o pago,normal,Normal,13
+mixto_3,3 cajas mixtas (actual),26,pago,Consignación o pago,lento,Lento,12
+mixto_3,3 cajas mixtas (actual),26,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,26,retiro,Retiro,rapido,Rápido,34
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,26,retiro,Retiro,normal,Normal,57
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,26,retiro,Retiro,lento,Lento,28
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,26,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,26,pago,Consignación o pago,rapido,Rápido,9
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,26,pago,Consignación o pago,normal,Normal,13
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,26,pago,Consignación o pago,lento,Lento,12
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,26,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,26,retiro,Retiro,rapido,Rápido,34
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,26,retiro,Retiro,normal,Normal,57
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,26,retiro,Retiro,lento,Lento,28
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,26,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,26,pago,Consignación o pago,rapido,Rápido,9
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,26,pago,Consignación o pago,normal,Normal,13
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,26,pago,Consignación o pago,lento,Lento,12
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,26,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,26,retiro,Retiro,rapido,Rápido,34
+mixto_4,4 cajas mixtas,26,retiro,Retiro,normal,Normal,57
+mixto_4,4 cajas mixtas,26,retiro,Retiro,lento,Lento,28
+mixto_4,4 cajas mixtas,26,retiro,Retiro,muy_lento,Muy lento,27
+mixto_4,4 cajas mixtas,26,pago,Consignación o pago,rapido,Rápido,9
+mixto_4,4 cajas mixtas,26,pago,Consignación o pago,normal,Normal,13
+mixto_4,4 cajas mixtas,26,pago,Consignación o pago,lento,Lento,12
+mixto_4,4 cajas mixtas,26,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,26,retiro,Retiro,rapido,Rápido,34
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,26,retiro,Retiro,normal,Normal,57
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,26,retiro,Retiro,lento,Lento,28
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,26,retiro,Retiro,muy_lento,Muy lento,27
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,26,pago,Consignación o pago,rapido,Rápido,9
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,26,pago,Consignación o pago,normal,Normal,13
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,26,pago,Consignación o pago,lento,Lento,12
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,26,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,26,retiro,Retiro,rapido,Rápido,34
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,26,retiro,Retiro,normal,Normal,57
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,26,retiro,Retiro,lento,Lento,28
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,26,retiro,Retiro,muy_lento,Muy lento,27
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,26,pago,Consignación o pago,rapido,Rápido,9
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,26,pago,Consignación o pago,normal,Normal,13
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,26,pago,Consignación o pago,lento,Lento,12
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,26,pago,Consignación o pago,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,26,retiro,Retiro,rapido,Rápido,34
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,26,retiro,Retiro,normal,Normal,57
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,26,retiro,Retiro,lento,Lento,28
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,26,retiro,Retiro,muy_lento,Muy lento,27
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,26,pago,Consignación o pago,rapido,Rápido,9
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,26,pago,Consignación o pago,normal,Normal,13
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,26,pago,Consignación o pago,lento,Lento,12
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,26,pago,Consignación o pago,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),27,retiro,Retiro,rapido,Rápido,21
+mixto_3,3 cajas mixtas (actual),27,retiro,Retiro,normal,Normal,52
+mixto_3,3 cajas mixtas (actual),27,retiro,Retiro,lento,Lento,16
+mixto_3,3 cajas mixtas (actual),27,retiro,Retiro,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),27,pago,Consignación o pago,rapido,Rápido,6
+mixto_3,3 cajas mixtas (actual),27,pago,Consignación o pago,normal,Normal,10
+mixto_3,3 cajas mixtas (actual),27,pago,Consignación o pago,lento,Lento,11
+mixto_3,3 cajas mixtas (actual),27,pago,Consignación o pago,muy_lento,Muy lento,29
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,27,retiro,Retiro,rapido,Rápido,21
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,27,retiro,Retiro,normal,Normal,52
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,27,retiro,Retiro,lento,Lento,16
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,27,retiro,Retiro,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,27,pago,Consignación o pago,rapido,Rápido,6
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,27,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,27,pago,Consignación o pago,lento,Lento,11
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,27,pago,Consignación o pago,muy_lento,Muy lento,29
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,27,retiro,Retiro,rapido,Rápido,21
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,27,retiro,Retiro,normal,Normal,52
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,27,retiro,Retiro,lento,Lento,16
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,27,retiro,Retiro,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,27,pago,Consignación o pago,rapido,Rápido,6
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,27,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,27,pago,Consignación o pago,lento,Lento,11
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,27,pago,Consignación o pago,muy_lento,Muy lento,29
+mixto_4,4 cajas mixtas,27,retiro,Retiro,rapido,Rápido,21
+mixto_4,4 cajas mixtas,27,retiro,Retiro,normal,Normal,52
+mixto_4,4 cajas mixtas,27,retiro,Retiro,lento,Lento,16
+mixto_4,4 cajas mixtas,27,retiro,Retiro,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,27,pago,Consignación o pago,rapido,Rápido,6
+mixto_4,4 cajas mixtas,27,pago,Consignación o pago,normal,Normal,10
+mixto_4,4 cajas mixtas,27,pago,Consignación o pago,lento,Lento,11
+mixto_4,4 cajas mixtas,27,pago,Consignación o pago,muy_lento,Muy lento,29
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,27,retiro,Retiro,rapido,Rápido,21
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,27,retiro,Retiro,normal,Normal,52
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,27,retiro,Retiro,lento,Lento,16
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,27,retiro,Retiro,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,27,pago,Consignación o pago,rapido,Rápido,6
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,27,pago,Consignación o pago,normal,Normal,10
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,27,pago,Consignación o pago,lento,Lento,11
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,27,pago,Consignación o pago,muy_lento,Muy lento,29
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,27,retiro,Retiro,rapido,Rápido,21
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,27,retiro,Retiro,normal,Normal,52
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,27,retiro,Retiro,lento,Lento,16
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,27,retiro,Retiro,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,27,pago,Consignación o pago,rapido,Rápido,6
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,27,pago,Consignación o pago,normal,Normal,10
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,27,pago,Consignación o pago,lento,Lento,11
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,27,pago,Consignación o pago,muy_lento,Muy lento,29
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,27,retiro,Retiro,rapido,Rápido,21
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,27,retiro,Retiro,normal,Normal,52
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,27,retiro,Retiro,lento,Lento,16
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,27,retiro,Retiro,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,27,pago,Consignación o pago,rapido,Rápido,6
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,27,pago,Consignación o pago,normal,Normal,10
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,27,pago,Consignación o pago,lento,Lento,11
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,27,pago,Consignación o pago,muy_lento,Muy lento,29
+mixto_3,3 cajas mixtas (actual),28,retiro,Retiro,rapido,Rápido,38
+mixto_3,3 cajas mixtas (actual),28,retiro,Retiro,normal,Normal,60
+mixto_3,3 cajas mixtas (actual),28,retiro,Retiro,lento,Lento,23
+mixto_3,3 cajas mixtas (actual),28,retiro,Retiro,muy_lento,Muy lento,34
+mixto_3,3 cajas mixtas (actual),28,pago,Consignación o pago,rapido,Rápido,3
+mixto_3,3 cajas mixtas (actual),28,pago,Consignación o pago,normal,Normal,9
+mixto_3,3 cajas mixtas (actual),28,pago,Consignación o pago,lento,Lento,16
+mixto_3,3 cajas mixtas (actual),28,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,28,retiro,Retiro,rapido,Rápido,38
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,28,retiro,Retiro,normal,Normal,60
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,28,retiro,Retiro,lento,Lento,23
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,28,retiro,Retiro,muy_lento,Muy lento,34
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,28,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,28,pago,Consignación o pago,normal,Normal,9
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,28,pago,Consignación o pago,lento,Lento,16
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,28,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,28,retiro,Retiro,rapido,Rápido,38
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,28,retiro,Retiro,normal,Normal,60
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,28,retiro,Retiro,lento,Lento,23
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,28,retiro,Retiro,muy_lento,Muy lento,34
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,28,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,28,pago,Consignación o pago,normal,Normal,9
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,28,pago,Consignación o pago,lento,Lento,16
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,28,pago,Consignación o pago,muy_lento,Muy lento,18
+mixto_4,4 cajas mixtas,28,retiro,Retiro,rapido,Rápido,38
+mixto_4,4 cajas mixtas,28,retiro,Retiro,normal,Normal,60
+mixto_4,4 cajas mixtas,28,retiro,Retiro,lento,Lento,23
+mixto_4,4 cajas mixtas,28,retiro,Retiro,muy_lento,Muy lento,34
+mixto_4,4 cajas mixtas,28,pago,Consignación o pago,rapido,Rápido,3
+mixto_4,4 cajas mixtas,28,pago,Consignación o pago,normal,Normal,9
+mixto_4,4 cajas mixtas,28,pago,Consignación o pago,lento,Lento,16
+mixto_4,4 cajas mixtas,28,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,28,retiro,Retiro,rapido,Rápido,38
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,28,retiro,Retiro,normal,Normal,60
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,28,retiro,Retiro,lento,Lento,23
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,28,retiro,Retiro,muy_lento,Muy lento,34
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,28,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,28,pago,Consignación o pago,normal,Normal,9
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,28,pago,Consignación o pago,lento,Lento,16
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,28,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,28,retiro,Retiro,rapido,Rápido,38
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,28,retiro,Retiro,normal,Normal,60
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,28,retiro,Retiro,lento,Lento,23
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,28,retiro,Retiro,muy_lento,Muy lento,34
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,28,pago,Consignación o pago,rapido,Rápido,3
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,28,pago,Consignación o pago,normal,Normal,9
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,28,pago,Consignación o pago,lento,Lento,16
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,28,pago,Consignación o pago,muy_lento,Muy lento,18
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,28,retiro,Retiro,rapido,Rápido,38
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,28,retiro,Retiro,normal,Normal,60
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,28,retiro,Retiro,lento,Lento,23
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,28,retiro,Retiro,muy_lento,Muy lento,34
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,28,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,28,pago,Consignación o pago,normal,Normal,9
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,28,pago,Consignación o pago,lento,Lento,16
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,28,pago,Consignación o pago,muy_lento,Muy lento,18
+mixto_3,3 cajas mixtas (actual),29,retiro,Retiro,rapido,Rápido,25
+mixto_3,3 cajas mixtas (actual),29,retiro,Retiro,normal,Normal,58
+mixto_3,3 cajas mixtas (actual),29,retiro,Retiro,lento,Lento,22
+mixto_3,3 cajas mixtas (actual),29,retiro,Retiro,muy_lento,Muy lento,24
+mixto_3,3 cajas mixtas (actual),29,pago,Consignación o pago,rapido,Rápido,3
+mixto_3,3 cajas mixtas (actual),29,pago,Consignación o pago,normal,Normal,16
+mixto_3,3 cajas mixtas (actual),29,pago,Consignación o pago,lento,Lento,15
+mixto_3,3 cajas mixtas (actual),29,pago,Consignación o pago,muy_lento,Muy lento,17
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,29,retiro,Retiro,rapido,Rápido,25
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,29,retiro,Retiro,normal,Normal,58
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,29,retiro,Retiro,lento,Lento,22
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,29,retiro,Retiro,muy_lento,Muy lento,24
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,29,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,29,pago,Consignación o pago,normal,Normal,16
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,29,pago,Consignación o pago,lento,Lento,15
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,29,pago,Consignación o pago,muy_lento,Muy lento,17
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,29,retiro,Retiro,rapido,Rápido,25
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,29,retiro,Retiro,normal,Normal,58
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,29,retiro,Retiro,lento,Lento,22
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,29,retiro,Retiro,muy_lento,Muy lento,24
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,29,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,29,pago,Consignación o pago,normal,Normal,16
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,29,pago,Consignación o pago,lento,Lento,15
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,29,pago,Consignación o pago,muy_lento,Muy lento,17
+mixto_4,4 cajas mixtas,29,retiro,Retiro,rapido,Rápido,25
+mixto_4,4 cajas mixtas,29,retiro,Retiro,normal,Normal,58
+mixto_4,4 cajas mixtas,29,retiro,Retiro,lento,Lento,22
+mixto_4,4 cajas mixtas,29,retiro,Retiro,muy_lento,Muy lento,24
+mixto_4,4 cajas mixtas,29,pago,Consignación o pago,rapido,Rápido,3
+mixto_4,4 cajas mixtas,29,pago,Consignación o pago,normal,Normal,16
+mixto_4,4 cajas mixtas,29,pago,Consignación o pago,lento,Lento,15
+mixto_4,4 cajas mixtas,29,pago,Consignación o pago,muy_lento,Muy lento,17
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,29,retiro,Retiro,rapido,Rápido,25
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,29,retiro,Retiro,normal,Normal,58
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,29,retiro,Retiro,lento,Lento,22
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,29,retiro,Retiro,muy_lento,Muy lento,24
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,29,pago,Consignación o pago,rapido,Rápido,3
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,29,pago,Consignación o pago,normal,Normal,16
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,29,pago,Consignación o pago,lento,Lento,15
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,29,pago,Consignación o pago,muy_lento,Muy lento,17
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,29,retiro,Retiro,rapido,Rápido,25
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,29,retiro,Retiro,normal,Normal,58
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,29,retiro,Retiro,lento,Lento,22
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,29,retiro,Retiro,muy_lento,Muy lento,24
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,29,pago,Consignación o pago,rapido,Rápido,3
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,29,pago,Consignación o pago,normal,Normal,16
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,29,pago,Consignación o pago,lento,Lento,15
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,29,pago,Consignación o pago,muy_lento,Muy lento,17
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,29,retiro,Retiro,rapido,Rápido,25
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,29,retiro,Retiro,normal,Normal,58
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,29,retiro,Retiro,lento,Lento,22
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,29,retiro,Retiro,muy_lento,Muy lento,24
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,29,pago,Consignación o pago,rapido,Rápido,3
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,29,pago,Consignación o pago,normal,Normal,16
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,29,pago,Consignación o pago,lento,Lento,15
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,29,pago,Consignación o pago,muy_lento,Muy lento,17
+mixto_3,3 cajas mixtas (actual),30,retiro,Retiro,rapido,Rápido,42
+mixto_3,3 cajas mixtas (actual),30,retiro,Retiro,normal,Normal,45
+mixto_3,3 cajas mixtas (actual),30,retiro,Retiro,lento,Lento,19
+mixto_3,3 cajas mixtas (actual),30,retiro,Retiro,muy_lento,Muy lento,42
+mixto_3,3 cajas mixtas (actual),30,pago,Consignación o pago,rapido,Rápido,8
+mixto_3,3 cajas mixtas (actual),30,pago,Consignación o pago,normal,Normal,15
+mixto_3,3 cajas mixtas (actual),30,pago,Consignación o pago,lento,Lento,32
+mixto_3,3 cajas mixtas (actual),30,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,30,retiro,Retiro,rapido,Rápido,42
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,30,retiro,Retiro,normal,Normal,45
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,30,retiro,Retiro,lento,Lento,19
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,30,retiro,Retiro,muy_lento,Muy lento,42
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,30,pago,Consignación o pago,rapido,Rápido,8
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,30,pago,Consignación o pago,normal,Normal,15
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,30,pago,Consignación o pago,lento,Lento,32
+retiro_1_pago_2,1 caja de retiros + 2 de pagos,30,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,30,retiro,Retiro,rapido,Rápido,42
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,30,retiro,Retiro,normal,Normal,45
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,30,retiro,Retiro,lento,Lento,19
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,30,retiro,Retiro,muy_lento,Muy lento,42
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,30,pago,Consignación o pago,rapido,Rápido,8
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,30,pago,Consignación o pago,normal,Normal,15
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,30,pago,Consignación o pago,lento,Lento,32
+retiro_2_pago_1,2 cajas de retiros + 1 de pagos,30,pago,Consignación o pago,muy_lento,Muy lento,19
+mixto_4,4 cajas mixtas,30,retiro,Retiro,rapido,Rápido,42
+mixto_4,4 cajas mixtas,30,retiro,Retiro,normal,Normal,45
+mixto_4,4 cajas mixtas,30,retiro,Retiro,lento,Lento,19
+mixto_4,4 cajas mixtas,30,retiro,Retiro,muy_lento,Muy lento,42
+mixto_4,4 cajas mixtas,30,pago,Consignación o pago,rapido,Rápido,8
+mixto_4,4 cajas mixtas,30,pago,Consignación o pago,normal,Normal,15
+mixto_4,4 cajas mixtas,30,pago,Consignación o pago,lento,Lento,32
+mixto_4,4 cajas mixtas,30,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,30,retiro,Retiro,rapido,Rápido,42
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,30,retiro,Retiro,normal,Normal,45
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,30,retiro,Retiro,lento,Lento,19
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,30,retiro,Retiro,muy_lento,Muy lento,42
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,30,pago,Consignación o pago,rapido,Rápido,8
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,30,pago,Consignación o pago,normal,Normal,15
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,30,pago,Consignación o pago,lento,Lento,32
+retiro_2_pago_2,2 cajas de retiros + 2 de pagos,30,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,30,retiro,Retiro,rapido,Rápido,42
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,30,retiro,Retiro,normal,Normal,45
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,30,retiro,Retiro,lento,Lento,19
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,30,retiro,Retiro,muy_lento,Muy lento,42
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,30,pago,Consignación o pago,rapido,Rápido,8
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,30,pago,Consignación o pago,normal,Normal,15
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,30,pago,Consignación o pago,lento,Lento,32
+retiro_3_pago_1,3 cajas de retiros + 1 de pagos,30,pago,Consignación o pago,muy_lento,Muy lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,30,retiro,Retiro,rapido,Rápido,42
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,30,retiro,Retiro,normal,Normal,45
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,30,retiro,Retiro,lento,Lento,19
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,30,retiro,Retiro,muy_lento,Muy lento,42
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,30,pago,Consignación o pago,rapido,Rápido,8
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,30,pago,Consignación o pago,normal,Normal,15
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,30,pago,Consignación o pago,lento,Lento,32
+retiro_1_pago_3,1 caja de retiros + 3 de pagos,30,pago,Consignación o pago,muy_lento,Muy lento,19

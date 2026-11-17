@@ -1,0 +1,10 @@
+﻿metrica,tres_cajas_mixtas,cuatro_cajas_mixtas,diferencia_4_menos_3,mejora_porcentual
+Espera promedio global (min),0.7811,0.2128,-0.5683,72.76
+Espera promedio retiros (min),0.8373,0.2088,-0.6285,75.06
+Espera promedio pagos (min),0.6629,0.2239,-0.4389,66.22
+Espera promedio peor tipo (min),1.1657,0.4729,-0.6927,59.43
+Espera p90 global (min),2.0878,0.0237,-2.0641,98.86
+Fracción con espera > 10 min,0.0194,0.0058,-0.0136,70.25
+Utilización promedio,0.4307,0.3234,-0.1073,24.92
+Utilización máxima de una caja,0.469,0.3645,-0.1044,22.27
+Usuarios que terminan después de las 8 h,1.5333,1.3,-0.2333,15.22

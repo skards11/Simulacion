@@ -1,0 +1,5 @@
+﻿escenario,user_type,tipo_etiqueta,replica_con_menor_cantidad,minimo,promedio,maximo,desviacion_estandar,replicas_empatadas
+mixto_3,rapido,Rápido,12,24,38.2333,55,8.7284,1
+mixto_3,normal,Normal,12,54,67.7,86,8.1332,1
+mixto_3,lento,Lento,27,27,40.4667,51,6.4366,1
+mixto_3,muy_lento,Muy lento,4,40,51.6667,63,6.2275,1

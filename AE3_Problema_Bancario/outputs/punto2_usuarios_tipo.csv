@@ -1,0 +1,5 @@
+﻿escenario,user_type,tipo_etiqueta,replicas,promedio_usuarios_por_replica,desviacion_estandar,ic95_inferior,ic95_superior,minimo,maximo,mediana,porcentaje,promedio_por_cajero
+mixto_3,rapido,Rápido,30,38.2333,8.7284,34.9741,41.4926,24.0,55.0,37.5,19.3033,12.7444
+mixto_3,normal,Normal,30,67.7,8.1332,64.663,70.737,54.0,86.0,69.0,34.1804,22.5667
+mixto_3,lento,Lento,30,40.4667,6.4366,38.0632,42.8701,27.0,51.0,39.5,20.4308,13.4889
+mixto_3,muy_lento,Muy lento,30,51.6667,6.2275,49.3413,53.992,40.0,63.0,50.5,26.0855,17.2222

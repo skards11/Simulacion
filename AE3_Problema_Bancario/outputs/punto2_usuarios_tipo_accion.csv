@@ -1,0 +1,9 @@
+﻿escenario,action,action_label,user_type,user_type_label,replicas,promedio_por_replica,desviacion_estandar,ic95_inferior,ic95_superior,minimo,maximo
+mixto_3,pago,Consignación o pago,lento,Lento,30,18.1,4.9574,16.2489,19.9511,11.0,32.0
+mixto_3,pago,Consignación o pago,muy_lento,Muy lento,30,23.9667,4.4604,22.3011,25.6322,17.0,34.0
+mixto_3,pago,Consignación o pago,normal,Normal,30,12.3667,3.9955,10.8747,13.8586,7.0,21.0
+mixto_3,pago,Consignación o pago,rapido,Rápido,30,6.0,2.7668,4.9669,7.0331,2.0,12.0
+mixto_3,retiro,Retiro,lento,Lento,30,22.3667,4.047,20.8555,23.8778,14.0,29.0
+mixto_3,retiro,Retiro,muy_lento,Muy lento,30,27.7,5.7063,25.5692,29.8308,19.0,42.0
+mixto_3,retiro,Retiro,normal,Normal,30,55.3333,6.3698,52.9548,57.7119,43.0,66.0
+mixto_3,retiro,Retiro,rapido,Rápido,30,32.2333,7.3329,29.4952,34.9715,19.0,45.0

@@ -1,0 +1,10 @@
+# Material original del aula: no se publica en el repositorio
+.Instrucciones/
+
+# Salida cruda regenerable; el resto de outputs sí se versiona
+outputs/clientes.csv
+
+# Cachés locales de Python y pytest
+__pycache__/
+*.py[cod]
+.pytest_cache/

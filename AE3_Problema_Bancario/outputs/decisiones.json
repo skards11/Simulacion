@@ -1,0 +1,69 @@
+{
+  "punto4_decision": {
+    "criterios": {
+      "espera_promedio_max_min": 5.0,
+      "espera_p90_max_min": 10.0,
+      "fraccion_espera_mayor_10_max": 0.1,
+      "utilizacion_maxima": 0.85
+    },
+    "tres_cajas_cumple_todos": true,
+    "cuatro_cajas_cumple_todos": true,
+    "criterios_incumplidos_con_3": [],
+    "espera_promedio_3_cajas_min": 0.7811,
+    "espera_promedio_4_cajas_min": 0.2128,
+    "nuevo_cajero_necesario": false,
+    "justificacion": "Con 3 cajas mixtas se cumplen todos los criterios de servicio (espera promedio 0.78 min y utilización máxima 46.9%). No se requiere crear un cuarto cajero para la demanda simulada."
+  },
+  "punto5_recomendacion": {
+    "criterios": {
+      "espera_promedio_max_min": 5.0,
+      "espera_p90_max_min": 10.0,
+      "fraccion_espera_mayor_10_max": 0.1,
+      "utilizacion_maxima": 0.85
+    },
+    "recomendado": "mixto_3",
+    "recomendado_etiqueta": "3 cajas mixtas (actual)",
+    "cajas_totales": 3,
+    "cajas_exclusivas_retiro": 0,
+    "cajas_exclusivas_pago": 0,
+    "cajas_mixtas": 3,
+    "espera_promedio_global_min": 0.7811,
+    "espera_promedio_retiro_min": 0.8373,
+    "espera_promedio_pago_min": 0.6629,
+    "utilizacion_maxima": 0.469,
+    "cumple_todos_los_criterios": true,
+    "advertencia": "",
+    "motivo_de_la_recomendacion": "La configuración actual de 3 cajas mixtas ya cumple todos los criterios de servicio; agregar una cuarta caja mejora la espera pero no es necesaria para la demanda simulada.",
+    "mejor_desempeno": {
+      "escenario": "mixto_4",
+      "etiqueta": "4 cajas mixtas",
+      "espera_promedio_global_min": 0.2128,
+      "cajas_totales": 4,
+      "nota": "Es la configuración con menor espera promedio, pero puede requerir más cajas de las necesarias para cumplir el servicio."
+    },
+    "justificacion": "La recomendación es '3 cajas mixtas (actual)' (0 cajas exclusivas de retiro, 0 de pago y 3 mixtas), con una espera promedio global de 0.78 min, espera de retiros de 0.84 min y espera de pagos de 0.66 min. La configuración actual de 3 cajas mixtas ya cumple todos los criterios de servicio; agregar una cuarta caja mejora la espera pero no es necesaria para la demanda simulada. Cumple todos los criterios de servicio definidos.",
+    "mejor_opcion_exclusiva_3_cajas": {
+      "escenario": "retiro_1_pago_2",
+      "etiqueta": "1 caja de retiros + 2 de pagos",
+      "cajas_exclusivas_retiro": 1,
+      "cajas_exclusivas_pago": 2,
+      "espera_promedio_global_min": 4.1585,
+      "espera_promedio_retiro_min": 5.5515,
+      "espera_promedio_pago_min": 0.889,
+      "peor_espera_por_accion_min": 5.5515,
+      "cumple_todos_los_criterios": false
+    },
+    "mejor_opcion_exclusiva_4_cajas": {
+      "escenario": "retiro_2_pago_2",
+      "etiqueta": "2 cajas de retiros + 2 de pagos",
+      "cajas_exclusivas_retiro": 2,
+      "cajas_exclusivas_pago": 2,
+      "espera_promedio_global_min": 0.6604,
+      "espera_promedio_retiro_min": 0.5656,
+      "espera_promedio_pago_min": 0.8639,
+      "peor_espera_por_accion_min": 1.0559,
+      "cumple_todos_los_criterios": true
+    },
+    "descripcion_configuracion": "Las tres cajas atienden retiros y pagos."
+  }
+}

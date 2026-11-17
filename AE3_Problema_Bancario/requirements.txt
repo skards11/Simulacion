@@ -1,0 +1,8 @@
+# Versiones del entorno con el que se ejecutó el laboratorio.
+# Python 3.12.10 (MSC v.1943 64 bit, Windows).
+numpy==2.5.4
+pandas==3.1.0
+scipy==1.18.1
+matplotlib==3.11.2
+tabulate==0.10.0
+pytest==9.2.0
