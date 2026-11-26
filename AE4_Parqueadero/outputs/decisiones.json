@@ -1,0 +1,96 @@
+{
+  "punto1_prueba": {
+    "prueba": "Friedman",
+    "cajeros_comparados": 3,
+    "replicas": 32,
+    "estadistico": 0.4375,
+    "p_value": 0.8035225736890608,
+    "kendall_w": 0.0068359375,
+    "interpretacion": "No hay evidencia de diferencias significativas entre los tiempos promedio de atención de los cajeros (p > 0.05)."
+  },
+  "punto2_prueba": {
+    "prueba": "Chi-cuadrado de bondad de ajuste",
+    "chi2": 1.6283406407480923,
+    "gl": 3,
+    "p_value": 0.6529809784488589,
+    "total_observado": 4997,
+    "composicion_observada_pct": {
+      "rapido": 25.495297178306984,
+      "normal": 20.13207924754853,
+      "lento": 26.736041624974987,
+      "muy_lento": 27.636581949169504
+    },
+    "composicion_esperada_pct": {
+      "rapido": 25.0,
+      "normal": 20.0,
+      "lento": 27.500000000000004,
+      "muy_lento": 27.500000000000004
+    },
+    "interpretacion": "La composición observada no difiere significativamente de la esperada 25/20/27.5/27.5 (p > 0.05)."
+  },
+  "punto3_decision": {
+    "criterios": {
+      "espera_cola_aceptable_min": 3.0,
+      "espera_cola_critica_min": 5.0,
+      "espera_sistema_aceptable_min": 5.0,
+      "espera_sistema_critica_min": 8.0,
+      "utilizacion_minima_eficiente": 0.6,
+      "utilizacion_maxima": 0.85,
+      "cola_maxima_aceptable": 3.0,
+      "cola_critica": 5.0,
+      "prob_espera_5_max": 0.1,
+      "prob_espera_5_critica": 0.2
+    },
+    "recomendado": "unica_3",
+    "recomendado_etiqueta": "3 cajeros con fila única (mejora propuesta)",
+    "cajeros_recomendados": 3,
+    "nuevos_cajeros": 0,
+    "politica_recomendada": "Fila única compartida",
+    "tipo_de_cambio": "Política de filas",
+    "configuracion_actual_cumple": false,
+    "criterios_incumplidos_actual": [
+      "Probabilidad de esperar más de 5 min"
+    ],
+    "espera_cola_actual": 1.6119,
+    "espera_cola_recomendada": 0.0773,
+    "espera_sistema_recomendada": 3.6144,
+    "prob_espera_mayor_5_recomendada": 0.0022,
+    "mejor_desempeno": {
+      "scenario": "unica_4",
+      "etiqueta": "4 cajeros con fila única",
+      "cajeros": 4,
+      "espera_cola_prom": 0.0059,
+      "nota": "Es el escenario de menor espera, pero puede requerir más cajeros o una reorganización de la operación."
+    },
+    "opcion_de_menor_costo_que_cumple": {
+      "scenario": "unica_2",
+      "etiqueta": "2 cajeros con fila única",
+      "cajeros": 2,
+      "espera_cola_prom": 0.7252,
+      "politica": "Fila única compartida"
+    },
+    "justificacion": "Con la configuración actual (3 cajeros, Filas independientes (elección aleatoria)) la espera promedio en cola es 1.61 min, el tiempo en el sistema es 5.15 min y 12.0% de los usuarios espera más de 5 min. Incumple: Probabilidad de esperar más de 5 min. La recomendación es '3 cajeros con fila única (mejora propuesta)': espera en cola 0.08 min, tiempo en el sistema 3.61 min y 0.2% de usuarios con espera mayor a 5 min. La configuración actual no cumple todos los criterios, pero con los mismos tres cajeros existe una alternativa que sí cumple: 3 cajeros con fila única (mejora propuesta). Por eso no es necesario instalar cajeros adicionales; se cambia la política de filas."
+  },
+  "punto5_resumen": {
+    "calentamiento_min": 102.0,
+    "ventana_estable_min": 9898.0,
+    "ventana_promedio_movil_min": 60,
+    "referencia_n": 1.2569,
+    "tolerancia": 0.3602,
+    "n_todo": 1.1828,
+    "n_primer_bloque": 0.598,
+    "n_despues": 1.1888,
+    "sesgo_inicial_pct": -0.51
+  },
+  "calibracion_llegadas": [
+    {
+      "parametro": "Tasa de llegadas (λ)",
+      "nominal_por_min": 0.2151,
+      "estimado_por_min": 0.2163,
+      "error_relativo_pct": 0.59,
+      "ic95_inf": 0.2103,
+      "ic95_sup": 0.2223,
+      "n_replicas": 32
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+﻿metrica,antes,despues,diferencia,cambio_pct,ic95_despues_inf,ic95_despues_sup
+N(t): primeros 102 min,0.598,1.1888,0.5908,98.78,,
+N(t): horizonte completo,1.1828,1.1888,0.006,0.51,,
+"Tiempo promedio en cola (Wq, min)",1.5702,1.6119,0.0417,2.66,1.4468,1.7769
+"Tiempo promedio en el sistema (W, min)",5.1118,5.1489,0.0372,0.73,4.896,5.4018
+Longitud promedio de la cola (Lq),0.34,0.3514,0.0114,3.35,0.3116,0.3912
+Usuarios promedio en el sistema (L),1.1016,1.1182,0.0166,1.51,1.0558,1.1806
+Tiempo promedio de servicio (min),3.5416,3.5371,-0.0046,-0.13,3.4073,3.6668

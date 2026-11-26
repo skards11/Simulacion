@@ -1,0 +1,13 @@
+﻿teller,teller_label,user_type,user_type_label,usuarios_prom_por_replica,servicio_prom,espera_prom
+0,Cajero 1,rapido,Rápido,13.375,0.9396,2.0962
+0,Cajero 1,normal,Normal,10.0312,2.8853,1.4861
+0,Cajero 1,lento,Lento,14.6875,4.1222,1.6925
+0,Cajero 1,muy_lento,Muy lento,14.0625,5.7606,1.0932
+1,Cajero 2,rapido,Rápido,13.1562,0.9636,2.2975
+1,Cajero 2,normal,Normal,10.7812,2.971,1.4602
+1,Cajero 2,lento,Lento,14.1875,3.933,1.5947
+1,Cajero 2,muy_lento,Muy lento,14.625,5.844,1.1797
+2,Cajero 3,rapido,Rápido,13.2812,1.0683,1.7024
+2,Cajero 3,normal,Normal,10.625,3.0685,1.7938
+2,Cajero 3,lento,Lento,12.875,3.9833,1.3319
+2,Cajero 3,muy_lento,Muy lento,14.4688,5.9656,1.2523

@@ -1,0 +1,2 @@
+﻿parametro,nominal_por_min,estimado_por_min,error_relativo_pct,ic95_inf,ic95_sup,n_replicas
+Tasa de llegadas (λ),0.2151,0.2163,0.59,0.2103,0.2223,32

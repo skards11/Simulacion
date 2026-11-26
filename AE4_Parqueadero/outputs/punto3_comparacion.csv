@@ -1,0 +1,11 @@
+﻿scenario,escenario_etiqueta,politica,cajeros,espera_cola_prom,espera_sistema_prom,cola_prom,sistema_prom,utilizacion_max,prob_espera_mayor_5,cumple_servicio,utilizacion_en_rango_eficiente,sobrecapacidad,ranking,recomendado
+unica_4,4 cajeros con fila única,Fila única compartida,4,0.0059,3.543,0.0012,0.7661,0.235,0.0,True,False,True,1,False
+unica_3,3 cajeros con fila única (mejora propuesta),Fila única compartida,3,0.0773,3.6144,0.0165,0.7815,0.2943,0.0022,True,False,True,2,True
+indep_3_adaptativa,"3 cajeros: libre al azar y, si todos ocupados, cola más corta",Filas independientes (libre al azar / cola más corta),3,0.2002,3.7373,0.0434,0.8085,0.2898,0.0137,True,False,True,3,False
+unica_2,2 cajeros con fila única,Fila única compartida,2,0.7252,4.2623,0.1556,0.9219,0.4083,0.051,True,False,True,4,False
+indep_5,5 cajeros con filas independientes,Filas independientes (elección aleatoria),5,0.9294,4.4665,0.2014,0.9672,0.2073,0.0642,True,False,True,5,False
+indep_3_corta,3 cajeros: cada usuario elige la cola más corta,Filas independientes (cola más corta),3,0.9698,4.5069,0.2084,0.9735,0.2957,0.0687,True,False,True,6,False
+indep_4,4 cajeros con filas independientes,Filas independientes (elección aleatoria),4,1.0697,4.6068,0.2346,1.0012,0.2411,0.0787,True,False,True,7,False
+indep_3,3 cajeros con filas independientes (actual),Filas independientes (elección aleatoria),3,1.6119,5.1489,0.3514,1.1182,0.3018,0.1196,False,False,True,8,False
+indep_2,2 cajeros con filas independientes,Filas independientes (elección aleatoria),2,2.767,6.3041,0.6058,1.3746,0.422,0.1931,False,False,True,9,False
+especializado_3,1 cajero para lentos + 2 para rápidos/normales,Filas independientes especializadas,3,3.5918,7.1289,0.788,1.5579,0.5855,0.2067,False,False,True,10,False

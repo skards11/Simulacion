@@ -1,0 +1,5 @@
+﻿user_type,tipo,replicas,promedio_usuarios,desv_usuarios,usuarios_ic95_inf,usuarios_ic95_sup,minimo,maximo,porcentaje_observado,porcentaje_esperado,diferencia_pp,promedio_por_cajero,servicio_prom,espera_prom,espera_ic95_inf,espera_ic95_sup,espera_p90,sistema_prom
+rapido,Rápido,32,39.8125,7.884,36.97,42.655,24.0,60.0,25.4953,25.0,0.4953,13.2708,0.9773,2.0132,1.7477,2.2786,6.9676,2.9905
+normal,Normal,32,31.4375,6.7773,28.994,33.881,20.0,48.0,20.1321,20.0,0.1321,10.4792,2.9692,1.6154,1.3093,1.9214,4.9401,4.5846
+lento,Lento,32,41.75,5.6511,39.7125,43.7875,29.0,52.0,26.736,27.5,-0.764,13.9167,4.0156,1.5451,1.2775,1.8127,5.8561,5.5608
+muy_lento,Muy lento,32,43.1562,6.0594,40.9716,45.3409,26.0,52.0,27.6366,27.5,0.1366,14.3854,5.8499,1.1976,1.0285,1.3667,4.0285,7.0475

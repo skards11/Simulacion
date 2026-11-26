@@ -1,0 +1,12 @@
+{
+  "duracion_min": 10000.0,
+  "escenario": "indep_3",
+  "calentamiento_min": 102.0,
+  "ventana_promedio_movil_min": 60,
+  "referencia_n": 1.2569486102779444,
+  "tolerancia": 0.36023734834675947,
+  "media_antes": 1.1827817218278172,
+  "media_despues": 1.1888069501969896,
+  "primer_bloque_n": 0.5980392156862745,
+  "serie_n": 10001
+}

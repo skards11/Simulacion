@@ -1,0 +1,10 @@
+﻿prueba,resultado,detalle,estado
+Identificadores únicos por escenario y réplica,Cumple,0 duplicados encontrados.,True
+Todos los usuarios que llegan terminan su servicio (drenaje),Cumple,49970 registros con inicio y fin de servicio.,True
+El servicio nunca inicia antes de la llegada,Cumple,Violaciones: 0.,True
+El servicio termina después de iniciar,Cumple,Violaciones: 0.,True
+Tiempos de servicio positivos y esperas no negativas,Cumple,Se verifican todas las filas de clientes.,True
+Cada usuario es atendido por un cajero válido y solo uno,Cumple,No hay usuarios con más de un cajero ni cajeros fuera de rango.,True
+"Utilización de cada cajero en [0, 1]",Cumple,"Rango observado: [0.124, 0.486].",True
+Longitudes promedio de cola y sistema no negativas,Cumple,Integración temporal sobre la ventana de estado estable.,True
+Conservación de usuarios (sin pérdidas ni duplicados),Cumple,Los identificadores consecutivos cubren todas las llegadas.,True

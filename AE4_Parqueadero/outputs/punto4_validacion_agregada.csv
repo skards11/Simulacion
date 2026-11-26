@@ -1,0 +1,4 @@
+﻿metrica,teorico_mg1,simulado,ic95_inf,ic95_sup,error_relativo_pct,validado,nota
+Tiempo en cola (Wq),1.5797,1.5767,1.3922,1.7611,-0.19,True,Aproximación M/G/1 con servicio hiperexponencial; se acepta un error de hasta 15 %.
+Tiempo en el sistema (W),5.1797,5.1135,4.841,5.386,-1.28,True,Aproximación M/G/1 con servicio hiperexponencial; se acepta un error de hasta 15 %.
+Usuarios en cola (Lq),0.1132,0.1171,0.1019,0.1324,3.43,True,Aproximación M/G/1 con servicio hiperexponencial; se acepta un error de hasta 15 %.

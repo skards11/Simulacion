@@ -1,0 +1,4 @@
+﻿cajero,cajero_id,clientes_atendidos_prom,tiempo_servicio_prom,tiempo_servicio_desv,tiempo_servicio_ic95_inf,tiempo_servicio_ic95_sup,tiempo_servicio_min_observado,tiempo_servicio_max_observado,tiempo_espera_prom,tiempo_espera_ic95_inf,tiempo_espera_ic95_sup,tiempo_espera_p90,tiempo_sistema_prom,utilizacion_prom,cola_prom,replicas,menor_tiempo_servicio,mayor_tiempo_servicio,diferencia_vs_media_min
+1,0,44.75,3.5168,0.6135,3.2956,3.738,0.0008,38.6378,1.5721,1.2175,1.9266,5.8139,5.0888,0.2559,0.1192,32,True,False,-0.02
+2,1,45.3438,3.5304,0.6289,3.3036,3.7571,0.0011,46.8507,1.6355,1.2906,1.9804,5.6499,5.1659,0.2592,0.1225,32,False,False,-0.0064
+3,2,43.5938,3.5633,0.6182,3.3404,3.7861,0.0,48.9637,1.5224,1.2317,1.8132,5.6664,5.0857,0.2517,0.1097,32,False,True,0.0265

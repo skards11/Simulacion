@@ -1,0 +1,51 @@
+﻿scenario,escenario_etiqueta,cajeros,politica,criterio,metrica,valor,umbral,cumple
+indep_2,2 cajeros con filas independientes,2,Filas independientes (elección aleatoria),Tiempo promedio en cola (Wq),mean_wait,2.767,3.0,True
+indep_2,2 cajeros con filas independientes,2,Filas independientes (elección aleatoria),Tiempo promedio en el sistema (W),mean_system,6.3041,8.0,True
+indep_2,2 cajeros con filas independientes,2,Filas independientes (elección aleatoria),Longitud promedio de la cola (Lq),Lq,0.6058,3.0,True
+indep_2,2 cajeros con filas independientes,2,Filas independientes (elección aleatoria),Utilización máxima de un cajero,max_teller_utilization,0.422,0.85,True
+indep_2,2 cajeros con filas independientes,2,Filas independientes (elección aleatoria),Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.1931,0.1,False
+indep_3,3 cajeros con filas independientes (actual),3,Filas independientes (elección aleatoria),Tiempo promedio en cola (Wq),mean_wait,1.6119,3.0,True
+indep_3,3 cajeros con filas independientes (actual),3,Filas independientes (elección aleatoria),Tiempo promedio en el sistema (W),mean_system,5.1489,8.0,True
+indep_3,3 cajeros con filas independientes (actual),3,Filas independientes (elección aleatoria),Longitud promedio de la cola (Lq),Lq,0.3514,3.0,True
+indep_3,3 cajeros con filas independientes (actual),3,Filas independientes (elección aleatoria),Utilización máxima de un cajero,max_teller_utilization,0.3018,0.85,True
+indep_3,3 cajeros con filas independientes (actual),3,Filas independientes (elección aleatoria),Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.1196,0.1,False
+indep_3_corta,3 cajeros: cada usuario elige la cola más corta,3,Filas independientes (cola más corta),Tiempo promedio en cola (Wq),mean_wait,0.9698,3.0,True
+indep_3_corta,3 cajeros: cada usuario elige la cola más corta,3,Filas independientes (cola más corta),Tiempo promedio en el sistema (W),mean_system,4.5069,8.0,True
+indep_3_corta,3 cajeros: cada usuario elige la cola más corta,3,Filas independientes (cola más corta),Longitud promedio de la cola (Lq),Lq,0.2084,3.0,True
+indep_3_corta,3 cajeros: cada usuario elige la cola más corta,3,Filas independientes (cola más corta),Utilización máxima de un cajero,max_teller_utilization,0.2957,0.85,True
+indep_3_corta,3 cajeros: cada usuario elige la cola más corta,3,Filas independientes (cola más corta),Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.0687,0.1,True
+indep_3_adaptativa,"3 cajeros: libre al azar y, si todos ocupados, cola más corta",3,Filas independientes (libre al azar / cola más corta),Tiempo promedio en cola (Wq),mean_wait,0.2002,3.0,True
+indep_3_adaptativa,"3 cajeros: libre al azar y, si todos ocupados, cola más corta",3,Filas independientes (libre al azar / cola más corta),Tiempo promedio en el sistema (W),mean_system,3.7373,8.0,True
+indep_3_adaptativa,"3 cajeros: libre al azar y, si todos ocupados, cola más corta",3,Filas independientes (libre al azar / cola más corta),Longitud promedio de la cola (Lq),Lq,0.0434,3.0,True
+indep_3_adaptativa,"3 cajeros: libre al azar y, si todos ocupados, cola más corta",3,Filas independientes (libre al azar / cola más corta),Utilización máxima de un cajero,max_teller_utilization,0.2898,0.85,True
+indep_3_adaptativa,"3 cajeros: libre al azar y, si todos ocupados, cola más corta",3,Filas independientes (libre al azar / cola más corta),Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.0137,0.1,True
+indep_4,4 cajeros con filas independientes,4,Filas independientes (elección aleatoria),Tiempo promedio en cola (Wq),mean_wait,1.0697,3.0,True
+indep_4,4 cajeros con filas independientes,4,Filas independientes (elección aleatoria),Tiempo promedio en el sistema (W),mean_system,4.6068,8.0,True
+indep_4,4 cajeros con filas independientes,4,Filas independientes (elección aleatoria),Longitud promedio de la cola (Lq),Lq,0.2346,3.0,True
+indep_4,4 cajeros con filas independientes,4,Filas independientes (elección aleatoria),Utilización máxima de un cajero,max_teller_utilization,0.2411,0.85,True
+indep_4,4 cajeros con filas independientes,4,Filas independientes (elección aleatoria),Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.0787,0.1,True
+indep_5,5 cajeros con filas independientes,5,Filas independientes (elección aleatoria),Tiempo promedio en cola (Wq),mean_wait,0.9294,3.0,True
+indep_5,5 cajeros con filas independientes,5,Filas independientes (elección aleatoria),Tiempo promedio en el sistema (W),mean_system,4.4665,8.0,True
+indep_5,5 cajeros con filas independientes,5,Filas independientes (elección aleatoria),Longitud promedio de la cola (Lq),Lq,0.2014,3.0,True
+indep_5,5 cajeros con filas independientes,5,Filas independientes (elección aleatoria),Utilización máxima de un cajero,max_teller_utilization,0.2073,0.85,True
+indep_5,5 cajeros con filas independientes,5,Filas independientes (elección aleatoria),Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.0642,0.1,True
+unica_2,2 cajeros con fila única,2,Fila única compartida,Tiempo promedio en cola (Wq),mean_wait,0.7252,3.0,True
+unica_2,2 cajeros con fila única,2,Fila única compartida,Tiempo promedio en el sistema (W),mean_system,4.2623,8.0,True
+unica_2,2 cajeros con fila única,2,Fila única compartida,Longitud promedio de la cola (Lq),Lq,0.1556,3.0,True
+unica_2,2 cajeros con fila única,2,Fila única compartida,Utilización máxima de un cajero,max_teller_utilization,0.4083,0.85,True
+unica_2,2 cajeros con fila única,2,Fila única compartida,Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.051,0.1,True
+unica_3,3 cajeros con fila única (mejora propuesta),3,Fila única compartida,Tiempo promedio en cola (Wq),mean_wait,0.0773,3.0,True
+unica_3,3 cajeros con fila única (mejora propuesta),3,Fila única compartida,Tiempo promedio en el sistema (W),mean_system,3.6144,8.0,True
+unica_3,3 cajeros con fila única (mejora propuesta),3,Fila única compartida,Longitud promedio de la cola (Lq),Lq,0.0165,3.0,True
+unica_3,3 cajeros con fila única (mejora propuesta),3,Fila única compartida,Utilización máxima de un cajero,max_teller_utilization,0.2943,0.85,True
+unica_3,3 cajeros con fila única (mejora propuesta),3,Fila única compartida,Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.0022,0.1,True
+unica_4,4 cajeros con fila única,4,Fila única compartida,Tiempo promedio en cola (Wq),mean_wait,0.0059,3.0,True
+unica_4,4 cajeros con fila única,4,Fila única compartida,Tiempo promedio en el sistema (W),mean_system,3.543,8.0,True
+unica_4,4 cajeros con fila única,4,Fila única compartida,Longitud promedio de la cola (Lq),Lq,0.0012,3.0,True
+unica_4,4 cajeros con fila única,4,Fila única compartida,Utilización máxima de un cajero,max_teller_utilization,0.235,0.85,True
+unica_4,4 cajeros con fila única,4,Fila única compartida,Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.0,0.1,True
+especializado_3,1 cajero para lentos + 2 para rápidos/normales,3,Filas independientes especializadas,Tiempo promedio en cola (Wq),mean_wait,3.5918,3.0,False
+especializado_3,1 cajero para lentos + 2 para rápidos/normales,3,Filas independientes especializadas,Tiempo promedio en el sistema (W),mean_system,7.1289,8.0,True
+especializado_3,1 cajero para lentos + 2 para rápidos/normales,3,Filas independientes especializadas,Longitud promedio de la cola (Lq),Lq,0.788,3.0,True
+especializado_3,1 cajero para lentos + 2 para rápidos/normales,3,Filas independientes especializadas,Utilización máxima de un cajero,max_teller_utilization,0.5855,0.85,True
+especializado_3,1 cajero para lentos + 2 para rápidos/normales,3,Filas independientes especializadas,Probabilidad de esperar más de 5 min,frac_wait_gt_5,0.2067,0.1,False

@@ -1,0 +1,5 @@
+﻿parametro,nominal_min,estimado_min,error_relativo_pct,n,ks_estadistico,ks_p_value,ajuste_exponencial
+Tiempo de servicio - Rápido,1.0,0.9759,-2.41,1274,0.0171,0.8421,True
+Tiempo de servicio - Normal,3.0,2.9522,-1.59,1006,0.0198,0.8159,True
+Tiempo de servicio - Lento,4.0,4.008,0.2,1336,0.015,0.9189,True
+Tiempo de servicio - Muy lento,6.0,5.8573,-2.38,1381,0.0138,0.9525,True

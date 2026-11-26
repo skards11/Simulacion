@@ -1,0 +1,13 @@
+﻿tipo,metrica,teorico,simulado,ic95_inf,ic95_sup,error_relativo_pct,p_value,validado,nota
+Rápido,Tiempo en el sistema (W),1.5,1.4941,1.4735,1.5147,-0.39,0.5651,True,
+Rápido,Tiempo en cola (Wq),0.5,0.4948,0.4779,0.5116,-1.05,0.529,True,
+Rápido,Usuarios en el sistema (L),0.5,0.4997,0.4906,0.5088,-0.07,,True,
+Rápido,Usuarios en cola (Lq),0.1667,0.1655,0.1592,0.1718,-0.71,,True,
+Lento,Tiempo en el sistema (W),20.0,19.905,18.2786,21.5314,-0.48,0.9057,True,
+Lento,Tiempo en cola (Wq),16.0,15.9116,14.3123,17.511,-0.55,0.9108,True,
+Lento,Usuarios en el sistema (L),4.0,3.9796,3.6303,4.3289,-0.51,,True,
+Lento,Usuarios en cola (Lq),3.2,3.1833,2.8438,3.5228,-0.52,,True,
+Muy lento,Tiempo en el sistema (W),42.0,41.0427,35.2054,46.8799,-2.28,0.7397,True,
+Muy lento,Tiempo en cola (Wq),36.0,35.0596,29.2626,40.8566,-2.61,0.7424,True,
+Muy lento,Usuarios en el sistema (L),6.0,5.8528,4.9761,6.7294,-2.45,,True,
+Muy lento,Usuarios en cola (Lq),5.1429,5.0053,4.1404,5.8702,-2.67,,True,
