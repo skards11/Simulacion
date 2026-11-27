@@ -228,12 +228,3 @@ Principales archivos de salida:
   cualitativa.
 - La validación agregada usa la aproximación M/G/1 por cajero, no una solución
   exacta del sistema con llegadas marcadas por tipo.
-
----
-
-## Estado del repositorio
-
-El proyecto está completo y reproducible en local. **Aún no se ha publicado en
-GitHub**; cuando el equipo lo decida, se debe subir la carpeta `AE4_Parqueadero`
-con `outputs/` (excepto los archivos ignorados) y verificar que el README y las
-rutas de las figuras sigan siendo válidos.
